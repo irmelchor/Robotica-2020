@@ -1,0 +1,7 @@
+/home/irene/Marene/ejemplo1/CMakeFiles/install/strip.dir
+/home/irene/Marene/ejemplo1/CMakeFiles/install.dir
+/home/irene/Marene/ejemplo1/CMakeFiles/list_install_components.dir
+/home/irene/Marene/ejemplo1/CMakeFiles/rebuild_cache.dir
+/home/irene/Marene/ejemplo1/CMakeFiles/edit_cache.dir
+/home/irene/Marene/ejemplo1/CMakeFiles/install/local.dir
+/home/irene/Marene/ejemplo1/CMakeFiles/ejemplo1.dir
