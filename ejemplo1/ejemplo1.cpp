@@ -35,8 +35,10 @@ void ejemplo1::contador(){
 }
 
 void ejemplo1::periodo(){
-   period = horizontalSlider->value();
-   timer.start(period);
+    if(!button->isChecked()) {
+        period = horizontalSlider->value();
+        timer.start(period);
+    }
 }
 
 void ejemplo1::elapsedTime(){
