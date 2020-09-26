@@ -15,7 +15,9 @@ Q_OBJECT
         virtual ~ejemplo1();
     
     public slots:
+    //Método que incrementa el valor mostrado en lcdNumber.
 	void doButton();
+     //Método que modifica la velocidad de lcdNumber siempre y cuando button se encuentre en START.
     void periodo();
 
     private:
@@ -31,7 +33,7 @@ Q_OBJECT
 		int trick = 5;
 
 
-
+        //Método que cuenta el tiempo, en segundos, transcurrido desde el inicio del programa
 		void elapsedTime();
 };
 

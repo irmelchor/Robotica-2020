@@ -14,7 +14,9 @@ class Timer
 
         Timer(){};
 
-        template <class callable>        
+        template <class callable>
+
+        //Método encargado de conectar los slots con los métodos creados para estos.
         void connect(callable&& f)
         {
 			std::thread([=]() 
@@ -27,14 +29,18 @@ class Timer
                 }
             }).detach();
         };
-        
+
+        //Método que se encarga de iniciar el timer con el valor dado por parámetros.
         void start(int p)
         {
 			period.store(p);
 			go.store(true);
         };
-        
+
+        //Método que se encarga de parar el timer.
         void stop() { go.store(!go); };
+
+        //Método que dado un entero por parámetros, carga dicho valor en la variable periodo.
 		void setPeriod(int p) { period.store(p) ;};
         
     private:

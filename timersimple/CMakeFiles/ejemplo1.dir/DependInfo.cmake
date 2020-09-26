@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/irene/Marene/timersimple/ejemplo1.cpp" "/home/irene/Marene/timersimple/CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o"
-  "/home/irene/Marene/timersimple/main.cpp" "/home/irene/Marene/timersimple/CMakeFiles/ejemplo1.dir/main.cpp.o"
-  "/home/irene/Marene/timersimple/moc_ejemplo1.cpp" "/home/irene/Marene/timersimple/CMakeFiles/ejemplo1.dir/moc_ejemplo1.cpp.o"
+  "/home/irene/Marene/Robotica-Practica1/timersimple/ejemplo1.cpp" "/home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o"
+  "/home/irene/Marene/Robotica-Practica1/timersimple/main.cpp" "/home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles/ejemplo1.dir/main.cpp.o"
+  "/home/irene/Marene/Robotica-Practica1/timersimple/moc_ejemplo1.cpp" "/home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles/ejemplo1.dir/moc_ejemplo1.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

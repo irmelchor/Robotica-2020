@@ -68,10 +68,10 @@ RM = /snap/clion/126/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/irene/Marene/timersimple
+CMAKE_SOURCE_DIR = /home/irene/Marene/Robotica-Practica1/timersimple
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/irene/Marene/timersimple
+CMAKE_BINARY_DIR = /home/irene/Marene/Robotica-Practica1/timersimple
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,9 +146,9 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/irene/Marene/timersimple/CMakeFiles /home/irene/Marene/timersimple/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles /home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/irene/Marene/timersimple/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

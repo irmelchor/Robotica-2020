@@ -63,10 +63,10 @@ RM = /snap/clion/126/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/irene/Marene/timersimple
+CMAKE_SOURCE_DIR = /home/irene/Marene/Robotica-Practica1/timersimple
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/irene/Marene/timersimple
+CMAKE_BINARY_DIR = /home/irene/Marene/Robotica-Practica1/timersimple
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ejemplo1.dir/depend.make
@@ -78,51 +78,51 @@ include CMakeFiles/ejemplo1.dir/progress.make
 include CMakeFiles/ejemplo1.dir/flags.make
 
 moc_ejemplo1.cpp: ejemplo1.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/irene/Marene/timersimple/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating moc_ejemplo1.cpp"
-	/usr/lib/qt5/bin/moc @/home/irene/Marene/timersimple/moc_ejemplo1.cpp_parameters
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating moc_ejemplo1.cpp"
+	/usr/lib/qt5/bin/moc @/home/irene/Marene/Robotica-Practica1/timersimple/moc_ejemplo1.cpp_parameters
 
 ui_counterDlg.h: counterDlg.ui
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/irene/Marene/timersimple/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating ui_counterDlg.h"
-	/usr/lib/qt5/bin/uic -o /home/irene/Marene/timersimple/ui_counterDlg.h /home/irene/Marene/timersimple/counterDlg.ui
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating ui_counterDlg.h"
+	/usr/lib/qt5/bin/uic -o /home/irene/Marene/Robotica-Practica1/timersimple/ui_counterDlg.h /home/irene/Marene/Robotica-Practica1/timersimple/counterDlg.ui
 
 CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o: CMakeFiles/ejemplo1.dir/flags.make
 CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o: ejemplo1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/irene/Marene/timersimple/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o -c /home/irene/Marene/timersimple/ejemplo1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ejemplo1.dir/ejemplo1.cpp.o -c /home/irene/Marene/Robotica-Practica1/timersimple/ejemplo1.cpp
 
 CMakeFiles/ejemplo1.dir/ejemplo1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ejemplo1.dir/ejemplo1.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/irene/Marene/timersimple/ejemplo1.cpp > CMakeFiles/ejemplo1.dir/ejemplo1.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/irene/Marene/Robotica-Practica1/timersimple/ejemplo1.cpp > CMakeFiles/ejemplo1.dir/ejemplo1.cpp.i
 
 CMakeFiles/ejemplo1.dir/ejemplo1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ejemplo1.dir/ejemplo1.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/irene/Marene/timersimple/ejemplo1.cpp -o CMakeFiles/ejemplo1.dir/ejemplo1.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/irene/Marene/Robotica-Practica1/timersimple/ejemplo1.cpp -o CMakeFiles/ejemplo1.dir/ejemplo1.cpp.s
 
 CMakeFiles/ejemplo1.dir/main.cpp.o: CMakeFiles/ejemplo1.dir/flags.make
 CMakeFiles/ejemplo1.dir/main.cpp.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/irene/Marene/timersimple/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ejemplo1.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ejemplo1.dir/main.cpp.o -c /home/irene/Marene/timersimple/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ejemplo1.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ejemplo1.dir/main.cpp.o -c /home/irene/Marene/Robotica-Practica1/timersimple/main.cpp
 
 CMakeFiles/ejemplo1.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ejemplo1.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/irene/Marene/timersimple/main.cpp > CMakeFiles/ejemplo1.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/irene/Marene/Robotica-Practica1/timersimple/main.cpp > CMakeFiles/ejemplo1.dir/main.cpp.i
 
 CMakeFiles/ejemplo1.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ejemplo1.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/irene/Marene/timersimple/main.cpp -o CMakeFiles/ejemplo1.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/irene/Marene/Robotica-Practica1/timersimple/main.cpp -o CMakeFiles/ejemplo1.dir/main.cpp.s
 
 CMakeFiles/ejemplo1.dir/moc_ejemplo1.cpp.o: CMakeFiles/ejemplo1.dir/flags.make
 CMakeFiles/ejemplo1.dir/moc_ejemplo1.cpp.o: moc_ejemplo1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/irene/Marene/timersimple/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ejemplo1.dir/moc_ejemplo1.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ejemplo1.dir/moc_ejemplo1.cpp.o -c /home/irene/Marene/timersimple/moc_ejemplo1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ejemplo1.dir/moc_ejemplo1.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ejemplo1.dir/moc_ejemplo1.cpp.o -c /home/irene/Marene/Robotica-Practica1/timersimple/moc_ejemplo1.cpp
 
 CMakeFiles/ejemplo1.dir/moc_ejemplo1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ejemplo1.dir/moc_ejemplo1.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/irene/Marene/timersimple/moc_ejemplo1.cpp > CMakeFiles/ejemplo1.dir/moc_ejemplo1.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/irene/Marene/Robotica-Practica1/timersimple/moc_ejemplo1.cpp > CMakeFiles/ejemplo1.dir/moc_ejemplo1.cpp.i
 
 CMakeFiles/ejemplo1.dir/moc_ejemplo1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ejemplo1.dir/moc_ejemplo1.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/irene/Marene/timersimple/moc_ejemplo1.cpp -o CMakeFiles/ejemplo1.dir/moc_ejemplo1.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/irene/Marene/Robotica-Practica1/timersimple/moc_ejemplo1.cpp -o CMakeFiles/ejemplo1.dir/moc_ejemplo1.cpp.s
 
 # Object files for target ejemplo1
 ejemplo1_OBJECTS = \
@@ -146,7 +146,7 @@ ejemplo1: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8
 ejemplo1: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8
 ejemplo1: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 ejemplo1: CMakeFiles/ejemplo1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/irene/Marene/timersimple/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ejemplo1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ejemplo1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ejemplo1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -160,6 +160,6 @@ CMakeFiles/ejemplo1.dir/clean:
 
 CMakeFiles/ejemplo1.dir/depend: moc_ejemplo1.cpp
 CMakeFiles/ejemplo1.dir/depend: ui_counterDlg.h
-	cd /home/irene/Marene/timersimple && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/irene/Marene/timersimple /home/irene/Marene/timersimple /home/irene/Marene/timersimple /home/irene/Marene/timersimple /home/irene/Marene/timersimple/CMakeFiles/ejemplo1.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/irene/Marene/Robotica-Practica1/timersimple && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/irene/Marene/Robotica-Practica1/timersimple /home/irene/Marene/Robotica-Practica1/timersimple /home/irene/Marene/Robotica-Practica1/timersimple /home/irene/Marene/Robotica-Practica1/timersimple /home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles/ejemplo1.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ejemplo1.dir/depend
 

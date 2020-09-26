@@ -1,7 +1,7 @@
-/home/irene/Marene/timersimple/CMakeFiles/install/strip.dir
-/home/irene/Marene/timersimple/CMakeFiles/install/local.dir
-/home/irene/Marene/timersimple/CMakeFiles/ejemplo1.dir
-/home/irene/Marene/timersimple/CMakeFiles/rebuild_cache.dir
-/home/irene/Marene/timersimple/CMakeFiles/edit_cache.dir
-/home/irene/Marene/timersimple/CMakeFiles/install.dir
-/home/irene/Marene/timersimple/CMakeFiles/list_install_components.dir
+/home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles/install/strip.dir
+/home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles/install/local.dir
+/home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles/ejemplo1.dir
+/home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles/rebuild_cache.dir
+/home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles/edit_cache.dir
+/home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles/install.dir
+/home/irene/Marene/Robotica-Practica1/timersimple/CMakeFiles/list_install_components.dir
