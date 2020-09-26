@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>535</width>
-    <height>414</height>
+    <width>457</width>
+    <height>406</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,6 +40,22 @@
     </widget>
    </item>
    <item>
+    <widget class="QWidget" name="widget_3" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Elapsed Time</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLCDNumber" name="elapsedLcd"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QWidget" name="widget" native="true">
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
@@ -66,7 +82,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLCDNumber" name="lcdNumber_2">
+       <widget class="QLCDNumber" name="periodLcd">
         <property name="intValue" stdset="0">
          <number>500</number>
         </property>
@@ -82,7 +98,7 @@
   <connection>
    <sender>horizontalSlider</sender>
    <signal>valueChanged(int)</signal>
-   <receiver>lcdNumber_2</receiver>
+   <receiver>periodLcd</receiver>
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">

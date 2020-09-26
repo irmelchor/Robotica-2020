@@ -6,31 +6,31 @@
 
 #IncludeRegexTransform: 
 
-/home/irene/Marene/ejemplo1/ejemplo1.cpp
+/home/irene/Marene/Robotica-Practica1/ejemplo1/ejemplo1.cpp
 ejemplo1.h
-/home/irene/Marene/ejemplo1/ejemplo1.h
+/home/irene/Marene/Robotica-Practica1/ejemplo1/ejemplo1.h
 
-/home/irene/Marene/ejemplo1/ejemplo1.h
+/home/irene/Marene/Robotica-Practica1/ejemplo1/ejemplo1.h
 QtGui
 -
 ui_counterDlg.h
-/home/irene/Marene/ejemplo1/ui_counterDlg.h
+/home/irene/Marene/Robotica-Practica1/ejemplo1/ui_counterDlg.h
 
-/home/irene/Marene/ejemplo1/main.cpp
+/home/irene/Marene/Robotica-Practica1/ejemplo1/main.cpp
 QtWidgets
 -
 ejemplo1.h
-/home/irene/Marene/ejemplo1/ejemplo1.h
+/home/irene/Marene/Robotica-Practica1/ejemplo1/ejemplo1.h
 
-/home/irene/Marene/ejemplo1/moc_ejemplo1.cpp
+/home/irene/Marene/Robotica-Practica1/ejemplo1/moc_ejemplo1.cpp
 ejemplo1.h
-/home/irene/Marene/ejemplo1/ejemplo1.h
+/home/irene/Marene/Robotica-Practica1/ejemplo1/ejemplo1.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/irene/Marene/ejemplo1/ui_counterDlg.h
+/home/irene/Marene/Robotica-Practica1/ejemplo1/ui_counterDlg.h
 QtCore/QVariant
 -
 QtWidgets/QApplication

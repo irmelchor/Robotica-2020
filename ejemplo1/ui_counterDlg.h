@@ -29,17 +29,21 @@ public:
     QVBoxLayout *verticalLayout_3;
     QLCDNumber *lcdNumber;
     QPushButton *button;
+    QWidget *widget_3;
+    QHBoxLayout *horizontalLayout;
+    QLabel *label_2;
+    QLCDNumber *elapsedLcd;
     QWidget *widget;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label;
     QSlider *horizontalSlider;
-    QLCDNumber *lcdNumber_2;
+    QLCDNumber *periodLcd;
 
     void setupUi(QWidget *Counter)
     {
         if (Counter->objectName().isEmpty())
             Counter->setObjectName(QString::fromUtf8("Counter"));
-        Counter->resize(535, 414);
+        Counter->resize(457, 406);
         verticalLayout = new QVBoxLayout(Counter);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         widget_2 = new QWidget(Counter);
@@ -61,6 +65,23 @@ public:
 
         verticalLayout->addWidget(widget_2);
 
+        widget_3 = new QWidget(Counter);
+        widget_3->setObjectName(QString::fromUtf8("widget_3"));
+        horizontalLayout = new QHBoxLayout(widget_3);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        label_2 = new QLabel(widget_3);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        horizontalLayout->addWidget(label_2);
+
+        elapsedLcd = new QLCDNumber(widget_3);
+        elapsedLcd->setObjectName(QString::fromUtf8("elapsedLcd"));
+
+        horizontalLayout->addWidget(elapsedLcd);
+
+
+        verticalLayout->addWidget(widget_3);
+
         widget = new QWidget(Counter);
         widget->setObjectName(QString::fromUtf8("widget"));
         horizontalLayout_2 = new QHBoxLayout(widget);
@@ -79,18 +100,18 @@ public:
 
         horizontalLayout_2->addWidget(horizontalSlider);
 
-        lcdNumber_2 = new QLCDNumber(widget);
-        lcdNumber_2->setObjectName(QString::fromUtf8("lcdNumber_2"));
-        lcdNumber_2->setProperty("intValue", QVariant(500));
+        periodLcd = new QLCDNumber(widget);
+        periodLcd->setObjectName(QString::fromUtf8("periodLcd"));
+        periodLcd->setProperty("intValue", QVariant(500));
 
-        horizontalLayout_2->addWidget(lcdNumber_2);
+        horizontalLayout_2->addWidget(periodLcd);
 
 
         verticalLayout->addWidget(widget);
 
 
         retranslateUi(Counter);
-        QObject::connect(horizontalSlider, SIGNAL(valueChanged(int)), lcdNumber_2, SLOT(display(int)));
+        QObject::connect(horizontalSlider, SIGNAL(valueChanged(int)), periodLcd, SLOT(display(int)));
 
         QMetaObject::connectSlotsByName(Counter);
     } // setupUi
@@ -99,6 +120,7 @@ public:
     {
         Counter->setWindowTitle(QApplication::translate("Counter", "Counter", nullptr));
         button->setText(QApplication::translate("Counter", "STOP", nullptr));
+        label_2->setText(QApplication::translate("Counter", "Elapsed Time", nullptr));
         label->setText(QApplication::translate("Counter", "Period", nullptr));
     } // retranslateUi
 

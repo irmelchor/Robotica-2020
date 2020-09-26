@@ -11,13 +11,15 @@ class ejemplo1 : public QWidget, public Ui_Counter
         ejemplo1();
 
     private:
-        QTimer timer;
+        QTimer timer, timerElapsed;
         int period = 500;
+        int elapsed = 1000;
 
     public slots:
         void doButton();
         void contador();
         void periodo();
+        void elapsedTime();
 };
 
 #endif // ejemplo1_H

@@ -7,7 +7,12 @@ ejemplo1::ejemplo1(): Ui_Counter()
     connect(button, SIGNAL(clicked()), this, SLOT(doButton()) );
     connect(&timer, SIGNAL(timeout()), this, SLOT(contador()) );
     connect(horizontalSlider, SIGNAL(valueChanged(int)), this, SLOT(periodo()) );
+    connect(&timerElapsed, SIGNAL(timeout()), this, SLOT(elapsedTime()) );
+
     timer.start(period);
+    timerElapsed.start(elapsed);
+
+
 
 }
 
@@ -32,6 +37,12 @@ void ejemplo1::contador(){
 void ejemplo1::periodo(){
    period = horizontalSlider->value();
    timer.start(period);
+}
+
+void ejemplo1::elapsedTime(){
+    static int j = 0;
+    elapsedLcd->display(j++);
+
 }
 
 
