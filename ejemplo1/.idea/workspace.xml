@@ -29,33 +29,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a737e59-9459-4135-a9b0-b5cdb19b9bad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/ejemplo1.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/counterDlg.ui" beforeDir="false" afterPath="$PROJECT_DIR$/counterDlg.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejemplo1" beforeDir="false" afterPath="$PROJECT_DIR$/ejemplo1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejemplo1.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ejemplo1.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejemplo1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ejemplo1.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejemplo1.h" beforeDir="false" afterPath="$PROJECT_DIR$/ejemplo1.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moc_ejemplo1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/moc_ejemplo1.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moc_ejemplo1.cpp_parameters" beforeDir="false" afterPath="$PROJECT_DIR$/moc_ejemplo1.cpp_parameters" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui_counterDlg.h" beforeDir="false" afterPath="$PROJECT_DIR$/ui_counterDlg.h" afterDir="false" />
-    </list>
+    <list default="true" id="5a737e59-9459-4135-a9b0-b5cdb19b9bad" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,7 +86,7 @@
       <workItem from="1600869097455" duration="4346000" />
       <workItem from="1601029664766" duration="265000" />
       <workItem from="1601029943896" duration="8208000" />
-      <workItem from="1601114035077" duration="1651000" />
+      <workItem from="1601114035077" duration="2196000" />
     </task>
     <servers />
   </component>
@@ -135,25 +109,25 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1601030889820" />
-    <state width="1248" height="172" key="GridCell.Tab.0.bottom" timestamp="1601115664901">
+    <state width="1248" height="172" key="GridCell.Tab.0.bottom" timestamp="1601116233610">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="172" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1601115664901" />
+    <state width="1248" height="172" key="GridCell.Tab.0.bottom/72.27.1294.741@72.27.1294.741" timestamp="1601116233610" />
     <state width="1802" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1600873340566" />
-    <state width="1248" height="172" key="GridCell.Tab.0.center" timestamp="1601115664901">
+    <state width="1248" height="172" key="GridCell.Tab.0.center" timestamp="1601116233610">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="172" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1601115664901" />
+    <state width="1248" height="172" key="GridCell.Tab.0.center/72.27.1294.741@72.27.1294.741" timestamp="1601116233610" />
     <state width="1802" height="275" key="GridCell.Tab.0.center/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1600873340566" />
-    <state width="1248" height="172" key="GridCell.Tab.0.left" timestamp="1601115664901">
+    <state width="1248" height="172" key="GridCell.Tab.0.left" timestamp="1601116233610">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="172" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1601115664901" />
+    <state width="1248" height="172" key="GridCell.Tab.0.left/72.27.1294.741@72.27.1294.741" timestamp="1601116233610" />
     <state width="1802" height="275" key="GridCell.Tab.0.left/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1600873340566" />
-    <state width="1248" height="172" key="GridCell.Tab.0.right" timestamp="1601115664901">
+    <state width="1248" height="172" key="GridCell.Tab.0.right" timestamp="1601116233610">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state width="1248" height="172" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1601115664901" />
+    <state width="1248" height="172" key="GridCell.Tab.0.right/72.27.1294.741@72.27.1294.741" timestamp="1601116233610" />
     <state width="1802" height="275" key="GridCell.Tab.0.right/72.27.1848.1053/1920.0.1920.1080@72.27.1848.1053" timestamp="1600873340566" />
     <state x="430" y="27" width="936" height="697" key="dock-window-1" timestamp="1601030632987">
       <screen x="72" y="27" width="1294" height="741" />
