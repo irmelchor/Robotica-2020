@@ -203,7 +203,7 @@ int SpecificWorker::startup_check()
 }
 
 
-
+/*Hola esto no funcona*/
 
 /**************************************/
 // From the RoboCompDifferentialRobot you can call this methods:
