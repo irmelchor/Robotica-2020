@@ -27,13 +27,19 @@
 #ifndef SPECIFICWORKER_H
 #define SPECIFICWORKER_H
 
+#include <map>
 #include <genericworker.h>
 #include <innermodel/innermodel.h>
 
 class SpecificWorker : public GenericWorker
 {
 Q_OBJECT
-public:
+const int HMIN=-2500, HMAX=2500, VMIN=-2500, VMAX=2500;
+	struct vec{
+		int v1;
+		int v2;
+	};
+public:			
 	SpecificWorker(MapPrx& mprx, bool startup_check);
 	~SpecificWorker();
 	bool setParams(RoboCompCommonBehavior::ParameterList params);
@@ -44,9 +50,14 @@ public slots:
 	void compute();
 	int startup_check();
 	void initialize(int period);
+	void initializeMatrix();
+	void checkMatrix(int x, int z, float alpha);
+	
 private:
 	std::shared_ptr < InnerModel > innerModel;
 	bool startup_check_flag;
+	bool map[5000][5000];
+	vec vecinos[9];
 
 };
 

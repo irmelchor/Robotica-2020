@@ -36,23 +36,24 @@ SpecificWorker::~SpecificWorker()
 
 bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 {
-//	THE FOLLOWING IS JUST AN EXAMPLE
-//	To use innerModelPath parameter you should uncomment specificmonitor.cpp readConfig method content
-//	try
-//	{
-//		RoboCompCommonBehavior::Parameter par = params.at("InnerModelPath");
-//		std::string innermodel_path = par.value;
-//		innerModel = std::make_shared(innermodel_path);
-//	}
-//	catch(const std::exception &e) { qFatal("Error reading config params"); }
+//  THE FOLLOWING IS JUST AN EXAMPLE
+//  To use innerModelPath parameter you should uncomment specificmonitor.cpp readConfig method content
+//  try
+//  {
+//    RoboCompCommonBehavior::Parameter par = params.at("InnerModelPath");
+//    std::string innermodel_path = par.value;
+//    innerModel = std::make_shared(innermodel_path);
+//  }
+//  catch(const std::exception &e) { qFatal("Error reading config params"); }
 
 
 
 
 
 
-	return true;
+  return true;
 }
+
 
 void SpecificWorker::initialize(int period)
 {
@@ -69,10 +70,71 @@ void SpecificWorker::initialize(int period)
 
 }
 
+void SpecificWorker::initializeMatrix(){
+ 	for( long int i = 0 ; i < 5000 ; i++)
+ 		for( long int j = 0 ; j < 5000 ; j++)
+			map[i][j]=false;	
+	//std::cout << "Map size: " << map.size() << std::endl;	
+}
+
+
+void SpecificWorker::checkMatrix(int x, int z, float alpha)
+{
+	x = x+2500;
+	z = z+2500;
+	
+
+	
+	vec vecinos[9]={
+		vecinos[0]= {x-1,z-1},
+		vecinos[1]={x,z-1},
+		vecinos[2]={x+1,z-1},
+		vecinos[3]={x-1,z},
+		vecinos[4]={x,z},
+		vecinos[5]={x+1,z},
+		vecinos[6]={x-1,z+1},
+		vecinos[7]={x,z+1},
+		vecinos[8]={x+1,z+1}
+		};
+
+    if(map[x][z]== false){
+        map[x][z] = true; 
+	
+		for(int k=0; k<9;k++){
+				if(map[x][z]!=map[vecinos[k].v1][vecinos[k].v2])
+					differentialrobot_proxy->setSpeedBase(500, 0.8); 
+				else
+					differentialrobot_proxy->setSpeedBase(500, 0); 
+
+		}
+	}else{
+		std::cout << "ERRORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR" << std::endl;
+	}
+	
+        
+}
+
+
+/*void SpecificWorker::checkMatrix(int x, int z){
+	//std::cout << "x: " <<x << ", " << "z: " << z << std::endl;
+	
+	for(long int i=0; i<5000;i++){
+		for(long int j=0; j<5000;j++){
+			
+			if(map[i][j]==map[x][z]){			
+				map[i][j]==true;
+			}
+		}
+	}
+}*/
+
+
 void SpecificWorker::compute()
 {
- const float threshold = 200; // millimeters
-    float rot = 0.785; //0.6  // rads per second
+ const float threshold = 200; // 200 millimeters
+    float rot = 0.6; //0.6  // rads per second
+	
+	initializeMatrix();
 
     try
     {
@@ -83,8 +145,16 @@ void SpecificWorker::compute()
         
 	if( ldata.front().dist < threshold)
 	{
+		
+		/*
+		float angulo = atan2(ldata.front().dist, 200);
+		
+		std::cout << "ANGULO " <<angulo<< std::endl;
+		*/
+		
 		std::cout << "DISTANCIA " <<ldata.front().dist << std::endl;
  		differentialrobot_proxy->setSpeedBase(5, rot);
+		
 		 
 		 /**/
 		 //differentialrobot_proxy->setSpeedBase(5, rot);
@@ -92,19 +162,18 @@ void SpecificWorker::compute()
 		/**/
 
 		usleep(rand()%(1500000-100000 + 1) + 100000);  // random wait between 1.5s and 0.1sec
-	/****/
-		//std::cout << "ROT1: " << rot << std::endl;
-
-	//rot = rot + 0.012;
-	/***/
-	//std::cout << "ROT2: "<< rot << std::endl;
-  
+		
+	  
   int x = 0, z = 0;
  float alpha=0;
     this->differentialrobot_proxy->getBasePose(x, z, alpha);
-std::cout << "X: "<< x << std::endl;
-std::cout << "Z: "<< z << std::endl;
-std::cout << "ALPHA: "<< alpha << std::endl;
+	/*std::cout << "X: "<< x << std::endl;
+	std::cout << "Z: "<< z << std::endl;
+	std::cout << "ALPHA: "<< alpha << std::endl;*/
+
+	/******************************/
+	 checkMatrix(x,z, alpha);
+	/******************************/
 
   
 
@@ -114,7 +183,9 @@ std::cout << "ALPHA: "<< alpha << std::endl;
 	
 	else
 	{
-		differentialrobot_proxy->setSpeedBase(200, 0); 
+		differentialrobot_proxy->setSpeedBase(750, 0); 
+		//differentialrobot_proxy->setSpeedBase(200, 0); 
+
   	}
     }
     catch(const Ice::Exception &ex)
