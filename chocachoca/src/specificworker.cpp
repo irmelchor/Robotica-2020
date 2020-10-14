@@ -46,11 +46,6 @@ bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 //  }
 //  catch(const std::exception &e) { qFatal("Error reading config params"); }
 
-
-
-
-
-
   return true;
 }
 
@@ -73,8 +68,8 @@ void SpecificWorker::initialize(int period)
 void SpecificWorker::initializeMatrix(){
  	for( long int i = 0 ; i < 5000 ; i++)
  		for( long int j = 0 ; j < 5000 ; j++)
-			map[i][j]=false;	
-	//std::cout << "Map size: " << map.size() << std::endl;	
+			map[i][j]=false;
+	//std::cout << "Map size: " << map.size() << std::endl;
 }
 
 
@@ -82,9 +77,9 @@ void SpecificWorker::checkMatrix(int x, int z, float alpha)
 {
 	x = x+2500;
 	z = z+2500;
-	
 
-	
+
+
 	vec vecinos[9]={
 		vecinos[0]= {x-1,z-1},
 		vecinos[1]={x,z-1},
@@ -98,101 +93,119 @@ void SpecificWorker::checkMatrix(int x, int z, float alpha)
 		};
 
     if(map[x][z]== false){
-        map[x][z] = true; 
-	
+        map[x][z] = true;
+
 		for(int k=0; k<9;k++){
 				if(map[x][z]!=map[vecinos[k].v1][vecinos[k].v2])
-					differentialrobot_proxy->setSpeedBase(500, 0.8); 
+					differentialrobot_proxy->setSpeedBase(500, 0.8);
 				else
-					differentialrobot_proxy->setSpeedBase(500, 0); 
+					differentialrobot_proxy->setSpeedBase(500, 0);
 
 		}
 	}else{
 		std::cout << "ERRORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR" << std::endl;
 	}
-	
-        
+
+
 }
 
 
 /*void SpecificWorker::checkMatrix(int x, int z){
 	//std::cout << "x: " <<x << ", " << "z: " << z << std::endl;
-	
+
 	for(long int i=0; i<5000;i++){
 		for(long int j=0; j<5000;j++){
-			
-			if(map[i][j]==map[x][z]){			
+
+			if(map[i][j]==map[x][z]){
 				map[i][j]==true;
 			}
 		}
 	}
 }*/
 
+//Metodo que sirve para que el robot gire para evitar objetos
+void SpecificWorker::turnMethod(RoboCompLaser::TLaserData ldata, float rot){
+    std::cout << "DISTANCIA " <<ldata.front().dist << std::endl;
+    if(ldata.front().dist < 500){
+        differentialrobot_proxy->setSpeedBase(200, 0);
+        std::cout << "ESTOY BAJANDO LA VELOCIDADDDDD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << std::endl;
+
+    }
+        differentialrobot_proxy->setSpeedBase(5, rot);
+   
+    usleep(rand()%(1500000-100000 + 1) + 100000);  // random wait between 1.5s and 0.1sec
+
+}
+
+//Metodo que sirve para avanzar hacia delante
+void SpecificWorker::goAheadMethod(){
+    differentialrobot_proxy->setSpeedBase(1000, 0);
+    //differentialrobot_proxy->setSpeedBase(200, 0);
+}
+
+void SpecificWorker::checkDirection(){
+    int x = 0, z = 0;
+                float alpha=0;
+                this->differentialrobot_proxy->getBasePose(x, z, alpha);
+                /*std::cout << "X: "<< x << std::endl;
+                std::cout << "Z: "<< z << std::endl;
+                std::cout << "ALPHA: "<< alpha << std::endl;*/
+
+                /******************************/
+                checkMatrix(x,z, alpha);
+                /******************************/
+}
+
 
 void SpecificWorker::compute()
 {
  const float threshold = 200; // 200 millimeters
     float rot = 0.6; //0.6  // rads per second
-	
-	initializeMatrix();
-
     try
     {
-    	// read laser data 
-        RoboCompLaser::TLaserData ldata = laser_proxy->getLaserData(); 
-	//sort laser data from small to large distances using a lambda function.
-        std::sort( ldata.begin(), ldata.end(), [](RoboCompLaser::TData a, RoboCompLaser::TData b){ return     a.dist < b.dist; });  
-        
-	if( ldata.front().dist < threshold)
-	{
-		
-		/*
-		float angulo = atan2(ldata.front().dist, 200);
-		
-		std::cout << "ANGULO " <<angulo<< std::endl;
-		*/
-		
-		std::cout << "DISTANCIA " <<ldata.front().dist << std::endl;
- 		differentialrobot_proxy->setSpeedBase(5, rot);
-		
-		 
-		 /**/
-		 //differentialrobot_proxy->setSpeedBase(5, rot);
- 		//differentialrobot_proxy->setSpeedBase(5, rot);
-		/**/
+       
+        // read laser data
+        RoboCompLaser::TLaserData ldata = laser_proxy->getLaserData();
+        //sort laser data from small to large distances using a lambda function.
+        std::sort( ldata.begin(), ldata.end(), [](RoboCompLaser::TData a, RoboCompLaser::TData b){ return     a.dist < b.dist; });
+        switch (estado) {
 
-		usleep(rand()%(1500000-100000 + 1) + 100000);  // random wait between 1.5s and 0.1sec
-		
-	  
-  int x = 0, z = 0;
- float alpha=0;
-    this->differentialrobot_proxy->getBasePose(x, z, alpha);
-	/*std::cout << "X: "<< x << std::endl;
-	std::cout << "Z: "<< z << std::endl;
-	std::cout << "ALPHA: "<< alpha << std::endl;*/
+            case 0: //Caso 0 -> Inicializar
+                initializeMatrix();
+                std::cout << "MATRIZ INICIALIZADA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << std::endl;
+                estado=2;
+            break;
+            case 1: //Caso 1 -> Evitar objetos
+                turnMethod(ldata, rot);
+                std::cout << "HE GIRADO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << std::endl;
+                 estado=3;
+            break;
+            case 2: //Caso 2 -> Seguir hacia delante
+                if(ldata.front().dist < threshold){
+                    std::cout << "VOY A GIRAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << std::endl;
+                    estado=1;
+                } else {
+                    goAheadMethod();
+                    std::cout << "ESTOY AVANZANDO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << std::endl;
+                }
+            break;
+            case 3: //Comprobar direccion
+                checkDirection();
+                estado = 2;
+            break;
 
-	/******************************/
-	 checkMatrix(x,z, alpha);
-	/******************************/
+        }
 
-  
+	//initializeMatrix();
 
-	/***/
- 
-	}
-	
-	else
-	{
-		differentialrobot_proxy->setSpeedBase(750, 0); 
-		//differentialrobot_proxy->setSpeedBase(200, 0); 
 
-  	}
+
     }
     catch(const Ice::Exception &ex)
     {
         std::cout << ex << std::endl;
     }
-	
+
 }
 
 int SpecificWorker::startup_check()
