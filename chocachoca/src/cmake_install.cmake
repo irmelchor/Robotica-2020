@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# Install script for directory: /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src
-=======
-# Install script for directory: /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src
->>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
+# Install script for directory: /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,10 +46,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-<<<<<<< HEAD
-file(INSTALL DESTINATION "/opt/robocomp/bin" TYPE FILE PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/bin/MyFirstComp")
-=======
-file(INSTALL DESTINATION "/opt/robocomp/bin" TYPE FILE PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/bin/MyFirstComp")
->>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
+file(INSTALL DESTINATION "/opt/robocomp/bin" TYPE FILE PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE FILES "/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/bin/MyFirstComp")
 endif()
 

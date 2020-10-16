@@ -43,17 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
-CMAKE_SOURCE_DIR = /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca
+CMAKE_SOURCE_DIR = /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca
-=======
-CMAKE_SOURCE_DIR = /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca
->>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
+CMAKE_BINARY_DIR = /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca
 
 # Utility rule file for MyFirstComp_autogen.
 
@@ -61,13 +54,8 @@ CMAKE_BINARY_DIR = /home/salabeta/robocomp/components/Robotica-2020-Marene/choca
 include src/CMakeFiles/MyFirstComp_autogen.dir/progress.make
 
 src/CMakeFiles/MyFirstComp_autogen:
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target MyFirstComp"
-	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src && /usr/bin/cmake -E cmake_autogen /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/MyFirstComp_autogen.dir/AutogenInfo.json ""
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target MyFirstComp"
-	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src && /usr/bin/cmake -E cmake_autogen /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/MyFirstComp_autogen.dir/AutogenInfo.json ""
->>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target MyFirstComp"
+	cd /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src && /usr/bin/cmake -E cmake_autogen /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/MyFirstComp_autogen.dir/AutogenInfo.json ""
 
 MyFirstComp_autogen: src/CMakeFiles/MyFirstComp_autogen
 MyFirstComp_autogen: src/CMakeFiles/MyFirstComp_autogen.dir/build.make
@@ -80,18 +68,10 @@ src/CMakeFiles/MyFirstComp_autogen.dir/build: MyFirstComp_autogen
 .PHONY : src/CMakeFiles/MyFirstComp_autogen.dir/build
 
 src/CMakeFiles/MyFirstComp_autogen.dir/clean:
-<<<<<<< HEAD
-	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src && $(CMAKE_COMMAND) -P CMakeFiles/MyFirstComp_autogen.dir/cmake_clean.cmake
+	cd /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src && $(CMAKE_COMMAND) -P CMakeFiles/MyFirstComp_autogen.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/MyFirstComp_autogen.dir/clean
 
 src/CMakeFiles/MyFirstComp_autogen.dir/depend:
-	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/MyFirstComp_autogen.dir/DependInfo.cmake --color=$(COLOR)
-=======
-	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src && $(CMAKE_COMMAND) -P CMakeFiles/MyFirstComp_autogen.dir/cmake_clean.cmake
-.PHONY : src/CMakeFiles/MyFirstComp_autogen.dir/clean
-
-src/CMakeFiles/MyFirstComp_autogen.dir/depend:
-	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/MyFirstComp_autogen.dir/DependInfo.cmake --color=$(COLOR)
->>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
+	cd /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/MyFirstComp_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/MyFirstComp_autogen.dir/depend
 

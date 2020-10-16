@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# Install script for directory: /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca
-=======
-# Install script for directory: /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca
->>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
+# Install script for directory: /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,20 +46,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-<<<<<<< HEAD
-file(INSTALL DESTINATION "/opt/robocomp/etc-default" TYPE FILE RENAME "MyFirstComp.conf" FILES "/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/etc/config")
-=======
-file(INSTALL DESTINATION "/opt/robocomp/etc-default" TYPE FILE RENAME "MyFirstComp.conf" FILES "/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/etc/config")
->>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
+file(INSTALL DESTINATION "/opt/robocomp/etc-default" TYPE FILE RENAME "MyFirstComp.conf" FILES "/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/etc/config")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-<<<<<<< HEAD
-  include("/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/cmake_install.cmake")
-=======
-  include("/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/cmake_install.cmake")
->>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
+  include("/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/cmake_install.cmake")
 
 endif()
 
@@ -75,9 +63,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-<<<<<<< HEAD
-file(WRITE "/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/${CMAKE_INSTALL_MANIFEST}"
-=======
-file(WRITE "/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/${CMAKE_INSTALL_MANIFEST}"
->>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
+file(WRITE "/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
