@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca
+CMAKE_SOURCE_DIR = /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca
+CMAKE_BINARY_DIR = /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,9 +126,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -170,17 +170,17 @@ MyFirstComp/fast:
 .PHONY : MyFirstComp/fast
 
 #=============================================================================
-# Target rules for targets named ICES__home_irene_robocomp_components_Robotica-2020-Marene_chocachoca_src
+# Target rules for targets named ICES__home_marta_robocomp_components_Robotica-2020-Marene_chocachoca_src
 
 # Build rule for target.
-ICES__home_irene_robocomp_components_Robotica-2020-Marene_chocachoca_src: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ICES__home_irene_robocomp_components_Robotica-2020-Marene_chocachoca_src
-.PHONY : ICES__home_irene_robocomp_components_Robotica-2020-Marene_chocachoca_src
+ICES__home_marta_robocomp_components_Robotica-2020-Marene_chocachoca_src: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ICES__home_marta_robocomp_components_Robotica-2020-Marene_chocachoca_src
+.PHONY : ICES__home_marta_robocomp_components_Robotica-2020-Marene_chocachoca_src
 
 # fast build rule for target.
-ICES__home_irene_robocomp_components_Robotica-2020-Marene_chocachoca_src/fast:
-	$(MAKE) -f src/CMakeFiles/ICES__home_irene_robocomp_components_Robotica-2020-Marene_chocachoca_src.dir/build.make src/CMakeFiles/ICES__home_irene_robocomp_components_Robotica-2020-Marene_chocachoca_src.dir/build
-.PHONY : ICES__home_irene_robocomp_components_Robotica-2020-Marene_chocachoca_src/fast
+ICES__home_marta_robocomp_components_Robotica-2020-Marene_chocachoca_src/fast:
+	$(MAKE) -f src/CMakeFiles/ICES__home_marta_robocomp_components_Robotica-2020-Marene_chocachoca_src.dir/build.make src/CMakeFiles/ICES__home_marta_robocomp_components_Robotica-2020-Marene_chocachoca_src.dir/build
+.PHONY : ICES__home_marta_robocomp_components_Robotica-2020-Marene_chocachoca_src/fast
 
 #=============================================================================
 # Target rules for targets named MyFirstComp_autogen
@@ -208,7 +208,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... MyFirstComp"
-	@echo "... ICES__home_irene_robocomp_components_Robotica-2020-Marene_chocachoca_src"
+	@echo "... ICES__home_marta_robocomp_components_Robotica-2020-Marene_chocachoca_src"
 	@echo "... MyFirstComp_autogen"
 .PHONY : help
 
