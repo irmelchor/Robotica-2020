@@ -1,56 +1,105 @@
 {
-	"BUILD_DIR" : "/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen",
-	"CMAKE_BINARY_DIR" : "/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src",
+<<<<<<< HEAD
+	"BUILD_DIR" : "/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen",
+	"CMAKE_BINARY_DIR" : "/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
-	"CMAKE_SOURCE_DIR" : "/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca",
+	"CMAKE_SOURCE_DIR" : "/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca",
 	"HEADERS" : 
 	[
 		[
-			"/home/irene/robocomp/classes/qlog/qlog.h",
+			"/home/marta/robocomp/classes/qlog/qlog.h",
 			"MU",
-			"VWFZQHFPUW/moc_qlog.cpp"
+			"VDTK472IFP/moc_qlog.cpp"
 		],
 		[
-			"/home/irene/robocomp/classes/rapplication/rapplication.h",
+			"/home/marta/robocomp/classes/rapplication/rapplication.h",
 			"MU",
-			"CT4OXGGVUK/moc_rapplication.cpp"
+			"PRB7HFCEP6/moc_rapplication.cpp"
 		],
 		[
-			"/home/irene/robocomp/classes/sigwatch/sigwatch.h",
+			"/home/marta/robocomp/classes/sigwatch/sigwatch.h",
 			"MU",
-			"WHB67T3INU/moc_sigwatch.cpp"
+			"4YQNYJM3XT/moc_sigwatch.cpp"
 		],
 		[
-			"/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/commonbehaviorI.h",
+			"/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/commonbehaviorI.h",
+=======
+	"BUILD_DIR" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen",
+	"CMAKE_BINARY_DIR" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_SOURCE_DIR" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca",
+	"HEADERS" : 
+	[
+		[
+			"/home/salabeta/robocomp/classes/qlog/qlog.h",
+			"MU",
+			"EQ62L5TKVX/moc_qlog.cpp"
+		],
+		[
+			"/home/salabeta/robocomp/classes/rapplication/rapplication.h",
+			"MU",
+			"DLFNUU7AK7/moc_rapplication.cpp"
+		],
+		[
+			"/home/salabeta/robocomp/classes/sigwatch/sigwatch.h",
+			"MU",
+			"BM3K3POHI5/moc_sigwatch.cpp"
+		],
+		[
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/commonbehaviorI.h",
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 			"MU",
 			"EWIEGA46WW/moc_commonbehaviorI.cpp"
 		],
 		[
-			"/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericmonitor.h",
+<<<<<<< HEAD
+			"/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericmonitor.h",
+=======
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericmonitor.h",
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 			"MU",
 			"EWIEGA46WW/moc_genericmonitor.cpp"
 		],
 		[
-			"/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericworker.h",
+<<<<<<< HEAD
+			"/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericworker.h",
+=======
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericworker.h",
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 			"MU",
 			"EWIEGA46WW/moc_genericworker.cpp"
 		],
 		[
-			"/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificmonitor.h",
+<<<<<<< HEAD
+			"/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificmonitor.h",
+=======
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificmonitor.h",
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 			"MU",
 			"EWIEGA46WW/moc_specificmonitor.cpp"
 		],
 		[
-			"/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificworker.h",
+<<<<<<< HEAD
+			"/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificworker.h",
+=======
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificworker.h",
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 			"MU",
 			"EWIEGA46WW/moc_specificworker.cpp"
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/mocs_compilation.cpp",
+<<<<<<< HEAD
+	"INCLUDE_DIR" : "/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/mocs_compilation.cpp",
+=======
+	"INCLUDE_DIR" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/mocs_compilation.cpp",
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 	"MOC_DEFINITIONS" : 
 	[
 		"QT_CORE_LIB",
@@ -72,14 +121,25 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src",
-		"/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src",
+<<<<<<< HEAD
+		"/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src",
+		"/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src",
 		"/opt/robocomp/include",
 		"/classes",
-		"/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca",
-		"/home/irene/robocomp/classes",
-		"/home/irene/robocomp/libs",
-		"/home/irene/robocomp/interfaces",
+		"/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca",
+		"/home/marta/robocomp/classes",
+		"/home/marta/robocomp/libs",
+		"/home/marta/robocomp/interfaces",
+=======
+		"/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src",
+		"/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src",
+		"/opt/robocomp/include",
+		"/classes",
+		"/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca",
+		"/home/salabeta/robocomp/classes",
+		"/home/salabeta/robocomp/libs",
+		"/home/salabeta/robocomp/interfaces",
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 		"/include",
 		"/usr/include/x86_64-linux-gnu/qt5",
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
@@ -110,43 +170,83 @@
 		"-c",
 		"/usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/moc_predefs.h",
+<<<<<<< HEAD
+	"MOC_PREDEFS_FILE" : "/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 2,
-	"PARSE_CACHE_FILE" : "/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/MyFirstComp_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/MyFirstComp_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
 	"QT_VERSION_MAJOR" : 5,
-	"SETTINGS_FILE" : "/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/MyFirstComp_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/MyFirstComp_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/home/irene/robocomp/classes/qlog/qlog.cpp", "MU" ],
-		[ "/home/irene/robocomp/classes/rapplication/rapplication.cpp", "MU" ],
-		[ "/home/irene/robocomp/classes/sigwatch/sigwatch.cpp", "MU" ],
+		[ "/home/marta/robocomp/classes/qlog/qlog.cpp", "MU" ],
+		[ "/home/marta/robocomp/classes/rapplication/rapplication.cpp", "MU" ],
+		[ "/home/marta/robocomp/classes/sigwatch/sigwatch.cpp", "MU" ],
 		[
-			"/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/commonbehaviorI.cpp",
+			"/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/commonbehaviorI.cpp",
 			"MU"
 		],
 		[
-			"/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericmonitor.cpp",
+			"/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericmonitor.cpp",
 			"MU"
 		],
 		[
-			"/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericworker.cpp",
+			"/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericworker.cpp",
 			"MU"
 		],
 		[
-			"/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/main.cpp",
+			"/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/main.cpp",
 			"MU"
 		],
 		[
-			"/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificmonitor.cpp",
+			"/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificmonitor.cpp",
 			"MU"
 		],
 		[
-			"/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificworker.cpp",
+			"/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificworker.cpp",
+=======
+	"MOC_PREDEFS_FILE" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 8,
+	"PARSE_CACHE_FILE" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/MyFirstComp_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
+	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
+	"QT_VERSION_MAJOR" : 5,
+	"SETTINGS_FILE" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/MyFirstComp_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[ "/home/salabeta/robocomp/classes/qlog/qlog.cpp", "MU" ],
+		[ "/home/salabeta/robocomp/classes/rapplication/rapplication.cpp", "MU" ],
+		[ "/home/salabeta/robocomp/classes/sigwatch/sigwatch.cpp", "MU" ],
+		[
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/commonbehaviorI.cpp",
+			"MU"
+		],
+		[
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericmonitor.cpp",
+			"MU"
+		],
+		[
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericworker.cpp",
+			"MU"
+		],
+		[
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/main.cpp",
+			"MU"
+		],
+		[
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificmonitor.cpp",
+			"MU"
+		],
+		[
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificworker.cpp",
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 			"MU"
 		]
 	],
@@ -154,7 +254,11 @@
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : 
 	[
-		"/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/mainUI.ui"
+<<<<<<< HEAD
+		"/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/mainUI.ui"
+=======
+		"/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/mainUI.ui"
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 	],
 	"UIC_UI_FILES" : [],
 	"VERBOSITY" : 0

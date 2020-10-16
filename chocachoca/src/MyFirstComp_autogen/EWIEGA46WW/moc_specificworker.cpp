@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_SpecificWorker_t {
-    QByteArrayData data[11];
-    char stringdata0[95];
+    QByteArrayData data[17];
+    char stringdata0[171];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -41,12 +41,20 @@ QT_MOC_LITERAL(6, 56, 16), // "initializeMatrix"
 QT_MOC_LITERAL(7, 73, 11), // "checkMatrix"
 QT_MOC_LITERAL(8, 85, 1), // "x"
 QT_MOC_LITERAL(9, 87, 1), // "z"
-QT_MOC_LITERAL(10, 89, 5) // "alpha"
+QT_MOC_LITERAL(10, 89, 5), // "alpha"
+QT_MOC_LITERAL(11, 95, 10), // "turnMethod"
+QT_MOC_LITERAL(12, 106, 25), // "RoboCompLaser::TLaserData"
+QT_MOC_LITERAL(13, 132, 5), // "ldata"
+QT_MOC_LITERAL(14, 138, 3), // "rot"
+QT_MOC_LITERAL(15, 142, 13), // "goAheadMethod"
+QT_MOC_LITERAL(16, 156, 14) // "checkDirection"
 
     },
     "SpecificWorker\0compute\0\0startup_check\0"
     "initialize\0period\0initializeMatrix\0"
-    "checkMatrix\0x\0z\0alpha"
+    "checkMatrix\0x\0z\0alpha\0turnMethod\0"
+    "RoboCompLaser::TLaserData\0ldata\0rot\0"
+    "goAheadMethod\0checkDirection"
 };
 #undef QT_MOC_LITERAL
 
@@ -56,7 +64,7 @@ static const uint qt_meta_data_SpecificWorker[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -64,11 +72,14 @@ static const uint qt_meta_data_SpecificWorker[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   39,    2, 0x0a /* Public */,
-       3,    0,   40,    2, 0x0a /* Public */,
-       4,    1,   41,    2, 0x0a /* Public */,
-       6,    0,   44,    2, 0x0a /* Public */,
-       7,    3,   45,    2, 0x0a /* Public */,
+       1,    0,   54,    2, 0x0a /* Public */,
+       3,    0,   55,    2, 0x0a /* Public */,
+       4,    1,   56,    2, 0x0a /* Public */,
+       6,    0,   59,    2, 0x0a /* Public */,
+       7,    3,   60,    2, 0x0a /* Public */,
+      11,    2,   67,    2, 0x0a /* Public */,
+      15,    0,   72,    2, 0x0a /* Public */,
+      16,    0,   73,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void,
@@ -76,6 +87,9 @@ static const uint qt_meta_data_SpecificWorker[] = {
     QMetaType::Void, QMetaType::Int,    5,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Float,    8,    9,   10,
+    QMetaType::Void, 0x80000000 | 12, QMetaType::Float,   13,   14,
+    QMetaType::Void,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -92,6 +106,9 @@ void SpecificWorker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 2: _t->initialize((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 3: _t->initializeMatrix(); break;
         case 4: _t->checkMatrix((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< float(*)>(_a[3]))); break;
+        case 5: _t->turnMethod((*reinterpret_cast< RoboCompLaser::TLaserData(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2]))); break;
+        case 6: _t->goAheadMethod(); break;
+        case 7: _t->checkDirection(); break;
         default: ;
         }
     }
@@ -126,13 +143,13 @@ int SpecificWorker::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 8)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 5;
+        _id -= 8;
     }
     return _id;
 }

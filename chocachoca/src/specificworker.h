@@ -52,12 +52,16 @@ public slots:
 	void initialize(int period);
 	void initializeMatrix();
 	void checkMatrix(int x, int z, float alpha);
+	void turnMethod(RoboCompLaser::TLaserData ldata, float rot);
+	void goAheadMethod();
+	void checkDirection();
 	
 private:
 	std::shared_ptr < InnerModel > innerModel;
 	bool startup_check_flag;
 	bool map[5000][5000];
 	vec vecinos[9];
+	int estado=0;
 
 };
 

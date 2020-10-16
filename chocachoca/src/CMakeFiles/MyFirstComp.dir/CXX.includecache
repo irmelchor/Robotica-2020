@@ -6,9 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/irene/robocomp/classes/qlog/qlog.h
+<<<<<<< HEAD
+/home/marta/robocomp/classes/qlog/qlog.cpp
+qlog.h
+/home/marta/robocomp/classes/qlog/qlog.h
+
+/home/marta/robocomp/classes/qlog/qlog.h
 config.h
-/home/irene/robocomp/classes/qlog/config.h
+/home/marta/robocomp/classes/qlog/config.h
+=======
+/home/salabeta/robocomp/classes/qlog/qlog.h
+config.h
+/home/salabeta/robocomp/classes/qlog/config.h
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 QtCore
 -
 iostream
@@ -20,7 +30,16 @@ boost/format.hpp
 boost/format.hpp
 -
 
+<<<<<<< HEAD
 /home/irene/robocomp/classes/rapplication/rapplication.h
+=======
+<<<<<<< HEAD
+/home/marta/robocomp/classes/rapplication/rapplication.cpp
+rapplication.h
+/home/marta/robocomp/classes/rapplication/rapplication.h
+
+/home/marta/robocomp/classes/rapplication/rapplication.h
+>>>>>>> 95b05364a8998872a527e09a441dbac65a3d49b1
 Ice/Ice.h
 -
 Ice/Application.h
@@ -30,13 +49,39 @@ IceUtil/IceUtil.h
 QtCore
 -
 
+<<<<<<< HEAD
 /home/irene/robocomp/classes/sigwatch/sigwatch.h
+=======
+/home/marta/robocomp/classes/sigwatch/sigwatch.cpp
+sys/socket.h
+-
+unistd.h
+-
+errno.h
+-
+QMap
+-
+QSocketNotifier
+-
+QDebug
+-
+sigwatch.h
+/home/marta/robocomp/classes/sigwatch/sigwatch.h
+moc_sigwatch.cpp
+/home/marta/robocomp/classes/sigwatch/moc_sigwatch.cpp
+
+/home/marta/robocomp/classes/sigwatch/sigwatch.h
+>>>>>>> 95b05364a8998872a527e09a441dbac65a3d49b1
 QObject
 -
 signal.h
 -
 
+<<<<<<< HEAD
 /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/CommonBehavior.cpp
+=======
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CommonBehavior.cpp
+>>>>>>> 95b05364a8998872a527e09a441dbac65a3d49b1
 CommonBehavior.h
 -
 IceUtil/PushDisableWarnings.h
@@ -54,7 +99,11 @@ Ice/OutputStream.h
 IceUtil/PopDisableWarnings.h
 -
 
+<<<<<<< HEAD
 /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/DifferentialRobot.cpp
+=======
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/DifferentialRobot.cpp
+>>>>>>> 95b05364a8998872a527e09a441dbac65a3d49b1
 DifferentialRobot.h
 -
 IceUtil/PushDisableWarnings.h
@@ -74,7 +123,11 @@ Ice/LocalException.h
 IceUtil/PopDisableWarnings.h
 -
 
+<<<<<<< HEAD
 /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/GenericBase.cpp
+=======
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/GenericBase.cpp
+>>>>>>> 95b05364a8998872a527e09a441dbac65a3d49b1
 GenericBase.h
 -
 IceUtil/PushDisableWarnings.h
@@ -94,7 +147,11 @@ Ice/LocalException.h
 IceUtil/PopDisableWarnings.h
 -
 
+<<<<<<< HEAD
 /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/Laser.cpp
+=======
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/Laser.cpp
+>>>>>>> 95b05364a8998872a527e09a441dbac65a3d49b1
 Laser.h
 -
 IceUtil/PushDisableWarnings.h
@@ -114,30 +171,49 @@ Ice/LocalException.h
 IceUtil/PopDisableWarnings.h
 -
 
+<<<<<<< HEAD
 /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/moc_genericmonitor.cpp
 genericmonitor.h
 /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/genericmonitor.h
+=======
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/moc_genericmonitor.cpp
+genericmonitor.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/genericmonitor.h
+>>>>>>> 95b05364a8998872a527e09a441dbac65a3d49b1
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
+<<<<<<< HEAD
 /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/moc_genericworker.cpp
 genericworker.h
 /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/genericworker.h
+=======
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/moc_genericworker.cpp
+genericworker.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/genericworker.h
+>>>>>>> 95b05364a8998872a527e09a441dbac65a3d49b1
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
+<<<<<<< HEAD
 /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/moc_specificmonitor.cpp
 specificmonitor.h
 /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/specificmonitor.h
+=======
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/moc_specificmonitor.cpp
+specificmonitor.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/specificmonitor.h
+>>>>>>> 95b05364a8998872a527e09a441dbac65a3d49b1
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
+<<<<<<< HEAD
 /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/moc_specificworker.cpp
 specificworker.h
 /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/specificworker.h
@@ -261,10 +337,142 @@ genericmonitor.h
 /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericmonitor.h
 
 /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificworker.cpp
+=======
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/moc_specificworker.cpp
+>>>>>>> 95b05364a8998872a527e09a441dbac65a3d49b1
 specificworker.h
-/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificworker.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/specificworker.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
 
-/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificworker.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/mocs_compilation.cpp
+EWIEGA46WW/moc_genericmonitor.cpp
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/moc_genericmonitor.cpp
+EWIEGA46WW/moc_genericworker.cpp
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/moc_genericworker.cpp
+EWIEGA46WW/moc_specificmonitor.cpp
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/moc_specificmonitor.cpp
+EWIEGA46WW/moc_specificworker.cpp
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/MyFirstComp_autogen/EWIEGA46WW/moc_specificworker.cpp
+
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/commonbehaviorI.cpp
+commonbehaviorI.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/commonbehaviorI.h
+
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/commonbehaviorI.h
+Ice/Ice.h
+-
+CommonBehavior.h
+-
+config.h
+-
+genericworker.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericworker.h
+genericmonitor.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericmonitor.h
+
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/config.h
+
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericmonitor.cpp
+genericmonitor.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericmonitor.h
+
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericmonitor.h
+Ice/Ice.h
+-
+QtCore
+-
+genericworker.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericworker.h
+config.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/config.h
+qlog/qlog.h
+-
+CommonBehavior.h
+-
+
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericworker.cpp
+genericworker.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericworker.h
+
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericworker.h
+config.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/config.h
+stdint.h
+-
+qlog/qlog.h
+-
+QtWidgets
+-
+QtGui
+-
+ui_mainUI.h
+-
+CommonBehavior.h
+-
+DifferentialRobot.h
+-
+GenericBase.h
+-
+Laser.h
+-
+
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/main.cpp
+signal.h
+-
+QtCore
+-
+QtGui
+-
+Ice/Ice.h
+-
+IceStorm/IceStorm.h
+-
+Ice/Application.h
+-
+rapplication/rapplication.h
+-
+sigwatch/sigwatch.h
+-
+qlog/qlog.h
+-
+config.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/config.h
+genericmonitor.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericmonitor.h
+genericworker.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericworker.h
+specificworker.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificworker.h
+specificmonitor.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificmonitor.h
+commonbehaviorI.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/commonbehaviorI.h
+GenericBase.h
+-
+
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificmonitor.cpp
+specificmonitor.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificmonitor.h
+
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificmonitor.h
+genericmonitor.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/genericmonitor.h
+
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificworker.cpp
+specificworker.h
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificworker.h
+
+/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificworker.h
+=======
+/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificworker.cpp
+specificworker.h
+/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificworker.h
+
+/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/specificworker.h
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 map
 -
 genericworker.h
@@ -580,6 +788,10 @@ boost/python.hpp
 boost/python/list.hpp
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
+qdebug.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent
 qcoreevent.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
@@ -591,6 +803,10 @@ qhash.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QList
 qlist.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QMap
+qmap.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QMargins
 qmargins.h
@@ -627,6 +843,10 @@ qsize.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QSizeF
 qsize.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QSocketNotifier
+qsocketnotifier.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsocketnotifier.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
 qstring.h
@@ -5570,6 +5790,14 @@ GenericBase.h
 IceUtil/UndefSysMacros.h
 -
 IceUtil/PopDisableWarnings.h
+-
+
+src/MyFirstComp_autogen/include/moc_sigwatch.cpp
+sigwatch/sigwatch.h
+src/MyFirstComp_autogen/include/sigwatch/sigwatch.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
 -
 
 src/config.h
