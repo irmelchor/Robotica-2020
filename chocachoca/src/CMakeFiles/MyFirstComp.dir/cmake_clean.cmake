@@ -12,9 +12,15 @@ file(REMOVE_RECURSE
   "CMakeFiles/MyFirstComp.dir/commonbehaviorI.cpp.o"
   "CMakeFiles/MyFirstComp.dir/genericmonitor.cpp.o"
   "CMakeFiles/MyFirstComp.dir/genericworker.cpp.o"
+<<<<<<< HEAD
   "CMakeFiles/MyFirstComp.dir/home/marta/robocomp/classes/qlog/qlog.cpp.o"
   "CMakeFiles/MyFirstComp.dir/home/marta/robocomp/classes/rapplication/rapplication.cpp.o"
   "CMakeFiles/MyFirstComp.dir/home/marta/robocomp/classes/sigwatch/sigwatch.cpp.o"
+=======
+  "CMakeFiles/MyFirstComp.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o"
+  "CMakeFiles/MyFirstComp.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o"
+  "CMakeFiles/MyFirstComp.dir/home/salabeta/robocomp/classes/sigwatch/sigwatch.cpp.o"
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
   "CMakeFiles/MyFirstComp.dir/main.cpp.o"
   "CMakeFiles/MyFirstComp.dir/specificmonitor.cpp.o"
   "CMakeFiles/MyFirstComp.dir/specificworker.cpp.o"

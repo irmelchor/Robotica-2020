@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/install/strip.dir
 /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/install/local.dir
 /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/install.dir
@@ -13,3 +14,20 @@
 /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/MyFirstComp.dir
 /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/ICES__home_marta_robocomp_components_Robotica-2020-Marene_chocachoca_src.dir
 /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/MyFirstComp_autogen.dir
+=======
+/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/install/strip.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/install/local.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/install.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/list_install_components.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/rebuild_cache.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/edit_cache.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/install/strip.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/install/local.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/install.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/list_install_components.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/rebuild_cache.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/edit_cache.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/MyFirstComp.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_chocachoca_src.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/MyFirstComp_autogen.dir
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff

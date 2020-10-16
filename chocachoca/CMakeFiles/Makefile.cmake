@@ -7,8 +7,13 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+<<<<<<< HEAD
   "/home/marta/robocomp/cmake/modules/qt.cmake"
   "/home/marta/robocomp/cmake/robocomp.cmake"
+=======
+  "/home/salabeta/robocomp/cmake/modules/qt.cmake"
+  "/home/salabeta/robocomp/cmake/robocomp.cmake"
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
   "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
@@ -185,6 +190,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/MyFirstComp.dir/DependInfo.cmake"
+<<<<<<< HEAD
   "src/CMakeFiles/ICES__home_marta_robocomp_components_Robotica-2020-Marene_chocachoca_src.dir/DependInfo.cmake"
+=======
+  "src/CMakeFiles/ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_chocachoca_src.dir/DependInfo.cmake"
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
   "src/CMakeFiles/MyFirstComp_autogen.dir/DependInfo.cmake"
   )

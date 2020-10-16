@@ -48,10 +48,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca
+=======
+CMAKE_SOURCE_DIR = /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +133,24 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(CMAKE_COMMAND) -E cmake_progress_start /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/progress.marks
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f CMakeFiles/Makefile2 src/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles 0
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(CMAKE_COMMAND) -E cmake_progress_start /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/src/CMakeFiles/progress.marks
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles 0
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : all
 
 # The main clean target
 clean:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +160,38 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/MyFirstComp.dir/rule:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/MyFirstComp.dir/rule
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/MyFirstComp.dir/rule
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : src/CMakeFiles/MyFirstComp.dir/rule
 
 # Convenience name for target.
@@ -168,6 +201,7 @@ MyFirstComp: src/CMakeFiles/MyFirstComp.dir/rule
 
 # fast build rule for target.
 MyFirstComp/fast:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/build
 .PHONY : MyFirstComp/fast
 
@@ -189,6 +223,29 @@ ICES__home_marta_robocomp_components_Robotica-2020-Marene_chocachoca_src/fast:
 # Convenience name for target.
 src/CMakeFiles/MyFirstComp_autogen.dir/rule:
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/MyFirstComp_autogen.dir/rule
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/build
+.PHONY : MyFirstComp/fast
+
+# Convenience name for target.
+src/CMakeFiles/ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_chocachoca_src.dir/rule:
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_chocachoca_src.dir/rule
+.PHONY : src/CMakeFiles/ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_chocachoca_src.dir/rule
+
+# Convenience name for target.
+ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_chocachoca_src: src/CMakeFiles/ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_chocachoca_src.dir/rule
+
+.PHONY : ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_chocachoca_src
+
+# fast build rule for target.
+ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_chocachoca_src/fast:
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_chocachoca_src.dir/build.make src/CMakeFiles/ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_chocachoca_src.dir/build
+.PHONY : ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_chocachoca_src/fast
+
+# Convenience name for target.
+src/CMakeFiles/MyFirstComp_autogen.dir/rule:
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/MyFirstComp_autogen.dir/rule
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : src/CMakeFiles/MyFirstComp_autogen.dir/rule
 
 # Convenience name for target.
@@ -198,7 +255,11 @@ MyFirstComp_autogen: src/CMakeFiles/MyFirstComp_autogen.dir/rule
 
 # fast build rule for target.
 MyFirstComp_autogen/fast:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp_autogen.dir/build.make src/CMakeFiles/MyFirstComp_autogen.dir/build
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp_autogen.dir/build.make src/CMakeFiles/MyFirstComp_autogen.dir/build
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : MyFirstComp_autogen/fast
 
 CommonBehavior.o: CommonBehavior.cpp.o
@@ -207,7 +268,11 @@ CommonBehavior.o: CommonBehavior.cpp.o
 
 # target to build an object file
 CommonBehavior.cpp.o:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/CommonBehavior.cpp.o
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/CommonBehavior.cpp.o
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : CommonBehavior.cpp.o
 
 CommonBehavior.i: CommonBehavior.cpp.i
@@ -216,7 +281,11 @@ CommonBehavior.i: CommonBehavior.cpp.i
 
 # target to preprocess a source file
 CommonBehavior.cpp.i:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/CommonBehavior.cpp.i
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/CommonBehavior.cpp.i
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : CommonBehavior.cpp.i
 
 CommonBehavior.s: CommonBehavior.cpp.s
@@ -225,7 +294,11 @@ CommonBehavior.s: CommonBehavior.cpp.s
 
 # target to generate assembly for a file
 CommonBehavior.cpp.s:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/CommonBehavior.cpp.s
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/CommonBehavior.cpp.s
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : CommonBehavior.cpp.s
 
 DifferentialRobot.o: DifferentialRobot.cpp.o
@@ -234,7 +307,11 @@ DifferentialRobot.o: DifferentialRobot.cpp.o
 
 # target to build an object file
 DifferentialRobot.cpp.o:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/DifferentialRobot.cpp.o
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/DifferentialRobot.cpp.o
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : DifferentialRobot.cpp.o
 
 DifferentialRobot.i: DifferentialRobot.cpp.i
@@ -243,7 +320,11 @@ DifferentialRobot.i: DifferentialRobot.cpp.i
 
 # target to preprocess a source file
 DifferentialRobot.cpp.i:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/DifferentialRobot.cpp.i
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/DifferentialRobot.cpp.i
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : DifferentialRobot.cpp.i
 
 DifferentialRobot.s: DifferentialRobot.cpp.s
@@ -252,7 +333,11 @@ DifferentialRobot.s: DifferentialRobot.cpp.s
 
 # target to generate assembly for a file
 DifferentialRobot.cpp.s:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/DifferentialRobot.cpp.s
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/DifferentialRobot.cpp.s
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : DifferentialRobot.cpp.s
 
 GenericBase.o: GenericBase.cpp.o
@@ -261,7 +346,11 @@ GenericBase.o: GenericBase.cpp.o
 
 # target to build an object file
 GenericBase.cpp.o:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/GenericBase.cpp.o
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/GenericBase.cpp.o
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : GenericBase.cpp.o
 
 GenericBase.i: GenericBase.cpp.i
@@ -270,7 +359,11 @@ GenericBase.i: GenericBase.cpp.i
 
 # target to preprocess a source file
 GenericBase.cpp.i:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/GenericBase.cpp.i
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/GenericBase.cpp.i
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : GenericBase.cpp.i
 
 GenericBase.s: GenericBase.cpp.s
@@ -279,7 +372,11 @@ GenericBase.s: GenericBase.cpp.s
 
 # target to generate assembly for a file
 GenericBase.cpp.s:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/GenericBase.cpp.s
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/GenericBase.cpp.s
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : GenericBase.cpp.s
 
 Laser.o: Laser.cpp.o
@@ -288,7 +385,11 @@ Laser.o: Laser.cpp.o
 
 # target to build an object file
 Laser.cpp.o:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/Laser.cpp.o
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/Laser.cpp.o
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : Laser.cpp.o
 
 Laser.i: Laser.cpp.i
@@ -297,7 +398,11 @@ Laser.i: Laser.cpp.i
 
 # target to preprocess a source file
 Laser.cpp.i:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/Laser.cpp.i
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/Laser.cpp.i
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : Laser.cpp.i
 
 Laser.s: Laser.cpp.s
@@ -306,7 +411,11 @@ Laser.s: Laser.cpp.s
 
 # target to generate assembly for a file
 Laser.cpp.s:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/Laser.cpp.s
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/Laser.cpp.s
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : Laser.cpp.s
 
 MyFirstComp_autogen/mocs_compilation.o: MyFirstComp_autogen/mocs_compilation.cpp.o
@@ -315,7 +424,11 @@ MyFirstComp_autogen/mocs_compilation.o: MyFirstComp_autogen/mocs_compilation.cpp
 
 # target to build an object file
 MyFirstComp_autogen/mocs_compilation.cpp.o:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/MyFirstComp_autogen/mocs_compilation.cpp.o
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/MyFirstComp_autogen/mocs_compilation.cpp.o
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : MyFirstComp_autogen/mocs_compilation.cpp.o
 
 MyFirstComp_autogen/mocs_compilation.i: MyFirstComp_autogen/mocs_compilation.cpp.i
@@ -324,7 +437,11 @@ MyFirstComp_autogen/mocs_compilation.i: MyFirstComp_autogen/mocs_compilation.cpp
 
 # target to preprocess a source file
 MyFirstComp_autogen/mocs_compilation.cpp.i:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/MyFirstComp_autogen/mocs_compilation.cpp.i
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/MyFirstComp_autogen/mocs_compilation.cpp.i
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : MyFirstComp_autogen/mocs_compilation.cpp.i
 
 MyFirstComp_autogen/mocs_compilation.s: MyFirstComp_autogen/mocs_compilation.cpp.s
@@ -333,7 +450,11 @@ MyFirstComp_autogen/mocs_compilation.s: MyFirstComp_autogen/mocs_compilation.cpp
 
 # target to generate assembly for a file
 MyFirstComp_autogen/mocs_compilation.cpp.s:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/MyFirstComp_autogen/mocs_compilation.cpp.s
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/MyFirstComp_autogen/mocs_compilation.cpp.s
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : MyFirstComp_autogen/mocs_compilation.cpp.s
 
 commonbehaviorI.o: commonbehaviorI.cpp.o
@@ -342,7 +463,11 @@ commonbehaviorI.o: commonbehaviorI.cpp.o
 
 # target to build an object file
 commonbehaviorI.cpp.o:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/commonbehaviorI.cpp.o
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/commonbehaviorI.cpp.o
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : commonbehaviorI.cpp.o
 
 commonbehaviorI.i: commonbehaviorI.cpp.i
@@ -351,7 +476,11 @@ commonbehaviorI.i: commonbehaviorI.cpp.i
 
 # target to preprocess a source file
 commonbehaviorI.cpp.i:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/commonbehaviorI.cpp.i
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/commonbehaviorI.cpp.i
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : commonbehaviorI.cpp.i
 
 commonbehaviorI.s: commonbehaviorI.cpp.s
@@ -360,7 +489,11 @@ commonbehaviorI.s: commonbehaviorI.cpp.s
 
 # target to generate assembly for a file
 commonbehaviorI.cpp.s:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/commonbehaviorI.cpp.s
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/commonbehaviorI.cpp.s
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : commonbehaviorI.cpp.s
 
 genericmonitor.o: genericmonitor.cpp.o
@@ -369,7 +502,11 @@ genericmonitor.o: genericmonitor.cpp.o
 
 # target to build an object file
 genericmonitor.cpp.o:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/genericmonitor.cpp.o
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/genericmonitor.cpp.o
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : genericmonitor.cpp.o
 
 genericmonitor.i: genericmonitor.cpp.i
@@ -378,7 +515,11 @@ genericmonitor.i: genericmonitor.cpp.i
 
 # target to preprocess a source file
 genericmonitor.cpp.i:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/genericmonitor.cpp.i
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/genericmonitor.cpp.i
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : genericmonitor.cpp.i
 
 genericmonitor.s: genericmonitor.cpp.s
@@ -387,7 +528,11 @@ genericmonitor.s: genericmonitor.cpp.s
 
 # target to generate assembly for a file
 genericmonitor.cpp.s:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/genericmonitor.cpp.s
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/genericmonitor.cpp.s
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : genericmonitor.cpp.s
 
 genericworker.o: genericworker.cpp.o
@@ -396,7 +541,11 @@ genericworker.o: genericworker.cpp.o
 
 # target to build an object file
 genericworker.cpp.o:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/genericworker.cpp.o
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/genericworker.cpp.o
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : genericworker.cpp.o
 
 genericworker.i: genericworker.cpp.i
@@ -405,7 +554,11 @@ genericworker.i: genericworker.cpp.i
 
 # target to preprocess a source file
 genericworker.cpp.i:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/genericworker.cpp.i
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/genericworker.cpp.i
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : genericworker.cpp.i
 
 genericworker.s: genericworker.cpp.s
@@ -414,6 +567,7 @@ genericworker.s: genericworker.cpp.s
 
 # target to generate assembly for a file
 genericworker.cpp.s:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/genericworker.cpp.s
 .PHONY : genericworker.cpp.s
 
@@ -497,6 +651,91 @@ home/marta/robocomp/classes/sigwatch/sigwatch.s: home/marta/robocomp/classes/sig
 home/marta/robocomp/classes/sigwatch/sigwatch.cpp.s:
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/home/marta/robocomp/classes/sigwatch/sigwatch.cpp.s
 .PHONY : home/marta/robocomp/classes/sigwatch/sigwatch.cpp.s
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/genericworker.cpp.s
+.PHONY : genericworker.cpp.s
+
+home/salabeta/robocomp/classes/qlog/qlog.o: home/salabeta/robocomp/classes/qlog/qlog.cpp.o
+
+.PHONY : home/salabeta/robocomp/classes/qlog/qlog.o
+
+# target to build an object file
+home/salabeta/robocomp/classes/qlog/qlog.cpp.o:
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o
+.PHONY : home/salabeta/robocomp/classes/qlog/qlog.cpp.o
+
+home/salabeta/robocomp/classes/qlog/qlog.i: home/salabeta/robocomp/classes/qlog/qlog.cpp.i
+
+.PHONY : home/salabeta/robocomp/classes/qlog/qlog.i
+
+# target to preprocess a source file
+home/salabeta/robocomp/classes/qlog/qlog.cpp.i:
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.i
+.PHONY : home/salabeta/robocomp/classes/qlog/qlog.cpp.i
+
+home/salabeta/robocomp/classes/qlog/qlog.s: home/salabeta/robocomp/classes/qlog/qlog.cpp.s
+
+.PHONY : home/salabeta/robocomp/classes/qlog/qlog.s
+
+# target to generate assembly for a file
+home/salabeta/robocomp/classes/qlog/qlog.cpp.s:
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.s
+.PHONY : home/salabeta/robocomp/classes/qlog/qlog.cpp.s
+
+home/salabeta/robocomp/classes/rapplication/rapplication.o: home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o
+
+.PHONY : home/salabeta/robocomp/classes/rapplication/rapplication.o
+
+# target to build an object file
+home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o:
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o
+.PHONY : home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o
+
+home/salabeta/robocomp/classes/rapplication/rapplication.i: home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i
+
+.PHONY : home/salabeta/robocomp/classes/rapplication/rapplication.i
+
+# target to preprocess a source file
+home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i:
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i
+.PHONY : home/salabeta/robocomp/classes/rapplication/rapplication.cpp.i
+
+home/salabeta/robocomp/classes/rapplication/rapplication.s: home/salabeta/robocomp/classes/rapplication/rapplication.cpp.s
+
+.PHONY : home/salabeta/robocomp/classes/rapplication/rapplication.s
+
+# target to generate assembly for a file
+home/salabeta/robocomp/classes/rapplication/rapplication.cpp.s:
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.s
+.PHONY : home/salabeta/robocomp/classes/rapplication/rapplication.cpp.s
+
+home/salabeta/robocomp/classes/sigwatch/sigwatch.o: home/salabeta/robocomp/classes/sigwatch/sigwatch.cpp.o
+
+.PHONY : home/salabeta/robocomp/classes/sigwatch/sigwatch.o
+
+# target to build an object file
+home/salabeta/robocomp/classes/sigwatch/sigwatch.cpp.o:
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/home/salabeta/robocomp/classes/sigwatch/sigwatch.cpp.o
+.PHONY : home/salabeta/robocomp/classes/sigwatch/sigwatch.cpp.o
+
+home/salabeta/robocomp/classes/sigwatch/sigwatch.i: home/salabeta/robocomp/classes/sigwatch/sigwatch.cpp.i
+
+.PHONY : home/salabeta/robocomp/classes/sigwatch/sigwatch.i
+
+# target to preprocess a source file
+home/salabeta/robocomp/classes/sigwatch/sigwatch.cpp.i:
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/home/salabeta/robocomp/classes/sigwatch/sigwatch.cpp.i
+.PHONY : home/salabeta/robocomp/classes/sigwatch/sigwatch.cpp.i
+
+home/salabeta/robocomp/classes/sigwatch/sigwatch.s: home/salabeta/robocomp/classes/sigwatch/sigwatch.cpp.s
+
+.PHONY : home/salabeta/robocomp/classes/sigwatch/sigwatch.s
+
+# target to generate assembly for a file
+home/salabeta/robocomp/classes/sigwatch/sigwatch.cpp.s:
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/home/salabeta/robocomp/classes/sigwatch/sigwatch.cpp.s
+.PHONY : home/salabeta/robocomp/classes/sigwatch/sigwatch.cpp.s
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 
 main.o: main.cpp.o
 
@@ -504,7 +743,11 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/main.cpp.o
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/main.cpp.o
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -513,7 +756,11 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/main.cpp.i
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/main.cpp.i
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -522,7 +769,11 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/main.cpp.s
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/main.cpp.s
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : main.cpp.s
 
 specificmonitor.o: specificmonitor.cpp.o
@@ -531,7 +782,11 @@ specificmonitor.o: specificmonitor.cpp.o
 
 # target to build an object file
 specificmonitor.cpp.o:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/specificmonitor.cpp.o
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/specificmonitor.cpp.o
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : specificmonitor.cpp.o
 
 specificmonitor.i: specificmonitor.cpp.i
@@ -540,7 +795,11 @@ specificmonitor.i: specificmonitor.cpp.i
 
 # target to preprocess a source file
 specificmonitor.cpp.i:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/specificmonitor.cpp.i
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/specificmonitor.cpp.i
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : specificmonitor.cpp.i
 
 specificmonitor.s: specificmonitor.cpp.s
@@ -549,7 +808,11 @@ specificmonitor.s: specificmonitor.cpp.s
 
 # target to generate assembly for a file
 specificmonitor.cpp.s:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/specificmonitor.cpp.s
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/specificmonitor.cpp.s
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : specificmonitor.cpp.s
 
 specificworker.o: specificworker.cpp.o
@@ -558,7 +821,11 @@ specificworker.o: specificworker.cpp.o
 
 # target to build an object file
 specificworker.cpp.o:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/specificworker.cpp.o
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/specificworker.cpp.o
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : specificworker.cpp.o
 
 specificworker.i: specificworker.cpp.i
@@ -567,7 +834,11 @@ specificworker.i: specificworker.cpp.i
 
 # target to preprocess a source file
 specificworker.cpp.i:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/specificworker.cpp.i
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/specificworker.cpp.i
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : specificworker.cpp.i
 
 specificworker.s: specificworker.cpp.s
@@ -576,7 +847,11 @@ specificworker.s: specificworker.cpp.s
 
 # target to generate assembly for a file
 specificworker.cpp.s:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/specificworker.cpp.s
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(MAKE) -f src/CMakeFiles/MyFirstComp.dir/build.make src/CMakeFiles/MyFirstComp.dir/specificworker.cpp.s
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : specificworker.cpp.s
 
 # Help Target
@@ -592,7 +867,11 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... MyFirstComp"
+<<<<<<< HEAD
 	@echo "... ICES__home_marta_robocomp_components_Robotica-2020-Marene_chocachoca_src"
+=======
+	@echo "... ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_chocachoca_src"
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 	@echo "... MyFirstComp_autogen"
 	@echo "... CommonBehavior.o"
 	@echo "... CommonBehavior.i"
@@ -618,6 +897,7 @@ help:
 	@echo "... genericworker.o"
 	@echo "... genericworker.i"
 	@echo "... genericworker.s"
+<<<<<<< HEAD
 	@echo "... home/marta/robocomp/classes/qlog/qlog.o"
 	@echo "... home/marta/robocomp/classes/qlog/qlog.i"
 	@echo "... home/marta/robocomp/classes/qlog/qlog.s"
@@ -627,6 +907,17 @@ help:
 	@echo "... home/marta/robocomp/classes/sigwatch/sigwatch.o"
 	@echo "... home/marta/robocomp/classes/sigwatch/sigwatch.i"
 	@echo "... home/marta/robocomp/classes/sigwatch/sigwatch.s"
+=======
+	@echo "... home/salabeta/robocomp/classes/qlog/qlog.o"
+	@echo "... home/salabeta/robocomp/classes/qlog/qlog.i"
+	@echo "... home/salabeta/robocomp/classes/qlog/qlog.s"
+	@echo "... home/salabeta/robocomp/classes/rapplication/rapplication.o"
+	@echo "... home/salabeta/robocomp/classes/rapplication/rapplication.i"
+	@echo "... home/salabeta/robocomp/classes/rapplication/rapplication.s"
+	@echo "... home/salabeta/robocomp/classes/sigwatch/sigwatch.o"
+	@echo "... home/salabeta/robocomp/classes/sigwatch/sigwatch.i"
+	@echo "... home/salabeta/robocomp/classes/sigwatch/sigwatch.s"
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -647,6 +938,10 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+<<<<<<< HEAD
 	cd /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+=======
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
 .PHONY : cmake_check_build_system
 
