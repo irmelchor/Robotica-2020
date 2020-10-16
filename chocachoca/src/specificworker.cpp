@@ -131,7 +131,7 @@ void SpecificWorker::checkMatrix(int x, int z, float alpha)
 
 void SpecificWorker::compute()
 {
- const float threshold = 200; // 200 millimeters
+ const float threshold = 300; // 200 millimeters
     float rot = 0.6; //0.6  // rads per second
 	
 	initializeMatrix();
