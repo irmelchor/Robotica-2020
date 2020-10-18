@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_SpecificWorker_t {
-    QByteArrayData data[17];
-    char stringdata0[166];
+    QByteArrayData data[16];
+    char stringdata0[152];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -37,24 +37,23 @@ QT_MOC_LITERAL(2, 23, 0), // ""
 QT_MOC_LITERAL(3, 24, 13), // "startup_check"
 QT_MOC_LITERAL(4, 38, 10), // "initialize"
 QT_MOC_LITERAL(5, 49, 6), // "period"
-QT_MOC_LITERAL(6, 56, 13), // "goAheadMethod"
-QT_MOC_LITERAL(7, 70, 16), // "initializeMatrix"
-QT_MOC_LITERAL(8, 87, 11), // "checkMatrix"
-QT_MOC_LITERAL(9, 99, 1), // "x"
-QT_MOC_LITERAL(10, 101, 1), // "z"
-QT_MOC_LITERAL(11, 103, 5), // "alpha"
-QT_MOC_LITERAL(12, 109, 10), // "turnMethod"
-QT_MOC_LITERAL(13, 120, 25), // "RoboCompLaser::TLaserData"
-QT_MOC_LITERAL(14, 146, 5), // "ldata"
-QT_MOC_LITERAL(15, 152, 3), // "rot"
-QT_MOC_LITERAL(16, 156, 9) // "threshold"
+QT_MOC_LITERAL(6, 56, 16), // "initializeMatrix"
+QT_MOC_LITERAL(7, 73, 11), // "checkMatrix"
+QT_MOC_LITERAL(8, 85, 1), // "x"
+QT_MOC_LITERAL(9, 87, 1), // "z"
+QT_MOC_LITERAL(10, 89, 5), // "alpha"
+QT_MOC_LITERAL(11, 95, 10), // "turnMethod"
+QT_MOC_LITERAL(12, 106, 25), // "RoboCompLaser::TLaserData"
+QT_MOC_LITERAL(13, 132, 5), // "ldata"
+QT_MOC_LITERAL(14, 138, 3), // "rot"
+QT_MOC_LITERAL(15, 142, 9) // "threshold"
 
     },
     "SpecificWorker\0compute\0\0startup_check\0"
-    "initialize\0period\0goAheadMethod\0"
-    "initializeMatrix\0checkMatrix\0x\0z\0alpha\0"
-    "turnMethod\0RoboCompLaser::TLaserData\0"
-    "ldata\0rot\0threshold"
+    "initialize\0period\0initializeMatrix\0"
+    "checkMatrix\0x\0z\0alpha\0turnMethod\0"
+    "RoboCompLaser::TLaserData\0ldata\0rot\0"
+    "threshold"
 };
 #undef QT_MOC_LITERAL
 
@@ -64,7 +63,7 @@ static const uint qt_meta_data_SpecificWorker[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       7,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -72,22 +71,20 @@ static const uint qt_meta_data_SpecificWorker[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   49,    2, 0x0a /* Public */,
-       3,    0,   50,    2, 0x0a /* Public */,
-       4,    1,   51,    2, 0x0a /* Public */,
-       6,    0,   54,    2, 0x0a /* Public */,
-       7,    0,   55,    2, 0x0a /* Public */,
-       8,    3,   56,    2, 0x0a /* Public */,
-      12,    3,   63,    2, 0x0a /* Public */,
+       1,    0,   44,    2, 0x0a /* Public */,
+       3,    0,   45,    2, 0x0a /* Public */,
+       4,    1,   46,    2, 0x0a /* Public */,
+       6,    0,   49,    2, 0x0a /* Public */,
+       7,    3,   50,    2, 0x0a /* Public */,
+      11,    3,   57,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Int,
     QMetaType::Void, QMetaType::Int,    5,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Float,    9,   10,   11,
-    QMetaType::Void, 0x80000000 | 13, QMetaType::Float, QMetaType::Float,   14,   15,   16,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::Float,    8,    9,   10,
+    QMetaType::Void, 0x80000000 | 12, QMetaType::Float, QMetaType::Float,   13,   14,   15,
 
        0        // eod
 };
@@ -102,10 +99,9 @@ void SpecificWorker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 1: { int _r = _t->startup_check();
             if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
         case 2: _t->initialize((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 3: _t->goAheadMethod(); break;
-        case 4: _t->initializeMatrix(); break;
-        case 5: _t->checkMatrix((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< float(*)>(_a[3]))); break;
-        case 6: _t->turnMethod((*reinterpret_cast< RoboCompLaser::TLaserData(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2])),(*reinterpret_cast< float(*)>(_a[3]))); break;
+        case 3: _t->initializeMatrix(); break;
+        case 4: _t->checkMatrix((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< float(*)>(_a[3]))); break;
+        case 5: _t->turnMethod((*reinterpret_cast< RoboCompLaser::TLaserData(*)>(_a[1])),(*reinterpret_cast< float(*)>(_a[2])),(*reinterpret_cast< float(*)>(_a[3]))); break;
         default: ;
         }
     }
@@ -140,13 +136,13 @@ int SpecificWorker::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
+        if (_id < 6)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 7;
+        _id -= 6;
     }
     return _id;
 }

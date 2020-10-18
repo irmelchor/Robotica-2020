@@ -50,7 +50,7 @@ public slots:
 	void compute();
 	int startup_check();
 	void initialize(int period);
-	void goAheadMethod();
+	//void goAheadMethod();
 	void initializeMatrix();
 	void checkMatrix(int x, int z, float alpha);
 	void turnMethod(RoboCompLaser::TLaserData ldata, float rot, float threshold);

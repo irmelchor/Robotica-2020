@@ -78,6 +78,7 @@ void SpecificWorker::checkMatrix(int x, int z, float alpha)
 {
 	x = x + 2500;
 	z = z + 2500;
+	bool enc=false;
 
 	vec vecinos[8] = {
 		vecinos[0] = {x - 1, z - 1},
@@ -93,13 +94,15 @@ void SpecificWorker::checkMatrix(int x, int z, float alpha)
 	{
 		map[x][z] = true;
 
-		for (int k = 0; k < 8; k++)
+		for (int k = 0; k < 8 && !enc; k++)
 		{
-			if (map[x][z] != map[vecinos[k].v1][vecinos[k].v2])
+			if (map[x][z] != map[vecinos[k].v1][vecinos[k].v2]){
 				differentialrobot_proxy->setSpeedBase(500, 0.8);
-			else
+				enc=true;
+			}else{
 				//goAheadMethod();
 				differentialrobot_proxy->setSpeedBase(1000, 0);
+			}
 		}
 	}
 	else
@@ -112,14 +115,14 @@ void SpecificWorker::checkMatrix(int x, int z, float alpha)
 void SpecificWorker::turnMethod(RoboCompLaser::TLaserData ldata, float rot, float threshold)
 {
 
-	if (ldata.front().dist < threshold)
+	if (ldata.front().dist <= threshold)
 	{
 		 srand(time(NULL));
 	     rot = (rand() % (1570-0000)) / 1000.0; //angulo aleatorio de 90grados como maximo y 3 decimales.
-		 		std::cout << "ROT: " <<rot << std::endl;
+		 	//std::cout << "ROT: " <<rot << std::endl;
 
 	 
-		std::cout << "DISTANCIA " << ldata.front().dist << std::endl;
+		//std::cout << "DISTANCIA " << ldata.front().dist << std::endl;
 		differentialrobot_proxy->setSpeedBase(5, rot);
 		usleep(rand() % (1500000 - 100000 + 1) + 100000); // random wait between 1.5s and 0.1sec
 
