@@ -98,7 +98,8 @@ void SpecificWorker::checkMatrix(int x, int z, float alpha)
 			if (map[x][z] != map[vecinos[k].v1][vecinos[k].v2])
 				differentialrobot_proxy->setSpeedBase(500, 0.8);
 			else
-				goAheadMethod();
+				//goAheadMethod();
+				differentialrobot_proxy->setSpeedBase(1000, 0);
 		}
 	}
 	else
@@ -129,18 +130,23 @@ void SpecificWorker::turnMethod(RoboCompLaser::TLaserData ldata, float rot, floa
 	}
 	else
 	{
-		goAheadMethod();
+		//goAheadMethod();
+		differentialrobot_proxy->setSpeedBase(1000, 0);
+
 	}
 
 	 
 }
 
+
 //Metodo que sirve para avanzar hacia delante
+/*
 void SpecificWorker::goAheadMethod()
 {
 
 	differentialrobot_proxy->setSpeedBase(1000, 0);
 }
+*/
 
 void SpecificWorker::compute()
 {
