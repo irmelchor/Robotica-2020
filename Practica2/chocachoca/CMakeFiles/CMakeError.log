@@ -1,0 +1,442 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6c082/fast && /usr/bin/make -f CMakeFiles/cmTC_6c082.dir/build.make CMakeFiles/cmTC_6c082.dir/build
+make[1]: se entra en el directorio '/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6c082.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_6c082.dir/src.c.o   -c /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6c082
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c082.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_6c082.dir/src.c.o  -o cmTC_6c082 
+/usr/bin/ld: CMakeFiles/cmTC_6c082.dir/src.c.o: en la función `main':
+src.c:(.text+0x46): referencia a `pthread_create' sin definir
+/usr/bin/ld: src.c:(.text+0x52): referencia a `pthread_detach' sin definir
+/usr/bin/ld: src.c:(.text+0x63): referencia a `pthread_join' sin definir
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_6c082.dir/build.make:87: cmTC_6c082] Error 1
+make[1]: se sale del directorio '/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_6c082/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a7973/fast && /usr/bin/make -f CMakeFiles/cmTC_a7973.dir/build.make CMakeFiles/cmTC_a7973.dir/build
+make[1]: se entra en el directorio '/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a7973.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a7973.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a7973
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7973.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_a7973.dir/CheckFunctionExists.c.o  -o cmTC_a7973  -lpthreads 
+/usr/bin/ld: no se puede encontrar -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a7973.dir/build.make:87: cmTC_a7973] Error 1
+make[1]: se sale del directorio '/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_a7973/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+<<<<<<< HEAD
+Change Dir: /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ab510/fast && /usr/bin/make -f CMakeFiles/cmTC_ab510.dir/build.make CMakeFiles/cmTC_ab510.dir/build
+make[1]: se entra en el directorio '/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ab510.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_ab510.dir/src.c.o   -c /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_ab510
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ab510.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_ab510.dir/src.c.o  -o cmTC_ab510 
+/usr/bin/ld: CMakeFiles/cmTC_ab510.dir/src.c.o: en la función `main':
+=======
+Change Dir: /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7b40e/fast && /usr/bin/make -f CMakeFiles/cmTC_7b40e.dir/build.make CMakeFiles/cmTC_7b40e.dir/build
+make[1]: se entra en el directorio '/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7b40e.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_7b40e.dir/src.c.o   -c /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_7b40e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7b40e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_7b40e.dir/src.c.o  -o cmTC_7b40e 
+/usr/bin/ld: CMakeFiles/cmTC_7b40e.dir/src.c.o: en la función `main':
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
+src.c:(.text+0x46): referencia a `pthread_create' sin definir
+/usr/bin/ld: src.c:(.text+0x52): referencia a `pthread_detach' sin definir
+/usr/bin/ld: src.c:(.text+0x63): referencia a `pthread_join' sin definir
+collect2: error: ld returned 1 exit status
+<<<<<<< HEAD
+make[1]: *** [CMakeFiles/cmTC_ab510.dir/build.make:87: cmTC_ab510] Error 1
+make[1]: se sale del directorio '/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_ab510/fast] Error 2
+=======
+make[1]: *** [CMakeFiles/cmTC_7b40e.dir/build.make:87: cmTC_7b40e] Error 1
+make[1]: se sale del directorio '/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_7b40e/fast] Error 2
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+<<<<<<< HEAD
+Change Dir: /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b0fbc/fast && /usr/bin/make -f CMakeFiles/cmTC_b0fbc.dir/build.make CMakeFiles/cmTC_b0fbc.dir/build
+make[1]: se entra en el directorio '/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b0fbc.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b0fbc.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b0fbc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b0fbc.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_b0fbc.dir/CheckFunctionExists.c.o  -o cmTC_b0fbc  -lpthreads 
+/usr/bin/ld: no se puede encontrar -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_b0fbc.dir/build.make:87: cmTC_b0fbc] Error 1
+make[1]: se sale del directorio '/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_b0fbc/fast] Error 2
+=======
+Change Dir: /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d4417/fast && /usr/bin/make -f CMakeFiles/cmTC_d4417.dir/build.make CMakeFiles/cmTC_d4417.dir/build
+make[1]: se entra en el directorio '/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d4417.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d4417.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d4417
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4417.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_d4417.dir/CheckFunctionExists.c.o  -o cmTC_d4417  -lpthreads 
+/usr/bin/ld: no se puede encontrar -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_d4417.dir/build.make:87: cmTC_d4417] Error 1
+make[1]: se sale del directorio '/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_d4417/fast] Error 2
+>>>>>>> f5136dc37e23032504b5654fdce499a68b9d60ff
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7160e/fast && /usr/bin/make -f CMakeFiles/cmTC_7160e.dir/build.make CMakeFiles/cmTC_7160e.dir/build
+make[1]: se entra en el directorio '/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7160e.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_7160e.dir/src.c.o   -c /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_7160e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7160e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_7160e.dir/src.c.o  -o cmTC_7160e 
+/usr/bin/ld: CMakeFiles/cmTC_7160e.dir/src.c.o: en la función `main':
+src.c:(.text+0x46): referencia a `pthread_create' sin definir
+/usr/bin/ld: src.c:(.text+0x52): referencia a `pthread_detach' sin definir
+/usr/bin/ld: src.c:(.text+0x63): referencia a `pthread_join' sin definir
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_7160e.dir/build.make:87: cmTC_7160e] Error 1
+make[1]: se sale del directorio '/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_7160e/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b6312/fast && /usr/bin/make -f CMakeFiles/cmTC_b6312.dir/build.make CMakeFiles/cmTC_b6312.dir/build
+make[1]: se entra en el directorio '/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b6312.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b6312.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b6312
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b6312.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_b6312.dir/CheckFunctionExists.c.o  -o cmTC_b6312  -lpthreads 
+/usr/bin/ld: no se puede encontrar -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_b6312.dir/build.make:87: cmTC_b6312] Error 1
+make[1]: se sale del directorio '/home/irene/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_b6312/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_01a81/fast && /usr/bin/make -f CMakeFiles/cmTC_01a81.dir/build.make CMakeFiles/cmTC_01a81.dir/build
+make[1]: se entra en el directorio '/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_01a81.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_01a81.dir/src.c.o   -c /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_01a81
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01a81.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_01a81.dir/src.c.o  -o cmTC_01a81 
+/usr/bin/ld: CMakeFiles/cmTC_01a81.dir/src.c.o: en la función `main':
+src.c:(.text+0x46): referencia a `pthread_create' sin definir
+/usr/bin/ld: src.c:(.text+0x52): referencia a `pthread_detach' sin definir
+/usr/bin/ld: src.c:(.text+0x63): referencia a `pthread_join' sin definir
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_01a81.dir/build.make:87: cmTC_01a81] Error 1
+make[1]: se sale del directorio '/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_01a81/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_dcfb8/fast && /usr/bin/make -f CMakeFiles/cmTC_dcfb8.dir/build.make CMakeFiles/cmTC_dcfb8.dir/build
+make[1]: se entra en el directorio '/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dcfb8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_dcfb8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_dcfb8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dcfb8.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_dcfb8.dir/CheckFunctionExists.c.o  -o cmTC_dcfb8  -lpthreads 
+/usr/bin/ld: no se puede encontrar -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_dcfb8.dir/build.make:87: cmTC_dcfb8] Error 1
+make[1]: se sale del directorio '/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_dcfb8/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5abe5/fast && /usr/bin/make -f CMakeFiles/cmTC_5abe5.dir/build.make CMakeFiles/cmTC_5abe5.dir/build
+make[1]: se entra en el directorio '/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5abe5.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_5abe5.dir/src.c.o   -c /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_5abe5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5abe5.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_5abe5.dir/src.c.o  -o cmTC_5abe5 
+/usr/bin/ld: CMakeFiles/cmTC_5abe5.dir/src.c.o: en la función `main':
+src.c:(.text+0x46): referencia a `pthread_create' sin definir
+/usr/bin/ld: src.c:(.text+0x52): referencia a `pthread_detach' sin definir
+/usr/bin/ld: src.c:(.text+0x63): referencia a `pthread_join' sin definir
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_5abe5.dir/build.make:87: cmTC_5abe5] Error 1
+make[1]: se sale del directorio '/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_5abe5/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e0201/fast && /usr/bin/make -f CMakeFiles/cmTC_e0201.dir/build.make CMakeFiles/cmTC_e0201.dir/build
+make[1]: se entra en el directorio '/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e0201.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e0201.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e0201
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e0201.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_e0201.dir/CheckFunctionExists.c.o  -o cmTC_e0201  -lpthreads 
+/usr/bin/ld: no se puede encontrar -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e0201.dir/build.make:87: cmTC_e0201] Error 1
+make[1]: se sale del directorio '/home/marta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_e0201/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_35089/fast && /usr/bin/make -f CMakeFiles/cmTC_35089.dir/build.make CMakeFiles/cmTC_35089.dir/build
+make[1]: se entra en el directorio '/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_35089.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_35089.dir/src.c.o   -c /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_35089
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_35089.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_35089.dir/src.c.o  -o cmTC_35089 
+/usr/bin/ld: CMakeFiles/cmTC_35089.dir/src.c.o: en la función `main':
+src.c:(.text+0x46): referencia a `pthread_create' sin definir
+/usr/bin/ld: src.c:(.text+0x52): referencia a `pthread_detach' sin definir
+/usr/bin/ld: src.c:(.text+0x63): referencia a `pthread_join' sin definir
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_35089.dir/build.make:87: cmTC_35089] Error 1
+make[1]: se sale del directorio '/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_35089/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e3e20/fast && /usr/bin/make -f CMakeFiles/cmTC_e3e20.dir/build.make CMakeFiles/cmTC_e3e20.dir/build
+make[1]: se entra en el directorio '/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e3e20.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e3e20.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e3e20
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e3e20.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_e3e20.dir/CheckFunctionExists.c.o  -o cmTC_e3e20  -lpthreads 
+/usr/bin/ld: no se puede encontrar -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e3e20.dir/build.make:87: cmTC_e3e20] Error 1
+make[1]: se sale del directorio '/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_e3e20/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_04677/fast && /usr/bin/make -f CMakeFiles/cmTC_04677.dir/build.make CMakeFiles/cmTC_04677.dir/build
+make[1]: se entra en el directorio '/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_04677.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_04677.dir/src.c.o   -c /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_04677
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_04677.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_04677.dir/src.c.o  -o cmTC_04677 
+/usr/bin/ld: CMakeFiles/cmTC_04677.dir/src.c.o: en la función `main':
+src.c:(.text+0x46): referencia a `pthread_create' sin definir
+/usr/bin/ld: src.c:(.text+0x52): referencia a `pthread_detach' sin definir
+/usr/bin/ld: src.c:(.text+0x63): referencia a `pthread_join' sin definir
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_04677.dir/build.make:87: cmTC_04677] Error 1
+make[1]: se sale del directorio '/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_04677/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_07a1f/fast && /usr/bin/make -f CMakeFiles/cmTC_07a1f.dir/build.make CMakeFiles/cmTC_07a1f.dir/build
+make[1]: se entra en el directorio '/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_07a1f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_07a1f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_07a1f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07a1f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_07a1f.dir/CheckFunctionExists.c.o  -o cmTC_07a1f  -lpthreads 
+/usr/bin/ld: no se puede encontrar -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_07a1f.dir/build.make:87: cmTC_07a1f] Error 1
+make[1]: se sale del directorio '/home/salabeta/robocomp/components/Robotica-2020-Marene/chocachoca/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_07a1f/fast] Error 2
+
+
+
