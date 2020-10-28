@@ -1,5 +1,5 @@
 /*
- *    Copyright (C) 2020 by Marta García Tornero, Irene Melchor Félix
+ *    Copyright (C) 2020 by YOUR NAME HERE
  *
  *    This file is part of RoboComp
  *
@@ -36,15 +36,20 @@ SpecificWorker::~SpecificWorker()
 
 bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 {
-	//	THE FOLLOWING IS JUST AN EXAMPLE
-	//	To use innerModelPath parameter you should uncomment specificmonitor.cpp readConfig method content
-	//	try
-	//	{
-	//		RoboCompCommonBehavior::Parameter par = params.at("InnerModelPath");
-	//		std::string innermodel_path = par.value;
-	//		innerModel = std::make_shared(innermodel_path);
-	//	}
-	//	catch(const std::exception &e) { qFatal("Error reading config params"); }
+//	THE FOLLOWING IS JUST AN EXAMPLE
+//	To use innerModelPath parameter you should uncomment specificmonitor.cpp readConfig method content
+//	try
+//	{
+//		RoboCompCommonBehavior::Parameter par = params.at("InnerModelPath");
+//		std::string innermodel_path = par.value;
+//		innerModel = std::make_shared(innermodel_path);
+//	}
+//	catch(const std::exception &e) { qFatal("Error reading config params"); }
+
+
+
+
+
 
 	return true;
 }
@@ -53,7 +58,7 @@ void SpecificWorker::initialize(int period)
 {
 	std::cout << "Initialize worker" << std::endl;
 	this->Period = period;
-	if (this->startup_check_flag)
+	if(this->startup_check_flag)
 	{
 		this->startup_check();
 	}
@@ -61,40 +66,25 @@ void SpecificWorker::initialize(int period)
 	{
 		timer.start(Period);
 	}
+
 }
 
 void SpecificWorker::compute()
 {
 	//computeCODE
-	QMutexLocker locker(mutex);
-
-	try
-	{
-		RoboCompDifferentialRobot::TBaseState bState;
-		differentialrobot_proxy->getBaseState(bState);
-		if(target.active){
-			//Debemos calcular deltaRot1, 2 s
-			//deltaRot1: angulo que alinea el robot con la direccion del objetivo
-			//deltaRot2: distancia actual al objetivo
-			float deltaRot1, deltaRot2;
-			float coord = target.get();
-			deltaRot2=bState.alpha;
-
-
-		}
-
-
-
-
-
-		//  camera_proxy->getYImage(0,img, cState, bState);
-		//  memcpy(image_gray.data, &img[0], m_width*m_height*sizeof(uchar));
-		//  searchTags(image_gray);
-	}
-	catch (const Ice::Exception &e)
-	{
-		//  std::cout << "Error reading from Camera" << e << std::endl;
-	}
+	//QMutexLocker locker(mutex);
+	//try
+	//{
+	//  camera_proxy->getYImage(0,img, cState, bState);
+	//  memcpy(image_gray.data, &img[0], m_width*m_height*sizeof(uchar));
+	//  searchTags(image_gray);
+	//}
+	//catch(const Ice::Exception &e)
+	//{
+	//  std::cout << "Error reading from Camera" << e << std::endl;
+	//}
+	
+	
 }
 
 int SpecificWorker::startup_check()
@@ -104,12 +94,15 @@ int SpecificWorker::startup_check()
 	return 0;
 }
 
+
 //SUBSCRIPTION to setPick method from RCISMousePicker interface
 void SpecificWorker::RCISMousePicker_setPick(RoboCompRCISMousePicker::Pick myPick)
 {
-	std::cout<< "PRESSED ON: X: " << myPick.x << " Y: " << myPick.y;
-	target.put(myPick.x, myPick.y);
+//subscribesToCODE
+
 }
+
+
 
 /**************************************/
 // From the RoboCompDifferentialRobot you can call this methods:
@@ -140,3 +133,4 @@ void SpecificWorker::RCISMousePicker_setPick(RoboCompRCISMousePicker::Pick myPic
 /**************************************/
 // From the RoboCompRCISMousePicker you can use this types:
 // RoboCompRCISMousePicker::Pick
+
