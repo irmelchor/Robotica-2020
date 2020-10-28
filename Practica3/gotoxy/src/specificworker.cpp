@@ -65,36 +65,33 @@ void SpecificWorker::initialize(int period)
 
 void SpecificWorker::compute()
 {
-	//computeCODE
-	QMutexLocker locker(mutex);
-
 	try
 	{
-		RoboCompDifferentialRobot::TBaseState bState;
-		differentialrobot_proxy->getBaseState(bState);
-		if(target.active){
-			//Debemos calcular deltaRot1, 2 s
-			//deltaRot1: angulo que alinea el robot con la direccion del objetivo
-			//deltaRot2: distancia actual al objetivo
-			float deltaRot1, deltaRot2;
-			float coord = target.get();
-			deltaRot2=bState.alpha;
-
-
-		}
-
-
-
-
-
-		//  camera_proxy->getYImage(0,img, cState, bState);
-		//  memcpy(image_gray.data, &img[0], m_width*m_height*sizeof(uchar));
-		//  searchTags(image_gray);
+      RoboCompGenericBase::TBaseState bState;
+      differentialrobot_proxy->getBaseState(bState);
 	}
 	catch (const Ice::Exception &e)
-	{
-		//  std::cout << "Error reading from Camera" << e << std::endl;
-	}
+	{  std::cout << "Error reading from Camera" << e << std::endl;}
+
+	 if(auto t_o = target.get() ; t_o.has_value()) { //Si bandera activa, obtenemos valores
+         auto tw = t_o;
+         auto rw = Eigen::Vector2f(bState.x, bState.z);
+         Eigen::Matrix2f() rot;
+         rot << cos(bState.alpha), sin(bState.alpha), -sin(bState.alpha), cos(bState.alpha);
+
+         auto tr = rot * (tw - rw); // TARGET EN EL ROBOT
+         auto beta = atan2(tr.x(), tr.y()); //Angulo
+         std::cout << tw << " " << rw << " " << rot << " " << beta << std::endl;
+         auto dist = tr.norm(); //Distancia a recorrer
+
+         /*switch () {
+             case State::GIRAR:
+                 //mientras fabs beta > 0.05
+             case State::AVANZAR:
+                 //mientaad dist > 30
+         }*/
+     }
+
 }
 
 int SpecificWorker::startup_check()
@@ -108,7 +105,7 @@ int SpecificWorker::startup_check()
 void SpecificWorker::RCISMousePicker_setPick(RoboCompRCISMousePicker::Pick myPick)
 {
 	std::cout<< "PRESSED ON: X: " << myPick.x << " Y: " << myPick.y;
-	target.put(myPick.x, myPick.y);
+	target.put(Eigen::Vector2f(myPick.x, myPick.y));
 }
 
 /**************************************/

@@ -1,61 +1,61 @@
 {
-	"BUILD_DIR" : "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/gotoxy_autogen",
-	"CMAKE_BINARY_DIR" : "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src",
+	"BUILD_DIR" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/gotoxy_autogen",
+	"CMAKE_BINARY_DIR" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
-	"CMAKE_SOURCE_DIR" : "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy",
+	"CMAKE_SOURCE_DIR" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy",
 	"HEADERS" : 
 	[
 		[
-			"/home/marta/robocomp/classes/qlog/qlog.h",
+			"/home/salabeta/robocomp/classes/qlog/qlog.h",
 			"MU",
-			"VDTK472IFP/moc_qlog.cpp"
+			"EQ62L5TKVX/moc_qlog.cpp"
 		],
 		[
-			"/home/marta/robocomp/classes/rapplication/rapplication.h",
+			"/home/salabeta/robocomp/classes/rapplication/rapplication.h",
 			"MU",
-			"PRB7HFCEP6/moc_rapplication.cpp"
+			"DLFNUU7AK7/moc_rapplication.cpp"
 		],
 		[
-			"/home/marta/robocomp/classes/sigwatch/sigwatch.h",
+			"/home/salabeta/robocomp/classes/sigwatch/sigwatch.h",
 			"MU",
-			"4YQNYJM3XT/moc_sigwatch.cpp"
+			"BM3K3POHI5/moc_sigwatch.cpp"
 		],
 		[
-			"/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/commonbehaviorI.h",
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/commonbehaviorI.h",
 			"MU",
 			"EWIEGA46WW/moc_commonbehaviorI.cpp"
 		],
 		[
-			"/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/genericmonitor.h",
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/genericmonitor.h",
 			"MU",
 			"EWIEGA46WW/moc_genericmonitor.cpp"
 		],
 		[
-			"/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/genericworker.h",
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/genericworker.h",
 			"MU",
 			"EWIEGA46WW/moc_genericworker.cpp"
 		],
 		[
-			"/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/rcismousepickerI.h",
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/rcismousepickerI.h",
 			"MU",
 			"EWIEGA46WW/moc_rcismousepickerI.cpp"
 		],
 		[
-			"/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/specificmonitor.h",
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/specificmonitor.h",
 			"MU",
 			"EWIEGA46WW/moc_specificmonitor.cpp"
 		],
 		[
-			"/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/specificworker.h",
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/specificworker.h",
 			"MU",
 			"EWIEGA46WW/moc_specificworker.cpp"
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/gotoxy_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/gotoxy_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/gotoxy_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/gotoxy_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"ICE_CPP11_MAPPING",
@@ -78,14 +78,14 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src",
-		"/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src",
+		"/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src",
+		"/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src",
 		"/opt/robocomp/include",
 		"/classes",
-		"/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy",
-		"/home/marta/robocomp/classes",
-		"/home/marta/robocomp/libs",
-		"/home/marta/robocomp/interfaces",
+		"/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy",
+		"/home/salabeta/robocomp/classes",
+		"/home/salabeta/robocomp/libs",
+		"/home/salabeta/robocomp/interfaces",
 		"/include",
 		"/usr/include/x86_64-linux-gnu/qt5",
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
@@ -116,47 +116,47 @@
 		"-c",
 		"/usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/gotoxy_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/gotoxy_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 2,
-	"PARSE_CACHE_FILE" : "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy_autogen.dir/ParseCache.txt",
+	"PARALLEL" : 8,
+	"PARSE_CACHE_FILE" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
 	"QT_VERSION_MAJOR" : 5,
-	"SETTINGS_FILE" : "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/home/marta/robocomp/classes/qlog/qlog.cpp", "MU" ],
-		[ "/home/marta/robocomp/classes/rapplication/rapplication.cpp", "MU" ],
-		[ "/home/marta/robocomp/classes/sigwatch/sigwatch.cpp", "MU" ],
+		[ "/home/salabeta/robocomp/classes/qlog/qlog.cpp", "MU" ],
+		[ "/home/salabeta/robocomp/classes/rapplication/rapplication.cpp", "MU" ],
+		[ "/home/salabeta/robocomp/classes/sigwatch/sigwatch.cpp", "MU" ],
 		[
-			"/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/commonbehaviorI.cpp",
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/commonbehaviorI.cpp",
 			"MU"
 		],
 		[
-			"/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/genericmonitor.cpp",
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/genericmonitor.cpp",
 			"MU"
 		],
 		[
-			"/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/genericworker.cpp",
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/genericworker.cpp",
 			"MU"
 		],
 		[
-			"/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/main.cpp",
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/main.cpp",
 			"MU"
 		],
 		[
-			"/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/rcismousepickerI.cpp",
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/rcismousepickerI.cpp",
 			"MU"
 		],
 		[
-			"/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/specificmonitor.cpp",
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/specificmonitor.cpp",
 			"MU"
 		],
 		[
-			"/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/specificworker.cpp",
+			"/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/specificworker.cpp",
 			"MU"
 		]
 	],
@@ -164,7 +164,7 @@
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : 
 	[
-		"/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/mainUI.ui"
+		"/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/mainUI.ui"
 	],
 	"UIC_UI_FILES" : [],
 	"VERBOSITY" : 0

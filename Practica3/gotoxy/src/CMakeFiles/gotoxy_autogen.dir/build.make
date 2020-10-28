@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy
+CMAKE_SOURCE_DIR = /home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy
+CMAKE_BINARY_DIR = /home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy
 
 # Utility rule file for gotoxy_autogen.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/marta/robocomp/components/Robotica-2020-Marene/Practica
 include src/CMakeFiles/gotoxy_autogen.dir/progress.make
 
 src/CMakeFiles/gotoxy_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target gotoxy"
-	cd /home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src && /usr/bin/cmake -E cmake_autogen /home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy_autogen.dir/AutogenInfo.json ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target gotoxy"
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src && /usr/bin/cmake -E cmake_autogen /home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy_autogen.dir/AutogenInfo.json ""
 
 gotoxy_autogen: src/CMakeFiles/gotoxy_autogen
 gotoxy_autogen: src/CMakeFiles/gotoxy_autogen.dir/build.make
@@ -68,10 +68,10 @@ src/CMakeFiles/gotoxy_autogen.dir/build: gotoxy_autogen
 .PHONY : src/CMakeFiles/gotoxy_autogen.dir/build
 
 src/CMakeFiles/gotoxy_autogen.dir/clean:
-	cd /home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src && $(CMAKE_COMMAND) -P CMakeFiles/gotoxy_autogen.dir/cmake_clean.cmake
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src && $(CMAKE_COMMAND) -P CMakeFiles/gotoxy_autogen.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/gotoxy_autogen.dir/clean
 
 src/CMakeFiles/gotoxy_autogen.dir/depend:
-	cd /home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy /home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src /home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy /home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src /home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy /home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src /home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy /home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src /home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/gotoxy_autogen.dir/depend
 

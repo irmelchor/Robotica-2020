@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Release" CONFIG_NAME="Release" BUILD_OPTIONS="make -j12">
+        <ADDITIONAL_GENERATION_ENVIRONMENT>
+          <envs>
+            <env name="ROBOCOMP" value="$PROJECT_DIR$/../../../../../robocomp/robocomp" />
+            <env name="PATH" value="/opt/robocomp/bin/:/usr/bin/:$PATH" />
+          </envs>
+        </ADDITIONAL_GENERATION_ENVIRONMENT>
+      </configuration>
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="43594c54-3dba-4e82-baa8-b883610e1d0b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/gotoxy/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/CMakeFiles/3.16.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/CMakeFiles/3.16.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/CMakeFiles/3.16.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/CMakeFiles/3.16.3/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/CMakeFiles/3.16.3/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/CMakeFiles/3.16.3/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/CMakeFiles/CMakeError.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/CMakeFiles/Progress/7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/bin/gotoxy" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/bin/gotoxy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy_autogen.dir/AutogenInfo.json" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy_autogen.dir/AutogenInfo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy_autogen.dir/AutogenUsed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy_autogen.dir/AutogenUsed.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy_autogen.dir/ParseCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy_autogen.dir/ParseCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy_autogen.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy_autogen.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CommonBehavior.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CommonBehavior.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CommonBehavior.h" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CommonBehavior.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/DifferentialRobot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/DifferentialRobot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/DifferentialRobot.h" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/DifferentialRobot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/GenericBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/GenericBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/GenericBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/GenericBase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/Laser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/Laser.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/Laser.h" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/Laser.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/RCISMousePicker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/RCISMousePicker.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/RCISMousePicker.h" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/RCISMousePicker.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/specificworker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/specificworker.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/specificworker.h" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/specificworker.h" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1jVnwYo4cK4iq6fLnaGnU8F7BQZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="43594c54-3dba-4e82-baa8-b883610e1d0b" name="Default Changelist" comment="" />
+      <created>1603898365808</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603898365808</updated>
+      <workItem from="1603898366836" duration="33000" />
+      <workItem from="1603898670577" duration="5000" />
+      <workItem from="1603898713082" duration="3796000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2369" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1603898875154">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2369" y="175" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603898875154" />
+  </component>
+</project>

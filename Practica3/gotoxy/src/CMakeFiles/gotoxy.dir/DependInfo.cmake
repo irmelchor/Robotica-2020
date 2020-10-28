@@ -4,22 +4,22 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CommonBehavior.cpp" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/CommonBehavior.cpp.o"
-  "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/DifferentialRobot.cpp" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/DifferentialRobot.cpp.o"
-  "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/GenericBase.cpp" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/GenericBase.cpp.o"
-  "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/Laser.cpp" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/Laser.cpp.o"
-  "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/RCISMousePicker.cpp" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/RCISMousePicker.cpp.o"
-  "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/commonbehaviorI.cpp" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/commonbehaviorI.cpp.o"
-  "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/genericmonitor.cpp" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/genericmonitor.cpp.o"
-  "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/genericworker.cpp" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/genericworker.cpp.o"
-  "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/gotoxy_autogen/mocs_compilation.cpp" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/gotoxy_autogen/mocs_compilation.cpp.o"
-  "/home/marta/robocomp/classes/qlog/qlog.cpp" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/home/marta/robocomp/classes/qlog/qlog.cpp.o"
-  "/home/marta/robocomp/classes/rapplication/rapplication.cpp" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/home/marta/robocomp/classes/rapplication/rapplication.cpp.o"
-  "/home/marta/robocomp/classes/sigwatch/sigwatch.cpp" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/home/marta/robocomp/classes/sigwatch/sigwatch.cpp.o"
-  "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/main.cpp" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/main.cpp.o"
-  "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/rcismousepickerI.cpp" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/rcismousepickerI.cpp.o"
-  "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/specificmonitor.cpp" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/specificmonitor.cpp.o"
-  "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/specificworker.cpp" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/specificworker.cpp.o"
+  "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CommonBehavior.cpp" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/CommonBehavior.cpp.o"
+  "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/DifferentialRobot.cpp" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/DifferentialRobot.cpp.o"
+  "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/GenericBase.cpp" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/GenericBase.cpp.o"
+  "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/Laser.cpp" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/Laser.cpp.o"
+  "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/RCISMousePicker.cpp" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/RCISMousePicker.cpp.o"
+  "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/commonbehaviorI.cpp" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/commonbehaviorI.cpp.o"
+  "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/genericmonitor.cpp" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/genericmonitor.cpp.o"
+  "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/genericworker.cpp" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/genericworker.cpp.o"
+  "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/gotoxy_autogen/mocs_compilation.cpp" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/gotoxy_autogen/mocs_compilation.cpp.o"
+  "/home/salabeta/robocomp/classes/qlog/qlog.cpp" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/home/salabeta/robocomp/classes/qlog/qlog.cpp.o"
+  "/home/salabeta/robocomp/classes/rapplication/rapplication.cpp" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/home/salabeta/robocomp/classes/rapplication/rapplication.cpp.o"
+  "/home/salabeta/robocomp/classes/sigwatch/sigwatch.cpp" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/home/salabeta/robocomp/classes/sigwatch/sigwatch.cpp.o"
+  "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/main.cpp" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/main.cpp.o"
+  "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/rcismousepickerI.cpp" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/rcismousepickerI.cpp.o"
+  "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/specificmonitor.cpp" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/specificmonitor.cpp.o"
+  "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/specificworker.cpp" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CMakeFiles/gotoxy.dir/specificworker.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -45,9 +45,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/robocomp/include"
   "/classes"
   "."
-  "/home/marta/robocomp/classes"
-  "/home/marta/robocomp/libs"
-  "/home/marta/robocomp/interfaces"
+  "/home/salabeta/robocomp/classes"
+  "/home/salabeta/robocomp/libs"
+  "/home/salabeta/robocomp/interfaces"
   "/include"
   "/usr/include/x86_64-linux-gnu/qt5"
   "/usr/include/x86_64-linux-gnu/qt5/QtGui"
@@ -63,11 +63,11 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Pairs of files generated by the same build rule.
 set(CMAKE_MULTIPLE_OUTPUT_PAIRS
-  "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CommonBehavior.h" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CommonBehavior.cpp"
-  "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/DifferentialRobot.h" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/DifferentialRobot.cpp"
-  "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/GenericBase.h" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/GenericBase.cpp"
-  "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/Laser.h" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/Laser.cpp"
-  "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/RCISMousePicker.h" "/home/marta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/RCISMousePicker.cpp"
+  "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CommonBehavior.h" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/CommonBehavior.cpp"
+  "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/DifferentialRobot.h" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/DifferentialRobot.cpp"
+  "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/GenericBase.h" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/GenericBase.cpp"
+  "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/Laser.h" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/Laser.cpp"
+  "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/RCISMousePicker.h" "/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/src/RCISMousePicker.cpp"
   )
 
 
