@@ -50,7 +50,7 @@ class SpecificWorker : public GenericWorker
     private:
         std::shared_ptr<InnerModel> innerModel;
         bool startup_check_flag;
-        int estado=1;
+        int estado=0;
 
         template <typename T>
         struct Target
