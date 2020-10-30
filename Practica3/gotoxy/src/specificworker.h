@@ -44,10 +44,13 @@ class SpecificWorker : public GenericWorker
         void compute();
         int startup_check();
         void initialize(int period);
+        void girar();
+	 void avanzar();
 
     private:
         std::shared_ptr<InnerModel> innerModel;
         bool startup_check_flag;
+        int estado=1;
 
         template <typename T>
         struct Target

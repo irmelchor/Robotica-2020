@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated />
+    <generated>
+      <config projectName="gotoxy" targetName="gotoxy" />
+      <config projectName="gotoxy" targetName="gotoxy_autogen" />
+      <config projectName="gotoxy" targetName="ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Release" CONFIG_NAME="Release" BUILD_OPTIONS="make -j12">
         <ADDITIONAL_GENERATION_ENVIRONMENT>
           <envs>
-            <env name="ROBOCOMP" value="$PROJECT_DIR$/../../../../../robocomp/robocomp" />
+            <env name="ROBOCOMP" value="$PROJECT_DIR$/../../.." />
             <env name="PATH" value="/opt/robocomp/bin/:/usr/bin/:$PATH" />
           </envs>
         </ADDITIONAL_GENERATION_ENVIRONMENT>
@@ -17,6 +21,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43594c54-3dba-4e82-baa8-b883610e1d0b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Practica3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Practica3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gotoxy/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gotoxy/CMakeFiles/3.16.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/CMakeFiles/3.16.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gotoxy/CMakeFiles/3.16.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/CMakeFiles/3.16.3/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
@@ -27,18 +34,17 @@
       <change beforePath="$PROJECT_DIR$/gotoxy/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gotoxy/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gotoxy/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gotoxy/CMakeFiles/Progress/7" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gotoxy/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/CMakeFiles/TargetDirectories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gotoxy/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gotoxy/bin/gotoxy" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/bin/gotoxy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/bin/gotoxy" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gotoxy/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir/progress.make" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/CMakeFiles/gotoxy.dir/build.make" afterDir="false" />
@@ -63,6 +69,7 @@
       <change beforePath="$PROJECT_DIR$/gotoxy/src/RCISMousePicker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/RCISMousePicker.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gotoxy/src/RCISMousePicker.h" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/RCISMousePicker.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gotoxy/src/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gotoxy/src/gotoxy_autogen/EWIEGA46WW/moc_specificworker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/gotoxy_autogen/EWIEGA46WW/moc_specificworker.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gotoxy/src/specificworker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/specificworker.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gotoxy/src/specificworker.h" beforeDir="false" afterPath="$PROJECT_DIR$/gotoxy/src/specificworker.h" afterDir="false" />
     </list>
@@ -74,6 +81,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -84,18 +92,52 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="CMake Application.gotoxy">
+    <configuration name="ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="gotoxy" TARGET_NAME="ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src" CONFIG_NAME="Release">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="CMakeRunConfiguration" factoryName="Application" nameIsGenerated="true" REDIRECT_INPUT="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Release" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gotoxy" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="gotoxy" TARGET_NAME="gotoxy" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="gotoxy" RUN_TARGET_NAME="gotoxy">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gotoxy_autogen" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="gotoxy" TARGET_NAME="gotoxy_autogen" CONFIG_NAME="Release">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="CMake Application.Unnamed" />
+      <item itemvalue="CMake Application.gotoxy" />
+      <item itemvalue="CMake Application.gotoxy_autogen" />
+      <item itemvalue="CMake Application.ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -108,6 +150,10 @@
       <workItem from="1603898366836" duration="33000" />
       <workItem from="1603898670577" duration="5000" />
       <workItem from="1603898713082" duration="3796000" />
+      <workItem from="1603965029137" duration="777000" />
+      <workItem from="1603965892755" duration="95000" />
+      <workItem from="1603965988868" duration="378000" />
+      <workItem from="1604046015314" duration="327000" />
     </task>
     <servers />
   </component>
@@ -115,9 +161,18 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2369" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1603898875154">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="177" y="32" width="1084" height="736" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603966176309">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
+    <state x="177" y="32" width="1084" height="736" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1294.741@72.27.1294.741" timestamp="1603966176309" />
+    <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1603965984342">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1603965984342" />
+    <state x="375" y="31" width="900" height="737" key="SettingsEditor" timestamp="1603965330477">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="375" y="31" width="900" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1603965330477" />
     <state x="2369" y="175" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1603898875154" />
   </component>
 </project>

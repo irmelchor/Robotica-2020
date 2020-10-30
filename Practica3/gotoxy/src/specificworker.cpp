@@ -63,35 +63,51 @@ void SpecificWorker::initialize(int period)
 	}
 }
 
+void SpecificWorker::girar()
+{
+}
+
+void SpecificWorker::avanzar()
+{
+}
+
 void SpecificWorker::compute()
 {
 	try
 	{
-      RoboCompGenericBase::TBaseState bState;
-      differentialrobot_proxy->getBaseState(bState);
+		RoboCompGenericBase::TBaseState bState;
+		differentialrobot_proxy->getBaseState(bState);
 	}
 	catch (const Ice::Exception &e)
-	{  std::cout << "Error reading from Camera" << e << std::endl;}
+	{
+		std::cout << "Error reading from Camera" << e << std::endl;
+	}
 
-	 if(auto t_o = target.get() ; t_o.has_value()) { //Si bandera activa, obtenemos valores
-         auto tw = t_o;
-         auto rw = Eigen::Vector2f(bState.x, bState.z);
-         Eigen::Matrix2f() rot;
-         rot << cos(bState.alpha), sin(bState.alpha), -sin(bState.alpha), cos(bState.alpha);
+	if (auto t_o = target.get(); t_o.has_value())
+	{ //Si bandera activa, obtenemos valores
+		auto tw = t_o;
+		auto rw = Eigen::Vector2f(bState.x, bState.z);
+		Eigen::Matrix2f() rot;
+		rot << cos(bState.alpha), sin(bState.alpha), -sin(bState.alpha), cos(bState.alpha);
 
-         auto tr = rot * (tw - rw); // TARGET EN EL ROBOT
-         auto beta = atan2(tr.x(), tr.y()); //Angulo
-         std::cout << tw << " " << rw << " " << rot << " " << beta << std::endl;
-         auto dist = tr.norm(); //Distancia a recorrer
+		auto tr = rot * (tw - rw);		   // TARGET EN EL ROBOT
+		auto beta = atan2(tr.x(), tr.y()); //Angulo
+		std::cout << tw << " " << rw << " " << rot << " " << beta << std::endl;
+		auto dist = tr.norm(); //Distancia a recorrer
 
-         /*switch () {
-             case State::GIRAR:
-                 //mientras fabs beta > 0.05
-             case State::AVANZAR:
-                 //mientaad dist > 30
+		/* switch (estado) {
+            case 0://GIRAR:
+                if(beta > 0.05){//mientras fabs beta > 0.05
+					girar();
+				}
+			break;
+            case 1: //AVANZAR:
+                if(dist > 30){//mientaad dist > 30
+					avanzar();
+				}
+			break;
          }*/
-     }
-
+	}
 }
 
 int SpecificWorker::startup_check()
@@ -104,7 +120,7 @@ int SpecificWorker::startup_check()
 //SUBSCRIPTION to setPick method from RCISMousePicker interface
 void SpecificWorker::RCISMousePicker_setPick(RoboCompRCISMousePicker::Pick myPick)
 {
-	std::cout<< "PRESSED ON: X: " << myPick.x << " Y: " << myPick.y;
+	std::cout << "PRESSED ON: X: " << myPick.x << " Y: " << myPick.y;
 	target.put(Eigen::Vector2f(myPick.x, myPick.y));
 }
 
