@@ -65,17 +65,25 @@ void SpecificWorker::initialize(int period)
 
 void SpecificWorker::girar()
 {
+	if(ldata.front().dist<= 300){
+		this->differentialrobot_proxy->setSpeedBase(5, 0.8);	
+		usleep(rand() % (1500000 - 100000 +1) +100000);
+		
+	}
+	estado=1;
 }
 
 void SpecificWorker::avanzar()
 {
+	this->differentialrobot_proxy->setSpeedBase(1000, 0);
+	estado=0;
 }
 
 void SpecificWorker::compute()
 {
 	try
 	{
-		RoboCompGenericBase::TBaseState bState;
+		RoboCompDifferentialRobot::TBaseState bState;
 		differentialrobot_proxy->getBaseState(bState);
 	}
 	catch (const Ice::Exception &e)
@@ -85,9 +93,9 @@ void SpecificWorker::compute()
 
 	if (auto t_o = target.get(); t_o.has_value())
 	{ //Si bandera activa, obtenemos valores
-		auto tw = t_o;
+		auto tw = t_o.value();
 		auto rw = Eigen::Vector2f(bState.x, bState.z);
-		Eigen::Matrix2f() rot;
+		Eigen::Matrix2f rot();
 		rot << cos(bState.alpha), sin(bState.alpha), -sin(bState.alpha), cos(bState.alpha);
 
 		auto tr = rot * (tw - rw);		   // TARGET EN EL ROBOT
@@ -95,18 +103,18 @@ void SpecificWorker::compute()
 		std::cout << tw << " " << rw << " " << rot << " " << beta << std::endl;
 		auto dist = tr.norm(); //Distancia a recorrer
 
-		/* switch (estado) {
-            case 0://GIRAR:
+		switch (estado) {
+            case 0: //GIRAR:
                 if(beta > 0.05){//mientras fabs beta > 0.05
 					girar();
 				}
 			break;
             case 1: //AVANZAR:
-                if(dist > 30){//mientaad dist > 30
+                if(dist > 30){ //mientras dist > 30
 					avanzar();
 				}
 			break;
-         }*/
+         }
 	}
 }
 
