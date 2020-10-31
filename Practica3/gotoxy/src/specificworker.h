@@ -44,10 +44,10 @@ class SpecificWorker : public GenericWorker
         void compute();
         int startup_check();
         void initialize(int period);
-        //void girar();
-	// void avanzar(float adv_speed);
-	 float reduce_speed_if_turning(float rot_speed, float s, float x);
-	 float reduce_speed_if_close_to_target(float dist);
+       // void girar();
+	//void avanzar(float adv_speed, float beta);
+	float reduce_speed_if_turning(float rot_speed, float s, float x);
+	float reduce_speed_if_close_to_target(float dist);
 
     private:
         std::shared_ptr<InnerModel> innerModel;

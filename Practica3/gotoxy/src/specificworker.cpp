@@ -131,9 +131,7 @@ void SpecificWorker::compute()
 			differentialrobot_proxy->setSpeedBase(adv_speed, beta);
 		}
 		 
-
-/*
-		switch (estado)
+		/*switch (estado)
 		{
 		case 0: //GIRAR: mientras fabs beta > 0.05
 			//if (beta > 0.05)
@@ -161,8 +159,8 @@ int SpecificWorker::startup_check()
 //SUBSCRIPTION to setPick method from RCISMousePicker interface
 void SpecificWorker::RCISMousePicker_setPick(RoboCompRCISMousePicker::Pick myPick)
 {
-	std::cout << "PRESSED ON: X: " << myPick.x << " Y: " << myPick.y;
-	target.put(Eigen::Vector2f(myPick.x, myPick.y));
+	std::cout << "PRESSED ON: X: " << myPick.x << " Z: " << myPick.z;
+	target.put(Eigen::Vector2f(myPick.x, myPick.z));
 }
 
 /**************************************/
