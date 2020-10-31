@@ -44,8 +44,10 @@ class SpecificWorker : public GenericWorker
         void compute();
         int startup_check();
         void initialize(int period);
-        void girar();
-	 void avanzar();
+        //void girar();
+	// void avanzar(float adv_speed);
+	 float reduce_speed_if_turning(float rot_speed, float s, float x);
+	 float reduce_speed_if_close_to_target(float dist);
 
     private:
         std::shared_ptr<InnerModel> innerModel;
@@ -79,7 +81,9 @@ class SpecificWorker : public GenericWorker
                 std::lock_guard<std::mutex> guard(mymutex);
                 active = false;
             }
+            
         };
+        
 
     	Target<Eigen::Vector2f> target;
 
