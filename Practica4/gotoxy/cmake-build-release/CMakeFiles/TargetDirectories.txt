@@ -1,0 +1,15 @@
+/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/cmake-build-release/CMakeFiles/install/strip.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/cmake-build-release/CMakeFiles/install/local.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/cmake-build-release/CMakeFiles/edit_cache.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/cmake-build-release/CMakeFiles/rebuild_cache.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/cmake-build-release/CMakeFiles/list_install_components.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/cmake-build-release/CMakeFiles/install.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/cmake-build-release/src/CMakeFiles/install/strip.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/cmake-build-release/src/CMakeFiles/install/local.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/cmake-build-release/src/CMakeFiles/install.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/cmake-build-release/src/CMakeFiles/list_install_components.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/cmake-build-release/src/CMakeFiles/ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/cmake-build-release/src/CMakeFiles/edit_cache.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/cmake-build-release/src/CMakeFiles/gotoxy.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/cmake-build-release/src/CMakeFiles/rebuild_cache.dir
+/home/salabeta/robocomp/components/Robotica-2020-Marene/Practica3/gotoxy/cmake-build-release/src/CMakeFiles/gotoxy_autogen.dir

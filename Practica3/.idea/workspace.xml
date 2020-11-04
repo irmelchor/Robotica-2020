@@ -102,7 +102,12 @@
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RunManager" selected="CMake Application.gotoxy">
-    <configuration name="ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="gotoxy" TARGET_NAME="ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src" CONFIG_NAME="Release">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="gotoxy" TARGET_NAME="ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src" CONFIG_NAME="Release">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -136,7 +141,7 @@
       <item itemvalue="CMake Application.Unnamed" />
       <item itemvalue="CMake Application.gotoxy" />
       <item itemvalue="CMake Application.gotoxy_autogen" />
-      <item itemvalue="CMake Application.ICES__home_marta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src" />
+      <item itemvalue="CMake Application.ICES__home_salabeta_robocomp_components_Robotica-2020-Marene_Practica3_gotoxy_src" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
