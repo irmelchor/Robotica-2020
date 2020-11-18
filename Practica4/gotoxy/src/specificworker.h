@@ -29,7 +29,9 @@
 #include <innermodel/innermodel.h>
 #include <cmath>
 #include <Eigen/Dense>
-
+#include <QGraphicsScene>
+#include <QGraphicsView>
+#include <QGraphicsItem>
 class SpecificWorker : public GenericWorker
 {
 	Q_OBJECT
@@ -44,18 +46,35 @@ class SpecificWorker : public GenericWorker
         void compute();
         int startup_check();
         void initialize(int period);
-	float reduce_speed_if_turning(float rot_speed, float s, float x);
-	float reduce_speed_if_close_to_target(float dist);
-	//bool checkPointsInsideLaserPolygon(RoboCompLaser::TLaserData ldata,RoboCompGenericBase::TBaseState bState);
+	    float reduce_speed_if_turning(float rot_speed, float s, float x);
+	    float reduce_speed_if_close_to_target(float dist);
+
 
 
     private:
         std::shared_ptr<InnerModel> innerModel;
         bool startup_check_flag;
-        int estado=1;
+
         using tupla = std::tuple<float, float, float, float, float>;
+
         std::vector<tupla>calcularPuntos(float vOrigen, float wOrigen);
-        void ordenarVector(std::vector <tupla> vPuntos,RoboCompGenericBase::TBaseState bState);
+
+        std::vector<tupla> ordenar(std::vector<tupla> vector, float x, float z);
+        //bool checkPointsInsideLaserPolygon(RoboCompLaser::TLaserData ldata);
+        std::vector<tupla> obstaculos(std::vector<tupla> vector, float aph,const RoboCompLaser::TLaserData &ldata);
+
+
+    //draw
+    QGraphicsScene scene;
+    QGraphicsView *graphicsView;
+    QGraphicsItem *robot_polygon = nullptr;
+    QGraphicsItem *laser_polygon = nullptr;
+    const float ROBOT_LENGTH = 400;
+
+    void draw_things(const RoboCompGenericBase::TBaseState &bState, const RoboCompLaser::TLaserData &ldata, const std::vector<tupla> &puntos);
+    std::vector<QGraphicsEllipseItem*> arcs_vector;
+
+
 
         template <typename T>
         struct Target
@@ -89,6 +108,7 @@ class SpecificWorker : public GenericWorker
         
 
     	Target<Eigen::Vector2f> target;
+
 
 };
 

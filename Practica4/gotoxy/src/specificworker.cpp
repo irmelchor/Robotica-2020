@@ -17,6 +17,7 @@
  *    along with RoboComp.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "specificworker.h"
+const float landa = -0.5 / log(0.1);
 
 /**
 * \brief Default constructor
@@ -38,30 +39,75 @@ bool SpecificWorker::setParams(RoboCompCommonBehavior::ParameterList params)
 {
 	//	THE FOLLOWING IS JUST AN EXAMPLE
 	//	To use innerModelPath parameter you should uncomment specificmonitor.cpp readConfig method content
-	//	try
-	//	{
-	//		RoboCompCommonBehavior::Parameter par = params.at("InnerModelPath");
-	//		std::string innermodel_path = par.value;
-	//		innerModel = std::make_shared(innermodel_path);
-	//	}
-	//	catch(const std::exception &e) { qFatal("Error reading config params"); }
+//		try
+//		{
+//			RoboCompCommonBehavior::Parameter par = params.at("InnerModelPath");
+//			std::string innermodel_path = par.value;
+//            innerModel = std::make_shared<InnerModel>(innermodel_path);
+//		}
+//		catch(const std::exception &e) { qFatal("Error reading config params"); }
 
 	return true;
 }
 
-void SpecificWorker::initialize(int period)
-{
-	std::cout << "Initialize worker" << std::endl;
-	this->Period = period;
-	if (this->startup_check_flag)
-	{
-		this->startup_check();
-	}
-	else
-	{
-		timer.start(Period);
-	}
+void SpecificWorker::initialize(int period) {
+    std::cout << "Initialize worker" << std::endl;
+
+    // graphics
+    graphicsView = new QGraphicsView(this);
+    graphicsView->resize(this->size());
+    graphicsView->setScene(&scene);
+    graphicsView->setMinimumSize(400,400);
+    scene.setItemIndexMethod(QGraphicsScene::NoIndex);
+    struct Dimensions
+    {
+        int TILE_SIZE = 100;
+        float HMIN = -2500, VMIN = -2500, WIDTH = 5000, HEIGHT = 5000;
+    };
+    Dimensions dim;
+    scene.setSceneRect(dim.HMIN, dim.VMIN, dim.WIDTH, dim.HEIGHT);
+    graphicsView->scale(1, -1);
+
+    graphicsView->show();
+
+    //robot
+    QPolygonF poly2;
+    float size = ROBOT_LENGTH / 2.f;
+    poly2 << QPoint(-size, -size)
+          << QPoint(-size, size)
+          << QPoint(-size / 3, size * 1.6)
+          << QPoint(size / 3, size * 1.6)
+          << QPoint(size, size)
+          << QPoint(size, -size);
+    QBrush brush;
+    brush.setColor(QColor("DarkRed"));
+    brush.setStyle(Qt::SolidPattern);
+    robot_polygon = (QGraphicsItem*) scene.addPolygon(poly2, QPen(QColor("DarkRed")), brush);
+    robot_polygon->setZValue(5);
+    RoboCompGenericBase::TBaseState bState;
+    try
+    {
+        differentialrobot_proxy->getBaseState(bState);
+        robot_polygon->setRotation(qRadiansToDegrees(-bState.alpha));
+        robot_polygon->setPos(bState.x,bState.z);
+    }
+    catch (const Ice::Exception &e) { std::cout << e.what() << std::endl; }
+
+    // box
+    //auto caja = innerModel->getTransform("caja1");
+    //if( caja )
+    //    scene.addRect(caja->backtX-200, caja->backtZ-200, 400, 400, QPen(QColor("Magenta")), QBrush(QColor("Magenta")));
+
+    graphicsView->fitInView(scene.sceneRect(), Qt::KeepAspectRatio );
+
+    this->Period = 100;
+    if (this->startup_check_flag) {
+        this->startup_check();
+    } else {
+        timer.start(Period);
+    }
 }
+
 
 /*
  * Módulo que sirve para calcular el segundo parametro de la formula
@@ -115,14 +161,16 @@ std::vector<SpecificWorker::tupla> SpecificWorker::calcularPuntos(float vOrigen,
    return vectorT;
 }
 
-void SpecificWorker::ordenarVector(std::vector <SpecificWorker::tupla> vPuntos,RoboCompGenericBase::TBaseState bState)
-{
-	std::sort(vPuntos.begin(), vPuntos.end());
+std::vector<SpecificWorker::tupla> SpecificWorker::ordenar(std::vector<tupla> vector, float x, float z) {
+	/*if(checkPointsInsideLaserPolygon(ldata)){
+
+	}
+    std::sort(vPuntos.begin(), vPuntos.end());*/
 }
 
 
 //Comprueba los puntos dentro del poligono del laser
-/*bool SpecificWorker::checkPointsInsideLaserPolygon(RoboCompLaser::TLaserData ldata,){
+/*bool SpecificWorker::checkPointsInsideLaserPolygon(RoboCompLaser::TLaserData ldata){
 	// create laser polygon
 	QPolygonF laser_poly;
 	QPoint& point(bState.x,bState.z);
@@ -134,6 +182,80 @@ void SpecificWorker::ordenarVector(std::vector <SpecificWorker::tupla> vPuntos,R
 	else
     	return false;
 }*/
+
+std::vector<SpecificWorker::tupla> SpecificWorker::obstaculos(std::vector<tupla> vector, float aph, const RoboCompLaser::TLaserData &ldata) {
+    QPolygonF polygonF;
+    const float semiancho = 300; // el semiancho del robot
+    std::vector<tupla> vectorOBs;
+    for (auto &l: ldata)
+        polygonF << QPointF(l.dist * sin(l.angle), l.dist * cos(l.angle));
+
+
+    for (auto &[x, y, a, g, ang]:vector) {
+        // GENERAR UN CUADRADO CON EL CENTRO EN X, Y Y ORIENTACION ANG.
+        QPolygonF polyRobot;
+
+        polyRobot << QPointF(x - semiancho, y + semiancho)
+                  << QPointF(x + semiancho, y + semiancho)
+                  << QPointF(x + semiancho, y - semiancho)
+                  << QPointF(x - semiancho, y - semiancho);
+
+        polyRobot = QTransform().rotate(aph).map(polyRobot);
+        //   qDebug () <<  "Despues de girar " <<  polyRobot;
+
+        bool cuatroEsquinas = true;
+        for (auto &p : polyRobot) {
+            if (polygonF.containsPoint(p, Qt::OddEvenFill)) {
+                cuatroEsquinas = false;
+                break;
+            }
+
+        }
+        if (!cuatroEsquinas) {
+            // qDebug() << "CuatroEsquinas es true";
+            //    std::cout << __FUNCTION__ << " " << x << " " << y << " " << a << " " << g << " " << ang << std::endl;
+            vectorOBs.emplace_back(std::make_tuple(x, y, a, g, ang));
+
+        }
+
+    }
+
+    return vectorOBs;
+
+}
+
+void SpecificWorker::draw_things( const RoboCompGenericBase::TBaseState &bState, const RoboCompLaser::TLaserData &ldata, const std::vector<tupla> &puntos)
+{
+    //draw robot
+    //innerModel->updateTransformValues("base", bState.x, 0, bState.z, 0, bState.alpha, 0);
+    robot_polygon->setRotation(qRadiansToDegrees(-bState.alpha));
+    robot_polygon->setPos(bState.x, bState.z);
+    graphicsView->resize(this->size());
+
+    //draw laser
+    if (laser_polygon != nullptr)
+        scene.removeItem(laser_polygon);
+    QPolygonF poly;
+    for( auto &l : ldata)
+        poly << robot_polygon->mapToScene(QPointF(l.dist * sin(l.angle), l.dist * cos(l.angle)));
+    QColor color("LightGreen");
+    color.setAlpha(40);
+    laser_polygon = scene.addPolygon(poly, QPen(color), QBrush(color));
+    laser_polygon->setZValue(13);
+
+    // draw future. Draw and arch going out from the robot
+    // remove existing arcs
+    for( auto arc: arcs_vector)
+        scene.removeItem(arc);
+    arcs_vector.clear();
+    QColor col("Red");
+    for( auto &[x,y,vx,wx,a] : puntos)
+    {
+        QPointF centro = robot_polygon->mapToScene(x,y);
+        arcs_vector.push_back(scene.addEllipse(centro.x(), centro.y(), 20, 20, QPen(col), QBrush(col)));
+    }
+
+}
 
 void SpecificWorker::compute()
 {
@@ -156,14 +278,41 @@ void SpecificWorker::compute()
 		float rot_speed = beta;
 		auto adv_speed = (1000 * reduce_speed_if_turning(rot_speed, 0.1, 0.5) * reduce_speed_if_close_to_target(dist));
 		//differentialrobot_proxy->setSpeedBase(adv_speed, beta);
-		
+
+
+		/***************************************************************************************************************/
 		float vOrigen =bState.advVz;
 		float wOrigen = bState.rotV;
 
 		std::vector <tupla> vPuntos = calcularPuntos(vOrigen, wOrigen);
+        std::vector<tupla> vOrdenado = obstaculos(vPuntos, bState.alpha, ldata);
 		//sort
-		ordenarVector(vPuntos, bState);
+		//ordenarVector(vPuntos, bState);
 		//differentialrobot_proxy->setSpeedBase(vPuntos.vNuevo, vPuntos.wNuevo);
+        std::cout << vOrdenado.size() << std::endl;
+        if (vOrdenado.size() > 0)
+        {
+
+            auto[x, y, v, w, alpha] = vOrdenado.front();
+            std::cout << __FUNCTION__ << " " << x << " " << y << " " << v << " " << w << " " << alpha
+                      << std::endl;
+
+            if (w > M_PI) w = M_PI;
+            if (w < -M_PI) w = -M_PI;
+            if (v < 0) v = 0;
+            // Aquí debemos hacer algo para lo de negativo
+            try
+            {
+                // differentialrobot_proxy->setSpeedBase(std::min(v/5, 1000.f), w);
+            }
+            catch (const Ice::Exception &e) { std::cout << e.what() << std::endl; }
+        }
+        else
+        {
+            std::cout << "Vector vacio" << std::endl;
+        }
+        // graphics
+        draw_things(bState, ldata, vOrdenado);
 
 
 	}
