@@ -46,11 +46,16 @@ class SpecificWorker : public GenericWorker
         void initialize(int period);
 	float reduce_speed_if_turning(float rot_speed, float s, float x);
 	float reduce_speed_if_close_to_target(float dist);
+	//bool checkPointsInsideLaserPolygon(RoboCompLaser::TLaserData ldata,RoboCompGenericBase::TBaseState bState);
+
 
     private:
         std::shared_ptr<InnerModel> innerModel;
         bool startup_check_flag;
         int estado=1;
+        using tupla = std::tuple<float, float, float, float, float>;
+        std::vector<tupla>calcularPuntos(float vOrigen, float wOrigen);
+        void ordenarVector(std::vector <tupla> vPuntos,RoboCompGenericBase::TBaseState bState);
 
         template <typename T>
         struct Target

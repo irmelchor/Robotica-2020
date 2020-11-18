@@ -84,11 +84,64 @@ float SpecificWorker::reduce_speed_if_close_to_target(float dist)
 	return std::min((dist / 1000), 1.f);
 }
 
+
+std::vector<SpecificWorker::tupla> SpecificWorker::calcularPuntos(float vOrigen, float wOrigen)
+{
+   std::vector<tupla> vectorT; //vector de tuplas <x,y,av,giro>
+   std::cout << "////////////////////////////" << std::endl;
+   for (float dt = 0.3; dt < 1.5; dt += 0.1)  // several steps in the future
+   {
+       for (float v = -1000; v <= 1000; v += 100) // several advance velocities
+       {
+           for (float w = -1; w <= 1; w += 0.1) // several rotacion velocities
+           {
+               float vNuevo = vOrigen + v;
+               float wNuevo = wOrigen + w;
+               if (fabs(w) > 0.1) {
+                   // Coordenadas posibles después de moverse imaginariamente
+                   float r = vNuevo / wNuevo; //radio
+                   float x = r - r * cos(wNuevo * dt);
+                   float y = r * sin(wNuevo * dt);
+                   float alp = wNuevo * dt;
+                   std::cout << __FUNCTION__ << " " << x << " " << y << " " << r << " " << vNuevo << " " << wNuevo
+                             << " " << std::endl;
+                   vectorT.emplace_back(std::make_tuple(x, y, vNuevo, wNuevo, alp)); //lo añadimos al vector de tuplas
+               } else // para evitar la división por cero en el cálculo de r
+                   vectorT.emplace_back(
+                           std::make_tuple(0, v * dt, vNuevo, wNuevo, wNuevo * dt)); //lo añadimos al vector de tuplas
+           }
+       }
+   }
+   return vectorT;
+}
+
+void SpecificWorker::ordenarVector(std::vector <SpecificWorker::tupla> vPuntos,RoboCompGenericBase::TBaseState bState)
+{
+	std::sort(vPuntos.begin(), vPuntos.end());
+}
+
+
+//Comprueba los puntos dentro del poligono del laser
+/*bool SpecificWorker::checkPointsInsideLaserPolygon(RoboCompLaser::TLaserData ldata,){
+	// create laser polygon
+	QPolygonF laser_poly;
+	QPoint& point(bState.x,bState.z);
+	for( auto &l : ldata)
+   		laser_poly << QPointF(l.dist * sin(l.angle), l.dist * cos(l.angle));
+    // check intersection
+	if (laser_poly.containsPoint(point))  // point to check. Must be in robot’s coordinate system
+    	return true;
+	else
+    	return false;
+}*/
+
 void SpecificWorker::compute()
 {
 
 	RoboCompGenericBase::TBaseState bState;
 	differentialrobot_proxy->getBaseState(bState);
+	RoboCompLaser::TLaserData ldata = laser_proxy->getLaserData();
+
 
 	if (auto t_o = target.get(); t_o.has_value())
 	{ //Si bandera activa, obtenemos valores
@@ -102,23 +155,19 @@ void SpecificWorker::compute()
 		auto dist = tr.norm(); //Distancia a recorrer
 		float rot_speed = beta;
 		auto adv_speed = (1000 * reduce_speed_if_turning(rot_speed, 0.1, 0.5) * reduce_speed_if_close_to_target(dist));
+		//differentialrobot_proxy->setSpeedBase(adv_speed, beta);
+		
+		float vOrigen =bState.advVz;
+		float wOrigen = bState.rotV;
 
-		switch (estado)
-		{
-		case 0: 
-			if (dist < 30)
-			{
-				target.active = false;
-				differentialrobot_proxy->setSpeedBase(0, 0);
-			}
-			estado = 1;
-			break;
-		case 1:
-			differentialrobot_proxy->setSpeedBase(adv_speed, beta);
-			estado = 0;
-			break;
-		}
+		std::vector <tupla> vPuntos = calcularPuntos(vOrigen, wOrigen);
+		//sort
+		ordenarVector(vPuntos, bState);
+		//differentialrobot_proxy->setSpeedBase(vPuntos.vNuevo, vPuntos.wNuevo);
+
+
 	}
+
 }
 
 int SpecificWorker::startup_check()
