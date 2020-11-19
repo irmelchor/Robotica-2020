@@ -64,6 +64,7 @@ class SpecificWorker : public GenericWorker
         std::vector<tupla> obstaculos(std::vector<tupla> vector, float aph,const RoboCompLaser::TLaserData &ldata);
 
 
+
     //draw
     QGraphicsScene scene;
     QGraphicsView *graphicsView;
@@ -71,7 +72,7 @@ class SpecificWorker : public GenericWorker
     QGraphicsItem *laser_polygon = nullptr;
     const float ROBOT_LENGTH = 400;
 
-    void draw_things(const RoboCompGenericBase::TBaseState &bState, const RoboCompLaser::TLaserData &ldata, const std::vector<tupla> &puntos);
+    void draw_things(const RoboCompGenericBase::TBaseState &bState, const RoboCompLaser::TLaserData &ldata, const std::vector<tupla> &puntos, const tupla &front);
     std::vector<QGraphicsEllipseItem*> arcs_vector;
 
 
