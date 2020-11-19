@@ -303,7 +303,6 @@ void SpecificWorker::compute()
         }
         else
         {
-            /***************************************************************************************************************/
             float vOrigen = bState.advVz;
             float wOrigen = bState.rotV;
 
@@ -325,23 +324,27 @@ void SpecificWorker::compute()
                 if (w < -M_PI)w = -M_PI;
                 if (v < 0) v = 0;
                 // Aquí debemos hacer algo para lo de negativo
+
                 try
                 {
                      differentialrobot_proxy->setSpeedBase(std::min(v/5, 1000.f), w);
+                      draw_things(bState, ldata, vOrdenado, vOrdenado.front());
                 }
                 catch (const Ice::Exception &e)
                 {
                     std::cout << e.what() << std::endl;
-                    draw_things(bState, ldata, vOrdenado, vOrdenado.front());
+                     
+                    
                 }
             }
             else
             {
                 std::cout << "Vector vacio" << std::endl;
             }
-           
+
             
         }
+
     }
 }
 
