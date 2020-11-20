@@ -145,7 +145,7 @@ std::vector<SpecificWorker::tupla> SpecificWorker::calcularPuntos(float vOrigen,
     // {
     for (float v = 0; v <= 1000; v += 100) // several advance velocities
     {
-        for (float w = -2; w <= 2; w += 0.1) // several rotacion velocities
+        for (float w = -M_PI; w <= M_PI; w += 0.1) // several rotacion velocities
         {
             float vNuevo = vOrigen + v;
             float wNuevo = wOrigen + w;
@@ -295,7 +295,7 @@ void SpecificWorker::compute()
                                //auto adv_speed = (1000 * reduce_speed_if_turning(rot_speed, 0.1, 0.5) * reduce_speed_if_close_to_target(dist));
                                //differentialrobot_proxy->setSpeedBase(adv_speed, beta);
 
-        if (dist < 100)
+        if (dist < 50)
         {
             differentialrobot_proxy->setSpeedBase(0, 0);
             target.active = false;
