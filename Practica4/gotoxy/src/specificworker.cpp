@@ -295,7 +295,7 @@ void SpecificWorker::compute()
                                //auto adv_speed = (1000 * reduce_speed_if_turning(rot_speed, 0.1, 0.5) * reduce_speed_if_close_to_target(dist));
                                //differentialrobot_proxy->setSpeedBase(adv_speed, beta);
 
-        if (dist < 50)
+        if (dist < 100)
         {
             differentialrobot_proxy->setSpeedBase(0, 0);
             target.active = false;
@@ -309,9 +309,6 @@ void SpecificWorker::compute()
             std::vector<tupla> vPuntos = calcularPuntos(vOrigen, wOrigen);
             std::vector<tupla> vSinObstaculos = obstaculos(vPuntos, bState.alpha, ldata);
             std::vector<tupla> vOrdenado = ordenar(vSinObstaculos, tr.x(), tr.y());
-            //sort
-            //ordenarVector(vPuntos, bState);
-            //differentialrobot_proxy->setSpeedBase(vPuntos.vNuevo, vPuntos.wNuevo);
             std::cout << vOrdenado.size() << std::endl;
             if (vOrdenado.size() > 0)
             {
@@ -327,8 +324,8 @@ void SpecificWorker::compute()
 
                 try
                 {
-                     differentialrobot_proxy->setSpeedBase(std::min(v/5, 1000.f), w);
-                      draw_things(bState, ldata, vOrdenado, vOrdenado.front());
+                    differentialrobot_proxy->setSpeedBase(std::min(v/5, 1000.f), w);
+                    draw_things(bState, ldata, vOrdenado, vOrdenado.front());
                 }
                 catch (const Ice::Exception &e)
                 {
