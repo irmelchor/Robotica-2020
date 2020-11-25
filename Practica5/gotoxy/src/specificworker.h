@@ -1,5 +1,5 @@
 /*
- *    Copyright (C) 2020 by Marta García Tornero, Irene Melchor Félix
+ *    Copyright (C) 2020 by jvallero & mtorocom
  *
  *    This file is part of RoboComp
  *
@@ -19,51 +19,87 @@
 
 /**
 	\brief
-	@author authorname
+	@author jvallero & mtorocom
 */
+
+
 
 #ifndef SPECIFICWORKER_H
 #define SPECIFICWORKER_H
 
 #include <genericworker.h>
 #include <innermodel/innermodel.h>
-#include <cmath>
 #include <Eigen/Dense>
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QGraphicsItem>
-class SpecificWorker : public GenericWorker
-{
-	Q_OBJECT
-    public:
-        SpecificWorker(TuplePrx tprx, bool startup_check);
-        ~SpecificWorker();
-        bool setParams(RoboCompCommonBehavior::ParameterList params);
+#include "grid.h"
 
-        void RCISMousePicker_setPick(RoboCompRCISMousePicker::Pick myPick);
+using namespace Eigen;
 
-    public slots:
-        void compute();
-        int startup_check();
-        void initialize(int period);
-	    float reduce_speed_if_turning(float rot_speed, float s, float x);
-	    float reduce_speed_if_close_to_target(float dist);
+class SpecificWorker : public GenericWorker {
+
+    template<typename T>
+    struct Target {
+        T data;
+        std::mutex mutex;
+        bool activate = false;
+        bool empty = true;
+
+        void put(const T &Data) {
+            std::lock_guard<std::mutex> guard(mutex);
+            data = Data;
+            activate = true;
+            empty = false;
+        }
+        std::optional<T> get() {
+            std::lock_guard<std::mutex> guard(mutex);
+            if (not empty){
+                return data;
+            } else
+                return {};
+        }
+        void set_task_finished() {
+            std::lock_guard<std::mutex> guard(mutex);
+            activate = false;
+        }
+        bool is_active()  {
+            std::lock_guard<std::mutex> guard(mutex);
+            return activate;
+        }
+    };
+
+public:
+    SpecificWorker(TuplePrx tprx, bool startup_check);
+    ~SpecificWorker();
+    bool setParams(RoboCompCommonBehavior::ParameterList params);
+    void RCISMousePicker_setPick(RoboCompRCISMousePicker::Pick myPick);
 
 
+public slots:
 
-    private:
-        std::shared_ptr<InnerModel> innerModel;
-        bool startup_check_flag;
+    void compute();
+    int startup_check();
+    void initialize(int period);
 
-        using tupla = std::tuple<float, float, float, float, float>;
+private:
+    std::shared_ptr<InnerModel> innerModel;
+    bool startup_check_flag;
 
-        std::vector<tupla>calcularPuntos(float vOrigen, float wOrigen);
+    //tupla de 3 variables float para las coordenadas x,y,z.
+    using Tpose = std::tuple<float, float, float>;
 
-        std::vector<tupla> ordenar(std::vector<tupla> vector, float x, float z);
-        //bool checkPointsInsideLaserPolygon(RoboCompLaser::TLaserData ldata);
-        std::vector<tupla> obstaculos(std::vector<tupla> vector, float aph,const RoboCompLaser::TLaserData &ldata);
+    //variable tipo Target con la tupla Tpose
+    Target<Tpose> target_buffer;
+    Tpose target;
+    using tupla = std::tuple<float, float, float, float, float>;
+    Eigen::Vector2f transformar_targetRW( RoboCompGenericBase::TBaseState bState);
 
-
+    //e4
+    std::vector<tupla> calcularPuntos(float vOrigen,  float wOrigen);
+    std::vector<tupla> ordenar(std::vector<tupla> vector, float x, float z);
+    std::vector<tupla> obstaculos(std::vector<tupla> vector, float aph,const RoboCompLaser::TLaserData &ldata);
+    void dynamicWindowApproach(RoboCompGenericBase::TBaseState bState, RoboCompLaser::TLaserData &ldata);
 
     //draw
     QGraphicsScene scene;
@@ -71,46 +107,11 @@ class SpecificWorker : public GenericWorker
     QGraphicsItem *robot_polygon = nullptr;
     QGraphicsItem *laser_polygon = nullptr;
     const float ROBOT_LENGTH = 400;
-
     void draw_things(const RoboCompGenericBase::TBaseState &bState, const RoboCompLaser::TLaserData &ldata, const std::vector<tupla> &puntos, const tupla &front);
     std::vector<QGraphicsEllipseItem*> arcs_vector;
 
-
-
-        template <typename T>
-        struct Target
-        {
-            T content;
-            std::mutex mymutex;
-            bool active = false;
-            T data;
-
-            void put(const T &data_)
-            {
-                std::lock_guard<std::mutex> guard(mymutex);
-                data = data_;
-                active = true;
-            }
-            std::optional<T> get()
-            {
-                std::lock_guard<std::mutex> guard(mymutex);
-                if (active)
-                    return data;
-                else
-                    return {};
-            }
-            void set_task_finished()
-            {
-                std::lock_guard<std::mutex> guard(mymutex);
-                active = false;
-            }
-            
-        };
-        
-
-    	Target<Eigen::Vector2f> target;
-
-
+    //grid
+    Grid<int, -2500, int, 5000, int, 100> grid;
 };
 
 #endif
