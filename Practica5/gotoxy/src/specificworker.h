@@ -112,6 +112,8 @@ private:
 
     //grid
     Grid<int, -2500, int, 5000, int, 100> grid;
+
+    void fill_grid_with_obstacles();
 };
 
 #endif

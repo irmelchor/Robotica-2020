@@ -101,6 +101,25 @@ void SpecificWorker::initialize(int period)
     grid.create_graphic_items(scene);
     // recorrer las cajas y poner a ocupado todos las celdas que caigan
     // recorrer las pared y poner las celdas a rojo
+	
+    /*for (auto &row : array){
+                for (auto &elem : row){
+					if(elem.cx == -2500 || elem.cx==2500 || elem.cz==-2500 || elem.cz==2500){
+						elem.paint_cell = scene.addRect(-tile / 2, -tile / 2, tile, tile, QPen(QColor("DarkRed")), QBrush(QColor("Red")));
+						elem.paint_cell->setPos(elem.cx, elem.cz);
+					}
+				}
+    }*/
+  /*  for(){
+
+    }
+    for(){
+
+    }
+    for(){
+
+    }
+*/
 
     this->Period = 100;
     if (this->startup_check_flag) {
@@ -109,6 +128,33 @@ void SpecificWorker::initialize(int period)
         timer.start(Period);
     }
 }
+
+void SpecificWorker::fill_grid_with_obstacles()
+{
+    for(int i=1; i<10; i++)  //max number of boxes
+    {
+        auto caja = "caja" + QString::number(i);
+        auto node = innerModel->getNode(caja);
+        auto mesh = innerModel->getNode("cajaMesh" + QString::number(i));
+        if(node and mesh)
+        {
+            auto pose = innerModel->transform("world", caja);
+            auto plane = dynamic_cast<InnerModelPlane*>(mesh);
+            int x = pose.x();
+            int z = pose.z();
+            int width = plane->depth;
+            int depth = plane->width;
+
+            /****
+
+            AQUI EL CODIGO DE MODIFICACIÓN DEL GRID
+
+            *****/
+
+        }
+    }
+}
+
 
 
 void SpecificWorker::compute()
