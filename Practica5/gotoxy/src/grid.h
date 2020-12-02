@@ -10,6 +10,7 @@
 template<typename HMIN, HMIN hmin, typename WIDTH, WIDTH width, typename TILE, TILE tile>
 class Grid
 {
+    //int width, tile;
     public:
         Grid()
         {
@@ -25,12 +26,13 @@ class Grid
                     array[k][l] = Value{false, nullptr, i, j};
                 }
             }
+      //      this->width = width; this->tile = tile;
         };
 
         struct Value
         {
             bool occupied = false;
-            QGraphicsItem * paint_cell = nullptr;
+            QGraphicsRectItem * paint_cell = nullptr;
             int cx, cy;
             int dist = 0; //dist vecinos
         };
@@ -42,17 +44,8 @@ class Grid
             for (auto &row : array)
                 for (auto &elem : row)
                 {
-                	//if(elem.cx == -2500 || elem.cx==2400 || elem.cy==-2500 || elem.cy==2400){
-                    		elem.paint_cell = scene.addRect(-tile / 2, -tile / 2, tile, tile, QPen(QColor("DarkGreen")),
-                                                    QBrush(QColor("Green")));
-                    		elem.paint_cell->setPos(elem.cx, elem.cy);
-               	/*} else{
-               	elem.paint_cell = scene.addRect(-tile / 2, -tile / 2, tile, tile, QPen(QColor("DarkGreen")),
-                                                    QBrush(QColor("Green")));
-                    		elem.paint_cell->setPos(elem.cx, elem.cy);
-                    		//std::cout << "(" << elem.cx << ", " << elem.cy << ")"<<endl;
-               	
-               	}*/
+               	    elem.paint_cell = scene.addRect(-tile / 2, -tile / 2, tile, tile, QPen(QColor("DarkGreen")), QBrush(QColor("Green")));
+               	    elem.paint_cell->setPos(elem.cx, elem.cy);
                 }
         }
     /*
@@ -83,6 +76,26 @@ public:
             array[i][j].paint_cell->setColor(QColor());
 
     }
+
+    void set_ocuppied_w(int x, int z)
+    {
+        if( auto r = transformar(x,z); r.has_value())
+        {
+            auto[i, j] = r.value();
+            array[i][j].occupied = true;
+            array[i][j].paint_cell->setBrush(QColor("Red"));
+        }
+        else
+            qInfo() << "out of bounds";
+    }
+
+
+    void set_free_w(int x, int z)
+    {
+        auto [i, j] = transformar(x,z);
+        array[i][j].occupied = false;
+        array[i][j].paint_cell->setBrush(QColor("Green"));
+    }
     /**
      * devolvemos el valor de la coordenada x,z
      * @param x
@@ -96,10 +109,14 @@ public:
        // return true;
     }
 
-    std::tuple<int, int> transformar(int i, int j){
-        int v1= (size/tile)/5000*i+(size/tile)/2;
-        int v2= (size/tile)/5000*j+(size/tile)/2;
-        return std::make_tuple(v1,v2);
+    std::optional<std::tuple<int, int>> transformar(int i, int j)
+    {
+        int v1= i/tile + width/tile/2;
+        int v2= j/tile + width/tile/2;
+        if(v1<0 or v1>=array.size() or v2<0 or v2>=array.size())
+            return {};
+        else
+            return std::make_tuple(v1,v2);
     }
 
 };

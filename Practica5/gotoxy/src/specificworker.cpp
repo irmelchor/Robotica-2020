@@ -101,39 +101,7 @@ void SpecificWorker::initialize(int period)
     grid.create_graphic_items(scene);
     // recorrer las cajas y poner a ocupado todos las celdas que caigan
     // recorrer las pared y poner las celdas a rojo
-	 struct Value
-        {
-            bool occupied = false;
-            QGraphicsItem * paint_cell = nullptr;
-            int x,z;
-            int dist = 0; //dist vecinos
-        };
-
-	std::vector<std::vector<Value>> array;
-     for (auto &row : array)
-                for (auto &elem : row){
-					//x=x-2500;
-					//z=z-2500;
-					if(elem.x == 0 || elem.x==0 || elem.z==0 || elem.z==0){
-						  //brush.setColor(QColor("Red"));
-						  elem.paint_cell = scene.addRect(dim.HMIN, dim.VMIN, dim.WIDTH, dim.HEIGHT,QPen(QColor("DarkRed")),QBrush(QColor("Red")));
-						 // map_polygon = (QGraphicsItem *) scene.addPolygon(poly2, QPen(QColor("DarkRed")), brush);
-						 elem.paint_cell->setPos(elem.x, elem.z);
-
-					}
-				}
-	
-   
-  /*  for(){
-
-    }
-    for(){
-
-    }
-    for(){
-
-    }
-*/
+    fill_grid_with_obstacles();
 
     this->Period = 100;
     if (this->startup_check_flag) {
@@ -143,33 +111,43 @@ void SpecificWorker::initialize(int period)
     }
 }
 
-void SpecificWorker::fill_grid_with_obstacles()
-{
-    for(int i=1; i<10; i++)  //max number of boxes
+void SpecificWorker::fill_grid_with_obstacles() {
+
+    for (int i = -2500; i < 2500; i++)
+        grid.set_ocuppied_w(i, -2500);
+    for (int i = -2500; i < 2500; i++)
+        grid.set_ocuppied_w(i, 2400);
+    for (int i = -2500; i < 2500; i++)
+        grid.set_ocuppied_w(-2500, i);
+    for (int i = -2500; i < 2500; i++)
+        grid.set_ocuppied_w(2400, i);
+
+
+    for (int i = 1; i < 10; i++)  //max number of boxes
     {
         auto caja = "caja" + QString::number(i);
         auto node = innerModel->getNode(caja);
         auto mesh = innerModel->getNode("cajaMesh" + QString::number(i));
-        if(node and mesh)
-        {
+        if (node and mesh) {
             auto pose = innerModel->transform("world", caja);
-            auto plane = dynamic_cast<InnerModelPlane*>(mesh);
+            auto plane = dynamic_cast<InnerModelPlane *>(mesh);
             int x = pose.x();
             int z = pose.z();
             int width = plane->depth;
             int depth = plane->width;
 
-            /****
 
-            AQUI EL CODIGO DE MODIFICACIÓN DEL GRID
+            for (int i = x-width/2; i < x + width/2; i++) {
+                for (int j = z-depth/2; j <z + depth/2; j++) {
+                    grid.set_ocuppied_w(i, j);
 
-            *****/
+                }
+            }
 
         }
     }
+
 }
-
-
 
 void SpecificWorker::compute()
 {
@@ -210,7 +188,7 @@ void SpecificWorker::dynamicWindowApproach(RoboCompGenericBase::TBaseState bStat
     {
         differentialrobot_proxy->setSpeedBase(0, 0);
         target_buffer.set_task_finished();
-        std::cout << __FUNCTION__ << " At target" << std::endl;
+        //std::cout << __FUNCTION__ << " At target" << std::endl;
         return;
     }
     else
