@@ -42,11 +42,17 @@ class Grid
             for (auto &row : array)
                 for (auto &elem : row)
                 {
-                	if(elem.cx == -2500 || elem.cx==0 || elem.cy==-2500 || elem.cy==0){
+                	//if(elem.cx == -2500 || elem.cx==2400 || elem.cy==-2500 || elem.cy==2400){
                     		elem.paint_cell = scene.addRect(-tile / 2, -tile / 2, tile, tile, QPen(QColor("DarkGreen")),
                                                     QBrush(QColor("Green")));
                     		elem.paint_cell->setPos(elem.cx, elem.cy);
-                }
+               	/*} else{
+               	elem.paint_cell = scene.addRect(-tile / 2, -tile / 2, tile, tile, QPen(QColor("DarkGreen")),
+                                                    QBrush(QColor("Green")));
+                    		elem.paint_cell->setPos(elem.cx, elem.cy);
+                    		//std::cout << "(" << elem.cx << ", " << elem.cy << ")"<<endl;
+               	
+               	}*/
                 }
         }
     /*

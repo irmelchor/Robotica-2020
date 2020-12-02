@@ -106,6 +106,7 @@ private:
     QGraphicsView *graphicsView;
     QGraphicsItem *robot_polygon = nullptr;
     QGraphicsItem *laser_polygon = nullptr;
+    QGraphicsItem *map_polygon = nullptr;
     const float ROBOT_LENGTH = 400;
     void draw_things(const RoboCompGenericBase::TBaseState &bState, const RoboCompLaser::TLaserData &ldata, const std::vector<tupla> &puntos, const tupla &front);
     std::vector<QGraphicsEllipseItem*> arcs_vector;

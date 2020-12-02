@@ -101,15 +101,29 @@ void SpecificWorker::initialize(int period)
     grid.create_graphic_items(scene);
     // recorrer las cajas y poner a ocupado todos las celdas que caigan
     // recorrer las pared y poner las celdas a rojo
-	
-    /*for (auto &row : array){
+	 struct Value
+        {
+            bool occupied = false;
+            QGraphicsItem * paint_cell = nullptr;
+            int x,z;
+            int dist = 0; //dist vecinos
+        };
+
+	std::vector<std::vector<Value>> array;
+     for (auto &row : array)
                 for (auto &elem : row){
-					if(elem.cx == -2500 || elem.cx==2500 || elem.cz==-2500 || elem.cz==2500){
-						elem.paint_cell = scene.addRect(-tile / 2, -tile / 2, tile, tile, QPen(QColor("DarkRed")), QBrush(QColor("Red")));
-						elem.paint_cell->setPos(elem.cx, elem.cz);
+					//x=x-2500;
+					//z=z-2500;
+					if(elem.x == 0 || elem.x==0 || elem.z==0 || elem.z==0){
+						  //brush.setColor(QColor("Red"));
+						  elem.paint_cell = scene.addRect(dim.HMIN, dim.VMIN, dim.WIDTH, dim.HEIGHT,QPen(QColor("DarkRed")),QBrush(QColor("Red")));
+						 // map_polygon = (QGraphicsItem *) scene.addPolygon(poly2, QPen(QColor("DarkRed")), brush);
+						 elem.paint_cell->setPos(elem.x, elem.z);
+
 					}
 				}
-    }*/
+	
+   
   /*  for(){
 
     }
