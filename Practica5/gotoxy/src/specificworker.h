@@ -101,6 +101,11 @@ private:
     std::vector<tupla> obstaculos(std::vector<tupla> vector, float aph,const RoboCompLaser::TLaserData &ldata);
     void dynamicWindowApproach(RoboCompGenericBase::TBaseState bState, RoboCompLaser::TLaserData &ldata);
 
+    //e5
+    void compute_navigation_function(Target T);
+    std::list<Values>::lista neighboors(Value v, int dist);
+    void reset_cell_distances();
+    
     //draw
     QGraphicsScene scene;
     QGraphicsView *graphicsView;
