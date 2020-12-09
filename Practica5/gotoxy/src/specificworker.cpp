@@ -137,7 +137,7 @@ void SpecificWorker::compute() {
         {
             auto target_cell = r.value();
             // calcular la función de navegación
-           // compute_navigation_function(target);
+             compute_navigation_function(target_cell);
             //desde el target, avanzar con un fuego
         }
     }
@@ -187,24 +187,26 @@ void SpecificWorker::fill_grid_with_obstacles() {
     }
 }
 
-void SpecificWorker::compute_navigation_function(Target<Tpose> T) {
+void SpecificWorker::compute_navigation_function(MyGrid::Value &target) {
 
 //    // vector con los desplazamientos locales para acceder a los 8 vecinos.
-//    grid.reset_cell_distances();
-//    int dist = 0;
-//    float L1 = lista_neighboors(grid.get_value(x,y).dist);
-//    float L2 = {};
-//    bool end = false;
-//    while (not end) {
-//        for (auto current_cell : L1) {
-//            auto selected = lista_neighboors(current_cell, dist);
-//            L2.append(selected);
-//        }
-//        dist++;
-//        end = L2.empty();
-//        L1.swap(L2);
-//        L2.clear();
-//    }
+    grid.reset_cell_distances();
+    int dist = 0;
+    auto L1 = grid.neighboors(target, dist);
+    std::vector<MyGrid::Value> L2 = {};
+     bool end = false;
+     while (not end)
+     {
+        for (auto current_cell : L1)
+        {
+            auto selected = grid.neighboors(current_cell, dist);
+            L2.insert(L2.end(), selected.begin(), selected.end());
+        }
+        dist++;
+        end = L2.empty();
+        L1.swap(L2);
+        L2.clear();
+    }
 }
 
 

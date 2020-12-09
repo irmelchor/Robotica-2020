@@ -37,7 +37,7 @@
 
 using namespace Eigen;
 
-class SpecificWorker : public GenericWorker {
+class SpecificWorker : public GenericWorker{
 
     template<typename T>
     struct Target {
@@ -76,6 +76,7 @@ public:
     void RCISMousePicker_setPick(RoboCompRCISMousePicker::Pick myPick);
 
 
+
 public slots:
 
     void compute();
@@ -106,7 +107,7 @@ private:
     MyGrid grid;
 
     //e5
-    void compute_navigation_function(Target<Tpose> t);
+    void compute_navigation_function(MyGrid::Value &target_cell);
     
     //draw
     QGraphicsScene scene;

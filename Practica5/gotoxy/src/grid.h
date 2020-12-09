@@ -40,6 +40,8 @@ public:
     };
 
     std::vector<std::vector<Value>> array;
+    std::vector<std::tuple<int, int>> listaCoorVec{{ -1, -1 }, { 0, -1 }, { 1, -1 }, { -1, 0 }, { 1, 0 }, { -1, 1 }, { 0, 1 }, { -1, 1 }};
+
 
     /* void create_graphic_items(QGraphicsScene &scene)
     {
@@ -154,27 +156,27 @@ public:
     {
         int v1 = i / tile + width / tile / 2;
         int v2 = j / tile + width / tile / 2;
-        if (v1 < 0 or v1 >= array.size() or v2 < 0 or v2 >= array.size())
+        if (v1 < 0 or v1 >= (int)array.size() or v2 < 0 or v2 >= array.size())
             return {};
         else
             return std::make_tuple(v1, v2);
     }
 
-    std::vector<Grid::Value> lista_neighboors(Value v, int dist)
+    std::vector<Grid::Value> neighboors(Value v, int dist)
     {
-//        std::vector<std::tuple<int, int>> listaCoorVec{{ -1, -1 }, { 0, -1 }, { 1, -1 }, { -1, 0 }, { 1, 0 }, { -1, 1 }, { 0, 1 }, { -1, 1 }};
-//
-//        std::vector<Value> lista;
-//        for (auto[dk, dl] : listaCoorVec) {
-//            int k = v.k + dk; // OJO hay que añadir al struct Value las coordenadas de array
-//            int l = v.l + dl;
-//            if (k, l is_in_limits and and grid[k][l].free and grid[k][l].dist != -1)
-//            {
-//                set_dist(k.l, dist);
-//                lista.append(array[k][l]);
-//            }
-//        }
-        //return lista;
+        std::vector<Value> lista;
+        for (auto[dk, dl] : listaCoorVec)
+        {
+            int k = v.k + dk; // OJO hay que añadir al struct Value las coordenadas de array
+            int l = v.l + dl;
+            if (k>0 and l>0 and k<array.size() and l<array.size() and not array[k][l].occupied and array[k][l].dist == -1)
+            {
+                array[k][l].dist = dist;
+                array[k][l].text_cell->setPlainText(QString::number(dist));
+                lista.push_back(array[k][l]);
+            }
+        }
+       return lista;
     }
 
     void reset_cell_distances()
