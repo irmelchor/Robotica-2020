@@ -99,12 +99,14 @@ private:
     std::vector<tupla> calcularPuntos(float vOrigen,  float wOrigen);
     std::vector<tupla> ordenar(std::vector<tupla> vector, float x, float z);
     std::vector<tupla> obstaculos(std::vector<tupla> vector, float aph,const RoboCompLaser::TLaserData &ldata);
-    void dynamicWindowApproach(RoboCompGenericBase::TBaseState bState, RoboCompLaser::TLaserData &ldata);
+    std::vector<tupla>  dynamicWindowApproach(RoboCompGenericBase::TBaseState bState, RoboCompLaser::TLaserData &ldata);
+
+    //grid
+    using MyGrid= Grid<int, -2500, int, 5000, int, 100>;
+    MyGrid grid;
 
     //e5
-    void compute_navigation_function(Target T);
-    std::list<Values>::lista neighboors(Value v, int dist);
-    void reset_cell_distances();
+    void compute_navigation_function(Target<Tpose> t);
     
     //draw
     QGraphicsScene scene;
@@ -116,8 +118,7 @@ private:
     void draw_things(const RoboCompGenericBase::TBaseState &bState, const RoboCompLaser::TLaserData &ldata, const std::vector<tupla> &puntos, const tupla &front);
     std::vector<QGraphicsEllipseItem*> arcs_vector;
 
-    //grid
-    Grid<int, -2500, int, 5000, int, 100> grid;
+
 
     void fill_grid_with_obstacles();
 };

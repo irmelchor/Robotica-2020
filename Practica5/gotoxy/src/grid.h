@@ -23,7 +23,7 @@ public:
             int l = 0;
             for (int j = hmin; j < width / 2; j += tile, l++)
             {
-                array[k][l] = Value{false, nullptr, i, j};
+                array[k][l] = Value{false, nullptr, nullptr, i, j};
             }
         }
         //      this->width = width; this->tile = tile;
@@ -35,6 +35,7 @@ public:
         QGraphicsRectItem *paint_cell = nullptr;
         QGraphicsTextItem *text_cell = nullptr;
         int cx, cy;
+        int k, l;
         int dist = 0; //dist vecinos
     };
 
@@ -50,7 +51,7 @@ public:
             }
     }*/
 
-    void create_graphic_items(QGraphicsScene &scene, QGraphicsView *view)
+    void create_graphic_items(QGraphicsScene &scene)
     {
         auto fondo = QColor("LightGreen");
         fondo.setAlpha(40);
@@ -138,11 +139,15 @@ public:
      * @param z
      * @return
      */
-    std::vector<std::vector<Value>> get_value(int x, int z)
+    std::optional<Value> get_value(int x, int z)
     {
-        auto [i, j] = transformar(x, z);
-        return this->array[x][z];
-        // return true;
+        if(auto r  = transformar(x, z); r.has_value())
+        {
+            auto [x,y] = r.value();
+            return this->array[x][y];
+        }
+        else
+            return {};
     }
 
     std::optional<std::tuple<int, int>> transformar(int i, int j)
@@ -154,6 +159,31 @@ public:
         else
             return std::make_tuple(v1, v2);
     }
+
+    std::vector<Grid::Value> lista_neighboors(Value v, int dist)
+    {
+//        std::vector<std::tuple<int, int>> listaCoorVec{{ -1, -1 }, { 0, -1 }, { 1, -1 }, { -1, 0 }, { 1, 0 }, { -1, 1 }, { 0, 1 }, { -1, 1 }};
+//
+//        std::vector<Value> lista;
+//        for (auto[dk, dl] : listaCoorVec) {
+//            int k = v.k + dk; // OJO hay que añadir al struct Value las coordenadas de array
+//            int l = v.l + dl;
+//            if (k, l is_in_limits and and grid[k][l].free and grid[k][l].dist != -1)
+//            {
+//                set_dist(k.l, dist);
+//                lista.append(array[k][l]);
+//            }
+//        }
+        //return lista;
+    }
+
+    void reset_cell_distances()
+    {
+        for (auto &row : array)
+            for (auto &elem : row)
+                elem.dist = -1;
+    }
+
 };
 
 #endif //GOTOXY_GRID_H
