@@ -111,23 +111,16 @@ void SpecificWorker::initialize(int period) {
     }
 }
 
-void SpecificWorker::compute() {
+void SpecificWorker::compute()
+{
     //Coordenadas del robot
     RoboCompGenericBase::TBaseState bState;
-    try {
-        differentialrobot_proxy->getBaseState(bState);
-    }
-    catch (const Ice::Exception &e) {
-        std::cout << e.what() << std::endl;
-    }
+    try { differentialrobot_proxy->getBaseState(bState);  }
+    catch (const Ice::Exception &e) { std::cout << e.what() << std::endl;  }
 
     RoboCompLaser::TLaserData ldata;
-    try {
-        ldata = laser_proxy->getLaserData();
-    }
-    catch (const Ice::Exception &e) {
-        std::cout << e.what() << std::endl;
-    }
+    try { ldata = laser_proxy->getLaserData();  }
+    catch (const Ice::Exception &e) { std::cout << e.what() << std::endl; }
 
     if (auto data = target_buffer.get(); data.has_value())
     {
@@ -137,19 +130,28 @@ void SpecificWorker::compute() {
         {
             auto target_cell = r.value();
             // calcular la función de navegación
-             compute_navigation_function(target_cell);
+            compute_navigation_function(target_cell);
             //desde el target, avanzar con un fuego
         }
     }
-    std::vector<tupla> vector_ordenado;
-    if (target_buffer.is_active()) {
-        //preuntar si ha llegado
-        //buscar el vecino más bajo en el grid
-        //llamar a DWA con ese punto
-        vector_ordenado =  dynamicWindowApproach(bState, ldata);
+    Eigen::Vector2f tr = transformar_targetRW(bState);
+    std::vector<tupla> res;
+    if (tr.norm() < 50)
+    {
+        differentialrobot_proxy->setSpeedBase(0, 0);
+        target_buffer.set_task_finished();
     }
-    if(not vector_ordenado.empty())
-        draw_things(bState, ldata, vector_ordenado, vector_ordenado.front());
+    else
+    {
+        if (target_buffer.is_active())
+        {
+            //preuntar si ha llegado
+            //buscar el vecino más bajo en el grid
+            //llamar a DWA con ese punto
+            res = dynamicWindowApproach(bState, ldata);
+        }
+    };
+    draw_things(bState, ldata, res);
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -187,7 +189,8 @@ void SpecificWorker::fill_grid_with_obstacles() {
     }
 }
 
-void SpecificWorker::compute_navigation_function(MyGrid::Value &target) {
+void SpecificWorker::compute_navigation_function(MyGrid::Value &target)
+{
 
 //    // vector con los desplazamientos locales para acceder a los 8 vecinos.
     grid.reset_cell_distances();
@@ -197,7 +200,7 @@ void SpecificWorker::compute_navigation_function(MyGrid::Value &target) {
      bool end = false;
      while (not end)
      {
-        for (auto current_cell : L1)
+        for (auto &current_cell : L1)
         {
             auto selected = grid.neighboors(current_cell, dist);
             L2.insert(L2.end(), selected.begin(), selected.end());
@@ -217,49 +220,30 @@ std::vector<SpecificWorker::tupla>  SpecificWorker::dynamicWindowApproach(RoboCo
     //coordenadas del target del mundo real al mundo del  robot
     Eigen::Vector2f tr = transformar_targetRW(bState);
     std::vector<tupla> vectorOrdenado;
-
+    std::vector<tupla> vectorSInObs;
+    std::vector<tupla> vectorPuntos;
     //distancia que debe recorrer hasta el target
-    auto dist = tr.norm();
-    if (dist < 50) {
-        differentialrobot_proxy->setSpeedBase(0, 0);
-        target_buffer.set_task_finished();
-        //std::cout << __FUNCTION__ << " At target" << std::endl;
-        return {};
-    } else {
-        //posiciones originales del robot
-        float vOrigen = bState.advVz; // Advance V
-        float wOrigen = bState.rotV;  // Rotation W
 
-        //calculamos las posiciones futuras del robot y se insertan en un vector.
-        std::vector<tupla> vectorPuntos = calcularPuntos(vOrigen, wOrigen);
+    //posiciones originales del robot
+    float vOrigen = bState.advVz; // Advance V
+    float wOrigen = bState.rotV;  // Rotation W
 
-        //quitamos los puntos futuros que nos llevan a obstaculos
-        std::vector<tupla> vectorSInObs = obstaculos(vectorPuntos, bState.alpha, ldata);
+    //calculamos las posiciones futuras del robot y se insertan en un vector.
+    vectorPuntos = calcularPuntos(vOrigen, wOrigen);
 
-        //ordenamos el vector de puntos segun la distancia
-        vectorOrdenado = ordenar(vectorSInObs, tr.x(), tr.y());
+    //quitamos los puntos futuros que nos llevan a obstaculos
+    vectorSInObs = obstaculos(vectorPuntos, bState.alpha, ldata);
 
-        if (vectorOrdenado.size() > 0) {
-            auto[x, y, v, w, alpha] = vectorOrdenado.front();
-            std::cout << __FUNCTION__ << " " << x << " " << y << " " << v << " " << w << " " << alpha
-                      << std::endl;
-            if (w > M_PI)
-                w = M_PI;
-            if (w < -M_PI)
-                w = -M_PI;
-            if (v < 0)
-                v = 0;
-            try {
-                differentialrobot_proxy->setSpeedBase(std::min(v / 5, 1000.f), w);
-            }
-            catch (const Ice::Exception &e) {
-                std::cout << e.what() << std::endl;
-            }
+    //ordenamos el vector de puntos segun la distancia
+    vectorOrdenado = ordenar(vectorSInObs, tr.x(), tr.y());
 
-        } else {
-            std::cout << "Vector vacio" << std::endl;
-            return {};
-        }
+    if (vectorOrdenado.size() > 0)
+    {
+        auto[x, y, v, w, alpha] = vectorOrdenado.front();
+        //std::cout << __FUNCTION__ << " " << x << " " << y << " " << v << " " << w << " " << alpha;
+        float adv = std::min(v, 1000.f);
+        try { differentialrobot_proxy->setSpeedBase(adv, w);  }
+        catch (const Ice::Exception &e) {std::cout << e.what() << std::endl; }
     }
     return vectorOrdenado;
 }
@@ -291,7 +275,7 @@ Eigen::Vector2f SpecificWorker::transformar_targetRW(RoboCompGenericBase::TBaseS
 }
 
 void SpecificWorker::draw_things(const RoboCompGenericBase::TBaseState &bState, const RoboCompLaser::TLaserData &ldata,
-                                 const std::vector<tupla> &puntos, const tupla &front) {
+                                 const std::vector<tupla> &puntos) {
     //draw robot
     //innerModel->updateTransformValues("base", bState.x, 0, bState.z, 0, bState.alpha, 0);
     robot_polygon->setRotation(qRadiansToDegrees(-bState.alpha));
@@ -314,15 +298,17 @@ void SpecificWorker::draw_things(const RoboCompGenericBase::TBaseState &bState, 
     for (auto arc : arcs_vector)
         scene.removeItem(arc);
     arcs_vector.clear();
-    QColor col("Red");
+    QColor col("Orange");
     for (auto &[x, y, vx, wx, a] : puntos)
     {
         QPointF centro = robot_polygon->mapToScene(x, y);
         arcs_vector.push_back(scene.addEllipse(centro.x(), centro.y(), 20, 20, QPen(col), QBrush(col)));
     }
-
-    QPointF center = robot_polygon->mapToScene(std::get<0>(front), std::get<1>(front));
-    arcs_vector.push_back(scene.addEllipse(center.x(), center.y(), 80, 80, QPen(Qt::black), QBrush(Qt::black)));
+    if(not puntos.empty())
+    {
+        QPointF center = robot_polygon->mapToScene(std::get<0>(puntos.front()), std::get<1>(puntos.front()));
+        arcs_vector.push_back(scene.addEllipse(center.x(), center.y(), 80, 80, QPen(Qt::black), QBrush(Qt::black)));
+    }
 }
 
 /**
@@ -334,10 +320,10 @@ void SpecificWorker::draw_things(const RoboCompGenericBase::TBaseState &bState, 
 std::vector<SpecificWorker::tupla> SpecificWorker::calcularPuntos(float vOrigen, float wOrigen) {
     std::vector<tupla> vectorT;
     //Calculamos las posiciones futuras del robot y se insertan en un vector.
-    for (float dt = 0.3; dt < 1; dt += 0.1) {                                          //velocidad robot
-        for (float v = 0; v <= 1000; v += 100) //advance
+    for (float dt = 0.3; dt < 2; dt += 0.1) {                                          //velocidad robot
+        for (float v = -100; v <= 700; v += 100) //advance
         {
-            for (float w = -3; w <= 3; w += 0.1) //rotacion
+            for (float w = -1; w <= 1; w += 0.1) //rotacion
             {
                 float vNuevo = vOrigen + v;
                 float wNuevo = wOrigen + w;
@@ -372,39 +358,31 @@ std::vector<SpecificWorker::tupla> SpecificWorker::calcularPuntos(float vOrigen,
 std::vector<SpecificWorker::tupla>
 SpecificWorker::obstaculos(std::vector<tupla> vector, float aph, const RoboCompLaser::TLaserData &ldata) {
     QPolygonF polygonF_Laser;
-    const float semiancho = 210; // el semiancho del robot
-    std::vector<tupla> vectorOBs;
+    const float semiancho = 200; // el semiancho del robot
+    std::vector<tupla> vector_obs;
 
     //poligono creado con los puntos del laser
     for (auto &l : ldata)
         polygonF_Laser << QPointF(l.dist * sin(l.angle), l.dist * cos(l.angle));
 
     //poligono del robot con los puntos futuros con sus esquinas
-    for (auto &[x, y, a, g, ang] : vector) {
+    for (auto &point : vector)
+    {
+        auto [x, y, adv, giro, ang] = point;
         // GENERAR UN CUADRADO CON EL CENTRO EN X, Y Y ORIENTACION ANG.
         QPolygonF polygonF_Robot;
         polygonF_Robot << QPointF(x - semiancho, y + semiancho)
                        << QPointF(x + semiancho, y + semiancho)
                        << QPointF(x + semiancho, y - semiancho)
                        << QPointF(x - semiancho, y - semiancho);
-        polygonF_Robot = QTransform().rotate(aph).map(polygonF_Robot);
+        polygonF_Robot = QTransform().rotate(ang).map(polygonF_Robot);
 
-        //comprobacion de si los puntos del poligono del robot estan contenidos en el poligono del laser,
-        //si el poligono del laser no contiene un punto del robot, no contiene alguna esquina por tanto pasamos a otro.
-        bool cuatroEsquinas = true;
-        for (auto &p : polygonF_Robot) {
-            if (!polygonF_Laser.containsPoint(p, Qt::OddEvenFill)) {
-                cuatroEsquinas = false;
-                break;
-            }
-        }
-
-        // SI contiene las 4 esquinas , metemos el valor.
-        if (cuatroEsquinas) {
-            vectorOBs.emplace_back(std::make_tuple(x, y, a, g, ang));
-        }
+        auto res = std::find_if_not(std::begin(polygonF_Robot), std::end(polygonF_Robot),
+                                    [polygonF_Laser](const auto &p){return polygonF_Laser.containsPoint(p,Qt::OddEvenFill);});
+        if(res == std::end(polygonF_Robot))  //all inside
+            vector_obs.emplace_back(point);
     }
-    return vectorOBs;
+    return vector_obs;
 }
 
 /**
@@ -414,7 +392,8 @@ SpecificWorker::obstaculos(std::vector<tupla> vector, float aph, const RoboCompL
  * @param z
  * @return vector ordenado
  */
-std::vector<SpecificWorker::tupla> SpecificWorker::ordenar(std::vector<tupla> vector, float x, float z) {
+std::vector<SpecificWorker::tupla> SpecificWorker::ordenar(std::vector<tupla> vector, float x, float z)
+{
     std::sort(vector.begin(), vector.end(), [x, z](const auto &a, const auto &b) {
         const auto &[ax, ay, ca, cw, aa] = a;
         const auto &[bx, by, ba, bw, bb] = b;

@@ -23,7 +23,7 @@ public:
             int l = 0;
             for (int j = hmin; j < width / 2; j += tile, l++)
             {
-                array[k][l] = Value{false, nullptr, nullptr, i, j};
+                array[k][l] = Value{false, nullptr, nullptr, i, j, k, l, -1};
             }
         }
         //      this->width = width; this->tile = tile;
@@ -36,7 +36,7 @@ public:
         QGraphicsTextItem *text_cell = nullptr;
         int cx, cy;
         int k, l;
-        int dist = 0; //dist vecinos
+        int dist; //dist vecinos
     };
 
     std::vector<std::vector<Value>> array;
@@ -156,13 +156,13 @@ public:
     {
         int v1 = i / tile + width / tile / 2;
         int v2 = j / tile + width / tile / 2;
-        if (v1 < 0 or v1 >= (int)array.size() or v2 < 0 or v2 >= array.size())
+        if (v1 < 0 or v1 >= (int)array.size() or v2 < 0 or v2 >= (int)array.size())
             return {};
         else
             return std::make_tuple(v1, v2);
     }
 
-    std::vector<Grid::Value> neighboors(Value v, int dist)
+    std::vector<Grid::Value> neighboors(Value &v, int dist)
     {
         std::vector<Value> lista;
         for (auto[dk, dl] : listaCoorVec)

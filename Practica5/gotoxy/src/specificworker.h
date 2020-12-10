@@ -54,9 +54,12 @@ class SpecificWorker : public GenericWorker{
         }
         std::optional<T> get() {
             std::lock_guard<std::mutex> guard(mutex);
-            if (not empty){
+            if (not empty)
+            {
+                empty = true;
                 return data;
-            } else
+            }
+            else
                 return {};
         }
         void set_task_finished() {
@@ -116,7 +119,7 @@ private:
     QGraphicsItem *laser_polygon = nullptr;
     QGraphicsItem *map_polygon = nullptr;
     const float ROBOT_LENGTH = 400;
-    void draw_things(const RoboCompGenericBase::TBaseState &bState, const RoboCompLaser::TLaserData &ldata, const std::vector<tupla> &puntos, const tupla &front);
+    void draw_things(const RoboCompGenericBase::TBaseState &bState, const RoboCompLaser::TLaserData &ldata, const std::vector<tupla> &puntos);
     std::vector<QGraphicsEllipseItem*> arcs_vector;
 
 
