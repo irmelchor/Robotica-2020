@@ -70,6 +70,7 @@ class SpecificWorker : public GenericWorker{
             std::lock_guard<std::mutex> guard(mutex);
             return activate;
         }
+        
     };
 
 public:
@@ -85,6 +86,14 @@ public slots:
     void compute();
     int startup_check();
     void initialize(int period);
+    
+    
+protected:
+       void resizeEvent(QResizeEvent * event)
+       {
+           graphicsView->fitInView(scene.sceneRect(), Qt::KeepAspectRatio);
+       }
+
 
 private:
     std::shared_ptr<InnerModel> innerModel;

@@ -146,9 +146,13 @@ void SpecificWorker::compute()
         if (target_buffer.is_active())
         {
             //preuntar si ha llegado
-            //buscar el vecino más bajo en el grid
-            //llamar a DWA con ese punto
-            res = dynamicWindowApproach(bState, ldata);
+			if(grid.get_value() == target_buffer.setBasePose()){ //******************************************************
+			
+				//buscar el vecino más bajo en el grid
+				auto L1 = grid.neighboors(target_buffer, 0);
+				//llamar a DWA con ese punto
+				res = dynamicWindowApproach(bState, L1);
+			}
         }
     };
     draw_things(bState, ldata, res);

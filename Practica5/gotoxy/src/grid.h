@@ -121,9 +121,12 @@ public:
     {
         if (auto r = transformar(x, z); r.has_value())
         {
-            auto [i, j] = r.value();
-            array[i][j].occupied = true;
-            array[i][j].paint_cell->setBrush(QColor("Red"));
+            	auto [i, j] = r.value();
+            	if (i>=0 and j>=0 and i<50 and j<50)  //**********
+            {
+           	array[i][j].occupied = true;
+            	array[i][j].paint_cell->setBrush(QColor("Red"));
+            }
         }
         else
             qInfo() << "out of bounds";
