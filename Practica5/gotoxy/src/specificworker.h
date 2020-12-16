@@ -99,20 +99,20 @@ private:
     std::shared_ptr<InnerModel> innerModel;
     bool startup_check_flag;
 
-    //tupla de 3 variables float para las coordenadas x,y,z.
+    //Tupla de 3 variables float para las coordenadas x,y,z.
     using Tpose = std::tuple<float, float, float>;
 
-    //variable tipo Target con la tupla Tpose
+    //variable tipo Target con la Tupla Tpose
     Target<Tpose> target_buffer;
     Tpose target;
-    using tupla = std::tuple<float, float, float, float, float>;
+    using Tupla = std::tuple<float, float, float, float, float>;
     Eigen::Vector2f transformar_targetRW( RoboCompGenericBase::TBaseState bState);
 
     //e4
-    std::vector<tupla> calcularPuntos(float vOrigen,  float wOrigen);
-    std::vector<tupla> ordenar(std::vector<tupla> vector, float x, float z);
-    std::vector<tupla> obstaculos(std::vector<tupla> vector, float aph,const RoboCompLaser::TLaserData &ldata);
-    std::vector<tupla>  dynamicWindowApproach(RoboCompGenericBase::TBaseState bState, RoboCompLaser::TLaserData &ldata);
+    std::vector<Tupla> calcularPuntos(float vOrigen, float wOrigen);
+    std::optional<Tupla> ordenar(std::vector<Tupla> vector, float x, float z);
+    std::vector<Tupla> obstaculos(std::vector<Tupla> vector, float aph, const RoboCompLaser::TLaserData &ldata);
+    std::tuple<std::vector<Tupla>, Tupla> dynamicWindowApproach(RoboCompGenericBase::TBaseState bState, RoboCompLaser::TLaserData &ldata);
 
     //grid
     using MyGrid= Grid<int, -2500, int, 5000, int, 100>;
@@ -128,7 +128,7 @@ private:
     QGraphicsItem *laser_polygon = nullptr;
     QGraphicsItem *map_polygon = nullptr;
     const float ROBOT_LENGTH = 400;
-    void draw_things(const RoboCompGenericBase::TBaseState &bState, const RoboCompLaser::TLaserData &ldata, const std::vector<tupla> &puntos);
+    void draw_things(const RoboCompGenericBase::TBaseState &bState, const RoboCompLaser::TLaserData &ldata, const std::tuple<std::vector<Tupla>, Tupla>&puntos);
     std::vector<QGraphicsEllipseItem*> arcs_vector;
 
 

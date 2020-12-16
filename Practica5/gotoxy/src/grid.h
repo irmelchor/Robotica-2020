@@ -7,30 +7,25 @@
 
 #include <QGraphicsItem>
 
-template <typename HMIN, HMIN hmin, typename WIDTH, WIDTH width, typename TILE, TILE tile>
-class Grid
-{
+template<typename HMIN, HMIN hmin, typename WIDTH, WIDTH width, typename TILE, TILE tile>
+class Grid {
     //int width, tile;
 public:
-    Grid()
-    {
-        array.resize((int)(width / tile));
+    Grid() {
+        array.resize((int) (width / tile));
         for (auto &row : array)
-            row.resize((int)(width / tile));
+            row.resize((int) (width / tile));
         int k = 0;
-        for (int i = hmin; i < width / 2; i += tile, k++)
-        {
+        for (int i = hmin; i < width / 2; i += tile, k++) {
             int l = 0;
-            for (int j = hmin; j < width / 2; j += tile, l++)
-            {
+            for (int j = hmin; j < width / 2; j += tile, l++) {
                 array[k][l] = Value{false, nullptr, nullptr, i, j, k, l, -1};
             }
         }
         //      this->width = width; this->tile = tile;
     };
 
-    struct Value
-    {
+    struct Value {
         bool occupied = false;
         QGraphicsRectItem *paint_cell = nullptr;
         QGraphicsTextItem *text_cell = nullptr;
@@ -40,7 +35,14 @@ public:
     };
 
     std::vector<std::vector<Value>> array;
-    std::vector<std::tuple<int, int>> listaCoorVec{{ -1, -1 }, { 0, -1 }, { 1, -1 }, { -1, 0 }, { 1, 0 }, { -1, 1 }, { 0, 1 }, { -1, 1 }};
+    std::vector<std::tuple<int, int>> listaCoorVec{{-1, -1},
+                                                   {0,  -1},
+                                                   {1,  -1},
+                                                   {-1, 0},
+                                                   {1,  0},
+                                                   {-1, 1},
+                                                   {0,  1},
+                                                   {-1, 1}};
 
 
     /* void create_graphic_items(QGraphicsScene &scene)
@@ -53,17 +55,16 @@ public:
             }
     }*/
 
-    void create_graphic_items(QGraphicsScene &scene)
-    {
+    void create_graphic_items(QGraphicsScene &scene) {
         auto fondo = QColor("LightGreen");
         fondo.setAlpha(40);
         QFont font("Bavaria");
         font.setPointSize(40);
         font.setWeight(QFont::TypeWriter);
         for (auto &row : array)
-            for (auto &elem : row)
-            {
-                elem.paint_cell = scene.addRect(-tile / 2, -tile / 2, tile, tile, QPen(QColor("DarkGreen")), QBrush(fondo));
+            for (auto &elem : row) {
+                elem.paint_cell = scene.addRect(-tile / 2, -tile / 2, tile, tile, QPen(QColor("DarkGreen")),
+                                                QBrush(fondo));
                 elem.paint_cell->setPos(elem.cx, elem.cy);
                 elem.text_cell = scene.addText("-1", font);
                 elem.text_cell->setPos(elem.cx - tile / 2, elem.cy - tile / 2);
@@ -90,12 +91,9 @@ public:
 /*
  * Inicializamos el array a false, osea, no ocupades.
  */
-    void inicializate()
-    {
-        for (int i = 0; i < this->tam; ++i)
-        {
-            for (int j = 0; j < this->tam; ++j)
-            {
+    void inicializate() {
+        for (int i = 0; i < this->tam; ++i) {
+            for (int j = 0; j < this->tam; ++j) {
                 this->array[i][j] = false;
             }
         }
@@ -108,82 +106,72 @@ public:
      * @param z
      * @param v
      */
-    void set_Value(int x, int z, bool v)
-    {
+    void set_Value(int x, int z, bool v) {
         this->array[x][z] = v;
-        auto [i, j] = transformar(x, z);
+        auto[i, j] = transformar(x, z);
         array[i][j].occupied = v;
         if (v)
             array[i][j].paint_cell->setColor(QColor());
     }
 
-    void set_ocuppied_w(int x, int z)
-    {
-        if (auto r = transformar(x, z); r.has_value())
-        {
-            	auto [i, j] = r.value();
-            	if (i>=0 and j>=0 and i<50 and j<50)  //**********
-            {
-           	array[i][j].occupied = true;
-            	array[i][j].paint_cell->setBrush(QColor("Red"));
-            }
-        }
-        else
+    void set_ocuppied_w(int x, int z) {
+        if (auto r = transformar(x, z); r.has_value()) {
+            auto[i, j] = r.value();
+            array[i][j].occupied = true;
+            array[i][j].paint_cell->setBrush(QColor("Red"));
+
+        } else
             qInfo() << "out of bounds";
     }
 
-    void set_free_w(int x, int z)
-    {
-        auto [i, j] = transformar(x, z);
+    void set_free_w(int x, int z) {
+        auto[i, j] = transformar(x, z);
         array[i][j].occupied = false;
         array[i][j].paint_cell->setBrush(QColor("Green"));
     }
+
     /**
      * devolvemos el valor de la coordenada x,z
      * @param x
      * @param z
      * @return
      */
-    std::optional<Value> get_value(int x, int z)
-    {
-        if(auto r  = transformar(x, z); r.has_value())
-        {
-            auto [x,y] = r.value();
+    std::optional<Value> get_value(int x, int z) {
+        if (auto r = transformar(x, z); r.has_value()) {
+            auto[x, y] = r.value();
             return this->array[x][y];
-        }
-        else
+        } else
             return {};
     }
 
-    std::optional<std::tuple<int, int>> transformar(int i, int j)
-    {
+    std::optional<std::tuple<int, int>> transformar(int i, int j) {
         int v1 = i / tile + width / tile / 2;
         int v2 = j / tile + width / tile / 2;
-        if (v1 < 0 or v1 >= (int)array.size() or v2 < 0 or v2 >= (int)array.size())
+        if (v1 < 0 or v1 >= (int) array.size() or v2 < 0 or v2 >= (int) array.size())
             return {};
         else
             return std::make_tuple(v1, v2);
     }
 
-    std::vector<Grid::Value> neighboors(Value &v, int dist)
-    {
+    std::vector<Grid::Value> neighboors(Value &v, int dist) {
         std::vector<Value> lista;
-        for (auto[dk, dl] : listaCoorVec)
-        {
+        for (auto[dk, dl] : listaCoorVec) {
             int k = v.k + dk; // OJO hay que añadir al struct Value las coordenadas de array
             int l = v.l + dl;
-            if (k>0 and l>0 and k<array.size() and l<array.size() and not array[k][l].occupied and array[k][l].dist == -1)
+            if (k > 0 and l > 0 and k < array.size() and l < array.size() and not array[k][l].occupied and
+                array[k][l].dist == -1)
             {
+                // if is_adjacent_to_obstacle(k,l)
+                //   dist == 999;
                 array[k][l].dist = dist;
                 array[k][l].text_cell->setPlainText(QString::number(dist));
                 lista.push_back(array[k][l]);
             }
         }
-       return lista;
+        return lista;
     }
 
-    void reset_cell_distances()
-    {
+    void reset_cell_distances() {
         for (auto &row : array)
             for (auto &elem : row)
                 elem.dist = -1;
