@@ -45,16 +45,6 @@ public:
                                                    {-1, 1}};
 
 
-    /* void create_graphic_items(QGraphicsScene &scene)
-    {
-        for (auto &row : array)
-            for (auto &elem : row)
-            {
-                elem.paint_cell = scene.addRect(-tile / 2, -tile / 2, tile, tile, QPen(QColor("DarkGreen")), QBrush(QColor("Green")));
-                elem.paint_cell->setPos(elem.cx, elem.cy);
-            }
-    }*/
-
     void create_graphic_items(QGraphicsScene &scene) {
         auto fondo = QColor("LightGreen");
         fondo.setAlpha(40);
@@ -152,21 +142,39 @@ public:
         else
             return std::make_tuple(v1, v2);
     }
+    
+    bool is_adjacent_to_obstacle(int k, int l){
+    	bool adjacent=false;
+    	for (auto[dk, dl] : listaCoorVec) {
+    	 int i = k + dk;
+         int j = l + dl;
+            
+            if (array[i][j].occupied)
+            {
+            
+    		adjacent=true;
+    	     }
+    	}
+    	return adjacent;
+    }
 
     std::vector<Grid::Value> neighboors(Value &v, int dist) {
         std::vector<Value> lista;
         for (auto[dk, dl] : listaCoorVec) {
             int k = v.k + dk; // OJO hay que añadir al struct Value las coordenadas de array
             int l = v.l + dl;
+              
             if (k > 0 and l > 0 and k < array.size() and l < array.size() and not array[k][l].occupied and
                 array[k][l].dist == -1)
             {
-                // if is_adjacent_to_obstacle(k,l)
-                //   dist == 999;
-                array[k][l].dist = dist;
-                array[k][l].text_cell->setPlainText(QString::number(dist));
+            	if(is_adjacent_to_obstacle(k,l)){
+            	    dist=999;
+            	    
+            	   }
+             	 array[k][l].dist = dist;
+             	 array[k][l].text_cell->setPlainText(QString::number(dist));
                 lista.push_back(array[k][l]);
-            }
+            } 
         }
         return lista;
     }
